@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 
 # Add src directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+sys.path.insert(0, str(Path(__file__).parent))
 
 from core.stadium_controller import SmartStadiumController
 from core.config_manager import ConfigManager
@@ -40,7 +40,8 @@ async def main():
         
         # Initialize Smart Stadium Controller
         print("🎯 Initializing Smart Stadium...")
-        stadium = SmartStadiumController(config)
+        stadium = SmartStadiumController()
+        await stadium.async_init()  # Load config and initialize components
         
         # Test device connectivity
         print("🧪 Testing device connectivity...")

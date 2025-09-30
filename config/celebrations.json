@@ -1,0 +1,26 @@
+{
+  "touchdown": {
+    "duration": 10,
+    "pattern": "pulse_team_colors",
+    "intensity": "high"
+  },
+  "field_goal": {
+    "duration": 5,
+    "pattern": "flash_team_colors",
+    "intensity": "medium"
+  },
+  "red_zone": {
+    "style": "solid_team_color",
+    "brightness": 150
+  },
+  "victory": {
+    "duration": 30,
+    "pattern": "celebration_wave",
+    "intensity": "maximum"
+  },
+  "turnover": {
+    "duration": 8,
+    "pattern": "strobe_team_colors",
+    "intensity": "high"
+  }
+}

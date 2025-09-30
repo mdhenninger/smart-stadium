@@ -1,0 +1,63 @@
+{
+  "stadium_info": {
+    "name": "Mark's Smart Stadium",
+    "location": "Home Theater",
+    "timezone": "America/New_York"
+  },
+  "devices": {
+    "smart_lights": {
+      "enabled": true,
+      "type": "wiz_lights",
+      "ips": [
+        "192.168.86.41",
+        "192.168.86.47", 
+        "192.168.86.48"
+      ],
+      "default_brightness": 180,
+      "celebration_brightness": 255,
+      "default_color_temp": 2700
+    },
+    "audio_system": {
+      "enabled": false,
+      "type": "placeholder",
+      "note": "Future: Sound effects and music"
+    },
+    "displays": {
+      "enabled": false,
+      "type": "placeholder", 
+      "note": "Future: LED strips, projectors, etc."
+    }
+  },
+  "monitoring": {
+    "default_polling_interval": 10,
+    "sports_enabled": {
+      "nfl": true,
+      "college_football": true,
+      "nba": false,
+      "nhl": false,
+      "mlb": false
+    },
+    "favorite_teams": {
+      "nfl": ["BUF"],
+      "college_football": [],
+      "nba": [],
+      "nhl": [],
+      "mlb": []
+    }
+  },
+  "celebrations": {
+    "touchdown_duration": 30,
+    "field_goal_duration": 10,
+    "extra_point_duration": 5,
+    "two_point_duration": 5,
+    "victory_duration": 60,
+    "red_zone_ambient": true,
+    "victory_celebrations": true
+  },
+  "web_interface": {
+    "enabled": true,
+    "port": 8080,
+    "host": "localhost"
+  },
+  "last_updated": "2025-09-30 16:00:00"
+}
