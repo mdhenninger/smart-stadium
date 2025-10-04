@@ -57,6 +57,9 @@ class TeamOption(BaseModel):
     name: str
     sport: str
     city: str | None = None
+    nickname: str | None = None  # Team mascot/nickname (e.g., "Bills")
+    logo_url: str | None = None  # ESPN logo URL
+    espn_id: str | None = None  # ESPN team ID
     colors: TeamColors
 
 

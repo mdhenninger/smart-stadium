@@ -31,59 +31,47 @@ class ServiceContainer:
     websocket_manager: WebSocketManager
 
 
-def _initialize_team_colors(lights_service: LightsService, team_colors: Dict[str, Any]) -> None:
-    """Load all team colors from config into lights service.
+def _initialize_team_colors(lights_service: LightsService, teams_database: Dict[str, Any]) -> None:
+    """Load team colors from teams_database into the lights service.
     
-    Prefers lighting-optimized colors (lighting_primary_color, lighting_secondary_color) 
-    over official team colors for better bulb visibility. Falls back to official colors
-    if lighting colors are not defined.
-    
-    Handles nested structure: {"nfl_teams": {"AFC_East": {"BUF": {...}}}}
-    Tracks sport context to disambiguate teams with same abbreviation (e.g., NFL BUF vs CFB BUF).
+    The teams_database uses a flat structure with unified keys like "NFL-BUFFALO-BILLS".
+    Each team has lighting_primary_color and lighting_secondary_color for celebrations.
     """
     count = 0
     
-    # Map top-level keys to sport identifiers
-    SPORT_MAPPING = {
-        "nfl_teams": "nfl",
-        "college_teams": "cfb",
-        "nhl_teams": "nhl",
-        "nba_teams": "nba",
-        "mlb_teams": "mlb",
-    }
+    # Get teams from the "teams" key in the database
+    all_teams = teams_database.get("teams", {})
     
-    def _load_team(team_abbr: str, colors: Dict[str, Any], sport: str | None = None) -> None:
-        nonlocal count
+    for unified_key, team_data in all_teams.items():
         try:
-            # Skip if not a team entry (no primary_color field)
-            if "primary_color" not in colors:
-                return
+            if not isinstance(team_data, dict):
+                continue
             
-            # Prefer lighting-optimized colors, fallback to official colors
-            primary = tuple(colors.get("lighting_primary_color", colors["primary_color"]))
-            secondary = tuple(colors.get("lighting_secondary_color", colors["secondary_color"]))
+            # Extract team metadata
+            sport = team_data.get("sport", "").lower()
+            abbreviation = team_data.get("abbreviation", "")
             
-            lights_service.set_team_colors(team_abbr, primary, secondary, sport=sport)
+            if not sport or not abbreviation:
+                logger.warning(f"Skipping team {unified_key}: missing sport or abbreviation")
+                continue
+            
+            # Use lighting-optimized colors for celebrations
+            lighting_primary = team_data.get("lighting_primary_color")
+            lighting_secondary = team_data.get("lighting_secondary_color")
+            
+            if not lighting_primary or not lighting_secondary:
+                logger.warning(f"Skipping team {unified_key}: missing lighting colors")
+                continue
+            
+            # Convert to tuples and register with lights service
+            primary = tuple(lighting_primary)
+            secondary = tuple(lighting_secondary)
+            lights_service.set_team_colors(abbreviation, primary, secondary, sport=sport)
             count += 1
-        except (KeyError, TypeError) as e:
-            logger.warning(f"Failed to load colors for team {team_abbr}: {e}")
+            
+        except (KeyError, TypeError, ValueError) as e:
+            logger.warning(f"Failed to load colors for team {unified_key}: {e}")
     
-    # Recursively traverse the nested team colors structure with sport context
-    def _traverse(data: Any, sport: str | None = None) -> None:
-        if isinstance(data, dict):
-            for key, value in data.items():
-                if isinstance(value, dict):
-                    # Check if this key indicates a sport category
-                    detected_sport = SPORT_MAPPING.get(key, sport)
-                    
-                    # Check if this is a team entry (has primary_color) or a division/category
-                    if "primary_color" in value:
-                        _load_team(key, value, sport=detected_sport)
-                    else:
-                        # Recurse into divisions/categories, carrying sport context
-                        _traverse(value, sport=detected_sport)
-    
-    _traverse(team_colors)
     logger.info(f"Loaded {count} team color configurations into lights service")
 
 
@@ -91,8 +79,8 @@ def build_container(config_manager: ConfigManager, websocket_manager: WebSocketM
     config = config_manager.get_config()
     lights_service = LightsService(config.light_ips)
     
-    # Load all team colors into lights service
-    _initialize_team_colors(lights_service, config.team_colors)
+    # Load all team colors into lights service from teams database
+    _initialize_team_colors(lights_service, config.teams_database)
     
     history_store = HistoryStore(config_manager.settings.data_dir / "history.db")
     monitoring_store = MonitoringStore(config_manager.settings.data_dir / "monitoring.db")

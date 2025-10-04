@@ -62,11 +62,16 @@ class BaseSportMonitor(ABC):
         
         try:
             while self.monitoring:
+                print("[DEBUG] Monitoring loop: monitored_games=")
+                for idx, config in enumerate(self.monitored_games):
+                    game = config['game']
+                    print(f"  {idx+1}. {game['away_name']} @ {game['home_name']} (id={game['id']}) monitored_teams={config.get('monitored_teams', [])}")
+
                 # Process each monitored game
-                for config in game_configs:
+                for config in self.monitored_games:
                     if self.monitoring:  # Check if still monitoring
                         await self.process_game_update(config)
-                
+
                 # Wait before next check
                 await asyncio.sleep(check_interval)
                 

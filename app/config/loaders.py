@@ -45,3 +45,9 @@ def load_wiz_config(settings: Settings) -> Dict[str, Any]:
     """Load WiZ light configuration file."""
 
     return _read_json(settings.config_dir / "wiz_lights_config.json")
+
+
+def load_teams_database(settings: Settings) -> Dict[str, Any]:
+    """Load teams database with all team metadata."""
+
+    return _read_json(settings.config_dir / "teams_database.json")

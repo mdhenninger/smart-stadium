@@ -224,31 +224,38 @@ class NFLMonitor(BaseSportMonitor):
         last_red_zone = self.red_zone_status.get(game_id, {})
         current_active = red_zone_info.get('active', False)
         current_team = red_zone_info.get('team', '')
-        
+
+        print(f"[DEBUG] Red zone poll: current_active={current_active}, current_team={current_team}, last_red_zone={last_red_zone}, monitored_teams={monitored_teams}")
         # Check if red zone status changed
         if current_active and current_team in monitored_teams:
             # Team is in red zone
             if not last_red_zone.get('active') or last_red_zone.get('team') != current_team:
                 # Red zone started or team changed
                 print(f"\n🎯 RED ZONE: {current_team} is in the red zone!")
-                
+
                 # Stop any existing red zone ambient
                 if self.lights_controller.red_zone_active:
                     await self.lights_controller.stop_red_zone_ambient()
-                
+                else:
+                    print("[DEBUG] Not calling stop_red_zone_ambient: already inactive (red zone start logic)")
+
                 # Set team colors and start red zone ambient lighting
                 await self.set_team_colors_for_celebration(current_team)
                 team_name = self.get_team_display_name(current_team, game_config['game'])
                 await self.lights_controller.start_red_zone_ambient(team_name)
-                
-        elif last_red_zone.get('active') and not current_active:
-            # Red zone ended
+
+        # Only call red zone end logic if last_red_zone was active, current is not, and last team was a monitored team
+        elif last_red_zone.get('active') and not current_active and last_red_zone.get('team') in monitored_teams and last_red_zone.get('team'):
             last_team = last_red_zone.get('team', 'Team')
             print(f"\n🚫 RED ZONE ENDED: {last_team} left the red zone")
-            
+
             # Stop red zone ambient lighting
             if self.lights_controller.red_zone_active:
                 await self.lights_controller.stop_red_zone_ambient()
+            else:
+                print("[DEBUG] Not calling stop_red_zone_ambient: already inactive (red zone end logic)")
+        else:
+            print(f"[DEBUG] No red zone transition: last_active={last_red_zone.get('active')}, current_active={current_active}, last_team={last_red_zone.get('team')}, monitored_teams={monitored_teams}")
         
         # Update stored red zone status
         self.red_zone_status[game_id] = red_zone_info.copy()

@@ -58,8 +58,8 @@ class LightsService:
     async def celebrate_score(self, team_name: str, points: int, team_abbr: str | None = None, sport: str | None = None) -> None:
         await self._controller.celebrate_score(team_name, points, team_abbr=team_abbr, sport=sport)
 
-    async def start_red_zone(self, team_name: str) -> None:
-        await self._controller.start_red_zone_ambient(team_name)
+    async def start_red_zone(self, team_abbr: str, sport: str | None = None) -> None:
+        await self._controller.start_red_zone_ambient(team_abbr, sport=sport)
 
     async def stop_red_zone(self) -> None:
         await self._controller.stop_red_zone_ambient()

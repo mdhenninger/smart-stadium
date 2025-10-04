@@ -9,6 +9,7 @@ from app.config.loaders import (
     load_celebrations,
     load_stadium_config,
     load_team_colors,
+    load_teams_database,
     load_wiz_config,
     ConfigLoadError,
 )
@@ -19,6 +20,7 @@ from app.config.settings import Settings
 class AppConfig:
     stadium: Dict[str, Any]
     team_colors: Dict[str, Any]
+    teams_database: Dict[str, Any]
     celebrations: Dict[str, Any]
     wiz_config: Dict[str, Any]
     light_ips: List[str]
@@ -52,6 +54,7 @@ class ConfigManager:
     def refresh(self) -> AppConfig:
         stadium = load_stadium_config(self._settings)
         team_colors = load_team_colors(self._settings)
+        teams_database = load_teams_database(self._settings)
         celebrations = load_celebrations(self._settings)
 
         try:
@@ -66,6 +69,7 @@ class ConfigManager:
         self._config = AppConfig(
             stadium=stadium,
             team_colors=team_colors,
+            teams_database=teams_database,
             celebrations=celebrations,
             wiz_config=wiz_config,
             light_ips=light_ips,

@@ -55,6 +55,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     await state.container.device_manager.refresh_status()
     logger.info("Initial device status check completed")
     
+    # Set lights to default warm white on startup
+    await state.container.lights_service.set_default_lighting()
+    logger.info("Lights set to default on startup")
+    
     await state.container.monitoring.start_all()
     logger.info("Monitoring services started")
 
@@ -64,6 +68,8 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         logger.info("Shutting down Smart Stadium application")
         if state.container:
             await state.container.monitoring.stop_all()
+            await state.container.lights_service.set_default_lighting()
+            logger.info("Lights reset to default on shutdown")
             await state.container.scoreboard_client.close()
 
 
