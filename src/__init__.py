@@ -1,18 +1,17 @@
 """
-Smart Stadium - Core Components
-Standalone smart lighting and game monitoring system
+Smart Stadium - Shared Modules
+Core modules used by the modern app/ backend
 """
 
-from .device_manager import SmartDeviceManager
-from .game_monitor import SmartStadiumGameMonitor, ESPNService
-from .smart_lights import BillsCelebrationController
+# The modern app/ backend imports directly from submodules:
+# - from src.devices.smart_lights import SmartStadiumLights
+# - from src.core.* (if needed)
+# - from src.sports.* (if needed)
 
-__version__ = "2.0.0"
+# This __init__.py is intentionally minimal to avoid import errors
+# after legacy scripts were archived to archive/legacy_scripts/
+
+__version__ = "3.0.0"
 __author__ = "Smart Stadium Team"
 
-__all__ = [
-    "SmartDeviceManager",
-    "SmartStadiumGameMonitor", 
-    "ESPNService",
-    "BillsCelebrationController"
-]
+__all__ = []
