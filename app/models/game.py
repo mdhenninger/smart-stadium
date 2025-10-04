@@ -34,6 +34,16 @@ class RedZoneInfo(BaseModel):
     yard_line: Optional[int] = None
 
 
+class GameSituation(BaseModel):
+    """Current game situation for in-progress games."""
+    possession_team_id: Optional[str] = None
+    down_distance: Optional[str] = None  # e.g., "1st & 10"
+    field_position: Optional[str] = None  # e.g., "UGA 19"
+    is_red_zone: bool = False
+    clock: Optional[str] = None  # e.g., "11:09"
+    period: Optional[int] = None  # Quarter/period number
+
+
 class GameSnapshot(BaseModel):
     game_id: str = Field(..., alias="id")
     sport: Sport
@@ -42,6 +52,7 @@ class GameSnapshot(BaseModel):
     status: GameStatus
     last_update: datetime
     red_zone: RedZoneInfo = Field(default_factory=RedZoneInfo)
+    situation: Optional[GameSituation] = None  # Only populated for in-progress games
 
     class Config:
         populate_by_name = True

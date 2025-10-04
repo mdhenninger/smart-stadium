@@ -76,6 +76,15 @@ export interface RedZoneInfo {
   yard_line?: number | null;
 }
 
+export interface GameSituation {
+  possession_team_id?: string | null;
+  down_distance?: string | null;
+  field_position?: string | null;
+  is_red_zone: boolean;
+  clock?: string | null;
+  period?: number | null;
+}
+
 export interface GameSnapshot {
   id: string;
   sport: SportCode;
@@ -84,6 +93,7 @@ export interface GameSnapshot {
   status: GameStatusCode;
   last_update: string;
   red_zone: RedZoneInfo;
+  situation?: GameSituation | null;
 }
 
 export interface GamesPayload {

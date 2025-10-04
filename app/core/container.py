@@ -12,6 +12,7 @@ from app.services.espn_client import EspnScoreboardClient
 from app.services.history_store import HistoryStore
 from app.services.lights_service import LightsService
 from app.services.monitoring import MonitorConfig, MonitoringCoordinator
+from app.services.monitoring_store import MonitoringStore
 from app.websocket.manager import WebSocketManager
 from app.utils.logging import get_logger
 
@@ -26,6 +27,7 @@ class ServiceContainer:
     scoreboard_client: EspnScoreboardClient
     monitoring: MonitoringCoordinator
     history_store: HistoryStore
+    monitoring_store: MonitoringStore
     websocket_manager: WebSocketManager
 
 
@@ -93,10 +95,11 @@ def build_container(config_manager: ConfigManager, websocket_manager: WebSocketM
     _initialize_team_colors(lights_service, config.team_colors)
     
     history_store = HistoryStore(config_manager.settings.data_dir / "history.db")
+    monitoring_store = MonitoringStore(config_manager.settings.data_dir / "monitoring.db")
     device_manager = DeviceManager(config, lights_service, history_store)
     scoreboard_client = EspnScoreboardClient()
 
-    monitoring = MonitoringCoordinator(scoreboard_client, lights_service, history_store, websocket_manager)
+    monitoring = MonitoringCoordinator(scoreboard_client, lights_service, history_store, monitoring_store, websocket_manager)
 
     monitor_configs: list[MonitorConfig] = []
     sports_enabled = config.get_sports_enabled()
@@ -125,5 +128,6 @@ def build_container(config_manager: ConfigManager, websocket_manager: WebSocketM
         scoreboard_client=scoreboard_client,
         monitoring=monitoring,
         history_store=history_store,
+        monitoring_store=monitoring_store,
         websocket_manager=websocket_manager,
     )

@@ -7,7 +7,7 @@ from typing import Dict
 
 import httpx
 
-from app.models.game import GameSnapshot, GameStatus, Scoreboard, Sport, TeamScore, RedZoneInfo
+from app.models.game import GameSnapshot, GameStatus, Scoreboard, Sport, TeamScore, RedZoneInfo, GameSituation
 from app.utils.logging import get_logger
 
 logger = get_logger(__name__)
@@ -55,12 +55,25 @@ class EspnScoreboardClient:
         status_info = event.get("status", {}).get("type", {})
         status = self._map_status(status_info.get("state") or status_info.get("name"))
 
-        situation = competition.get("situation", {}) or {}
+        situation_data = competition.get("situation", {}) or {}
         red_zone = RedZoneInfo(
-            active=bool(situation.get("isRedZone")),
-            team_abbr=situation.get("possessionText"),
-            yard_line=situation.get("yardLine"),
+            active=bool(situation_data.get("isRedZone")),
+            team_abbr=situation_data.get("possessionText"),
+            yard_line=situation_data.get("yardLine"),
         )
+
+        # Parse game situation for in-progress games
+        game_situation = None
+        if status == GameStatus.IN_PROGRESS and situation_data:
+            status_obj = event.get("status", {})
+            game_situation = GameSituation(
+                possession_team_id=situation_data.get("possession"),
+                down_distance=situation_data.get("shortDownDistanceText"),
+                field_position=situation_data.get("possessionText"),
+                is_red_zone=bool(situation_data.get("isRedZone")),
+                clock=status_obj.get("displayClock"),
+                period=status_obj.get("period"),
+            )
 
         last_update = status_info.get("detail") or event.get("date")
         try:
@@ -76,6 +89,7 @@ class EspnScoreboardClient:
             status=status,
             last_update=parsed_last_update,
             red_zone=red_zone,
+            situation=game_situation,
         )
 
     @staticmethod

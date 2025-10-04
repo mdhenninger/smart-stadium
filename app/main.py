@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from datetime import datetime, timezone
 
-from app.api import celebrations, devices, games, history, status, teams
+from app.api.routes import celebrations, devices, games, history, monitoring, status, teams
 from app.config.settings import Settings, load_settings
 from app.core.config_manager import ConfigManager
 from app.core.container import ServiceContainer, build_container
@@ -48,6 +48,13 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     )
 
     await state.container.history_store.initialize()
+    await state.container.monitoring_store.initialize()
+    logger.info("Monitoring store initialized")
+    
+    # Perform initial device status check
+    await state.container.device_manager.refresh_status()
+    logger.info("Initial device status check completed")
+    
     await state.container.monitoring.start_all()
     logger.info("Monitoring services started")
 
@@ -101,6 +108,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(games.router)
     app.include_router(history.router)
     app.include_router(teams.router)
+    app.include_router(monitoring.router)
 
     @app.websocket("/api/ws")
     async def websocket_endpoint(websocket: WebSocket):

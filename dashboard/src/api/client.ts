@@ -114,3 +114,61 @@ export const fetchTeams = async (sport?: string) => {
   }
   return payload.data.teams;
 };
+
+// ---- Monitoring ----
+
+export interface MonitoredGame {
+  game_id: string;
+  sport: SportCode;
+  home_team_abbr: string;
+  away_team_abbr: string;
+  monitored_teams: string[];
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MonitoringRequest {
+  game_id: string;
+  sport: SportCode;
+  home_team_abbr: string;
+  away_team_abbr: string;
+  monitored_teams: string[];
+}
+
+export const fetchMonitoredGames = async (): Promise<MonitoredGame[]> => {
+  const payload = await request<ApiResponse<{ monitored_games: MonitoredGame[]; count: number }>>(
+    '/api/monitoring/',
+  );
+  if (!payload.data) {
+    throw new Error('Monitoring response missing data');
+  }
+  return payload.data.monitored_games;
+};
+
+export const addMonitoring = async (monitoringRequest: MonitoringRequest): Promise<MonitoredGame> => {
+  const payload = await request<ApiResponse<MonitoredGame>>('/api/monitoring/', {
+    method: 'POST',
+    body: JSON.stringify(monitoringRequest),
+  });
+  if (!payload.data) {
+    throw new Error('Add monitoring response missing data');
+  }
+  return payload.data;
+};
+
+export const removeMonitoring = async (gameId: string): Promise<void> => {
+  await request<ApiResponse<unknown>>(`/api/monitoring/${gameId}`, {
+    method: 'DELETE',
+  });
+};
+
+export const updateMonitoring = async (gameId: string, monitoringRequest: MonitoringRequest): Promise<MonitoredGame> => {
+  const payload = await request<ApiResponse<MonitoredGame>>(`/api/monitoring/${gameId}`, {
+    method: 'PUT',
+    body: JSON.stringify(monitoringRequest),
+  });
+  if (!payload.data) {
+    throw new Error('Update monitoring response missing data');
+  }
+  return payload.data;
+};
