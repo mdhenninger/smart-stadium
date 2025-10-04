@@ -79,55 +79,170 @@ class LightsService:
         """Helper to run a method on all available controllers."""
         tasks = []
         if self._wiz_controller and hasattr(self._wiz_controller, method_name):
-            tasks.append(getattr(self._wiz_controller, method_name)(*args, **kwargs))
+            tasks.append(("wiz", getattr(self._wiz_controller, method_name)(*args, **kwargs)))
         if self._govee_controller and hasattr(self._govee_controller, method_name):
-            tasks.append(getattr(self._govee_controller, method_name)(*args, **kwargs))
+            tasks.append(("govee", getattr(self._govee_controller, method_name)(*args, **kwargs)))
         
         if tasks:
-            await asyncio.gather(*tasks, return_exceptions=True)
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in {method_name}: {result}")
 
     async def celebrate_touchdown(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
-        await self._run_on_all("touchdown_celebration")
+        # WiZ uses celebrate_touchdown, Govee uses touchdown_celebration
+        # For Govee, we need to set team colors first if team_abbr is provided
+        if team_abbr and self._govee_controller and self._wiz_controller:
+            # Get colors from WiZ controller's database
+            primary, secondary = self._wiz_controller.get_team_colors(team_abbr, sport)
+            self._govee_controller.set_team_colors(primary, secondary)
+        
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_touchdown(team_name, team_abbr=team_abbr, sport=sport)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in touchdown: {result}")
 
     async def celebrate_field_goal(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
-        await self._run_on_all("field_goal_celebration")
+        # WiZ uses celebrate_field_goal, Govee uses field_goal_celebration
+        # For Govee, we need to set team colors first if team_abbr is provided
+        if team_abbr and self._govee_controller and self._wiz_controller:
+            # Get colors from WiZ controller's database
+            primary, secondary = self._wiz_controller.get_team_colors(team_abbr, sport)
+            self._govee_controller.set_team_colors(primary, secondary)
+        
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_field_goal(team_name, team_abbr=team_abbr, sport=sport)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.field_goal_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in field_goal: {result}")
 
     async def celebrate_extra_point(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
-        # Map to touchdown for now (Govee uses touchdown_celebration)
-        await self._run_on_all("touchdown_celebration")
+        # Both use same celebration as touchdown
+        await self.celebrate_touchdown(team_name, team_abbr=team_abbr, sport=sport)
 
     async def celebrate_two_point(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
-        await self._run_on_all("touchdown_celebration")
+        await self.celebrate_touchdown(team_name, team_abbr=team_abbr, sport=sport)
 
-    async def celebrate_safety(self, team_name: str) -> None:
-        await self._run_on_all("touchdown_celebration")
+    async def celebrate_safety(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
+        # Safety celebration
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_safety(team_name)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in safety: {result}")
 
     async def celebrate_turnover(self, team_name: str, turnover_type: str) -> None:
-        await self._run_on_all("touchdown_celebration")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_turnover(team_name, turnover_type)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in turnover: {result}")
 
     async def celebrate_sack(self, team_name: str) -> None:
-        await self._run_on_all("touchdown_celebration")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_sack(team_name)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in sack: {result}")
 
     async def celebrate_big_play(self, team_name: str, play_description: str) -> None:
-        await self._run_on_all("touchdown_celebration")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_big_play(team_name, play_description)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in big_play: {result}")
 
     async def celebrate_defensive_stop(self, team_name: str) -> None:
-        await self._run_on_all("touchdown_celebration")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_defensive_stop(team_name)))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in defensive_stop: {result}")
 
     async def celebrate_victory(self, team_name: str, final_score: str | None = None) -> None:
-        await self._run_on_all("touchdown_celebration")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.celebrate_victory(team_name, final_score or "")))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.touchdown_celebration()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in victory: {result}")
 
     async def celebrate_score(self, team_name: str, points: int, team_abbr: str | None = None, sport: str | None = None) -> None:
         if points >= 6:
-            await self._run_on_all("touchdown_celebration")
+            await self.celebrate_touchdown(team_name, team_abbr=team_abbr, sport=sport)
         else:
-            await self._run_on_all("field_goal_celebration")
+            await self.celebrate_field_goal(team_name, team_abbr=team_abbr, sport=sport)
 
     async def start_red_zone(self, team_abbr: str, sport: str | None = None) -> None:
+        tasks = []
         if self._wiz_controller:
-            await self._wiz_controller.start_red_zone_ambient(team_abbr, sport=sport)
+            tasks.append(("wiz", self._wiz_controller.start_red_zone_ambient(team_abbr, sport=sport)))
         if self._govee_controller:
-            await self._govee_controller.start_red_zone_ambient(team_abbr, sport=sport)
+            tasks.append(("govee", self._govee_controller.start_red_zone_ambient(team_abbr, sport=sport)))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in start_red_zone: {result}")
 
     async def stop_red_zone(self) -> None:
-        await self._run_on_all("stop_red_zone_ambient")
+        tasks = []
+        if self._wiz_controller:
+            tasks.append(("wiz", self._wiz_controller.stop_red_zone_ambient()))
+        if self._govee_controller:
+            tasks.append(("govee", self._govee_controller.stop_red_zone_ambient()))
+        
+        if tasks:
+            results = await asyncio.gather(*[task[1] for task in tasks], return_exceptions=True)
+            for (controller_name, _), result in zip(tasks, results):
+                if isinstance(result, Exception):
+                    logger.error(f"{controller_name} controller error in stop_red_zone: {result}")

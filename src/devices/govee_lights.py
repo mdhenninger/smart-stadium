@@ -157,6 +157,9 @@ class GoveeLightController:
         }
         temp_result = await self._send_to_all(temp_command)
         
+        # Add delay to respect Govee API rate limits
+        await asyncio.sleep(0.3)
+        
         # Set brightness
         await self.set_brightness(brightness)
         
@@ -231,8 +234,14 @@ class GoveeStadiumLights:
     async def set_default_lighting(self) -> bool:
         """Set default warm white lighting."""
         logger.info("Govee: Setting default warm white (2700K @ 180)")
-        await self.controller.turn_on()
-        return await self.controller.set_warm_white(2700, 180)
+        try:
+            # Just set color temp - Govee will handle turning on automatically
+            result = await self.controller.set_warm_white(2700, 180)
+            logger.info(f"Govee: Default lighting {'set successfully' if result else 'failed'}")
+            return result
+        except Exception as e:
+            logger.error(f"Govee: Error setting default lighting: {e}")
+            return False
     
     async def test_connectivity(self) -> bool:
         """Test connection to Govee devices."""
@@ -246,35 +255,43 @@ class GoveeStadiumLights:
     async def touchdown_celebration(self) -> bool:
         """
         Execute touchdown celebration sequence.
-        Matches SmartStadiumLights pattern.
+        Adjusted for Govee API rate limits (WiZ does 30 flashes, Govee does 10).
         """
         logger.info("Govee: 🏈 TOUCHDOWN CELEBRATION!")
         
         primary = self.current_primary_color
         secondary = self.current_secondary_color
         
-        # Rapid alternating flashes (8 times, 0.25s each)
-        for i in range(8):
+        # 10 alternating flashes (WiZ does 30, but Govee API needs slower pace)
+        # 0.6s per flash = ~6 seconds total (WiZ takes ~12 seconds)
+        for i in range(10):
             color = primary if i % 2 == 0 else secondary
             await self.controller.set_color(*color, brightness=255)
-            await asyncio.sleep(0.25)
+            await asyncio.sleep(0.6)
         
-        # Return to default
+        # Delay before returning to default
+        logger.info("Govee: Returning to warm white...")
+        await asyncio.sleep(0.8)
         await self.set_default_lighting()
         return True
     
     async def field_goal_celebration(self) -> bool:
-        """Field goal celebration - 4 quick flashes."""
+        """Field goal celebration - 5 flashes to match WiZ timing."""
         logger.info("Govee: ⚡ Field Goal!")
         
         primary = self.current_primary_color
+        secondary = self.current_secondary_color
         
-        for _ in range(4):
-            await self.controller.set_color(*primary, brightness=255)
-            await asyncio.sleep(0.2)
-            await self.controller.set_color(0, 0, 0, brightness=50)
-            await asyncio.sleep(0.2)
+        # 5 alternating flashes (WiZ does 10, but Govee API is slower)
+        # Govee needs ~0.5s between commands minimum for API rate limits
+        for i in range(5):
+            color = primary if i % 2 == 0 else secondary
+            await self.controller.set_color(*color, brightness=255)
+            await asyncio.sleep(0.8)  # 0.8s per flash = ~4 seconds total
         
+        # Delay before returning to default (Govee API rate limit)
+        logger.info("Govee: Returning to warm white...")
+        await asyncio.sleep(0.8)
         await self.set_default_lighting()
         return True
     
