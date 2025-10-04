@@ -6,7 +6,7 @@
       "model": "H6009",
       "name": "Stadium Light 4",
       "location": "Zone 4",
-      "enabled": true
+      "enabled": false
     }
   ]
 }

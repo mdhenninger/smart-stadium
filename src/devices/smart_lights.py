@@ -155,23 +155,20 @@ class SmartStadiumLights:
     
     async def celebrate_touchdown(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         print(f"[DEBUG] celebrate_touchdown called for {team_name} ({team_abbr}, {sport})")
-        """Epic 30-second touchdown celebration"""
+        """Epic 12-second touchdown celebration"""
         print(f"\n🏈 {team_name} TOUCHDOWN! 🏈")
-        print("🎉 30-second epic celebration starting...")
+        print("🎉 12-second epic celebration starting...")
         start_time = time.time()
         
         # Get sport-specific colors if team_abbr provided
         primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
         
-        # Epic celebration sequence - 5 cycles of 6 flashes each
-        flash_count = 0
-        for cycle in range(5):
-            for i in range(6):
-                flash_count += 1
-                color = primary if i % 2 == 0 else secondary
-                color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
-                print(f"   Epic Flash {flash_count}/30: {color_name}")
-                await self.flash_color(color, 0.4)
+        # Epic celebration sequence - 30 alternating flashes @ 0.4s each = 12 seconds total
+        for i in range(30):
+            color = primary if i % 2 == 0 else secondary
+            color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
+            print(f"   Epic Flash {i+1}/30: {color_name}")
+            await self.flash_color(color, 0.4)
         
         elapsed = time.time() - start_time
         print(f"🏈 Touchdown celebration complete! ({elapsed:.1f}s)")
@@ -179,15 +176,15 @@ class SmartStadiumLights:
 
     async def celebrate_field_goal(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         print(f"[DEBUG] celebrate_field_goal called for {team_name} ({team_abbr}, {sport})")
-        """10-second field goal celebration"""
+        """5-second field goal celebration"""
         print(f"\n🥅 {team_name} FIELD GOAL! 🥅")
-        print("⚡ 10-second celebration starting...")
+        print("⚡ 5-second celebration starting...")
         start_time = time.time()
         
         # Get sport-specific colors if team_abbr provided
         primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
         
-        # 10 alternating flashes
+        # 10 alternating flashes @ 0.5s each = 5 seconds total
         for i in range(10):
             color = primary if i % 2 == 0 else secondary
             color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
