@@ -49,81 +49,124 @@ Transform your smart lights into the ultimate football experience! This system a
 
 ## 🚀 Quick Start
 
-### **🎯 Easy Web Dashboard (Recommended)**
+### **Prerequisites**
 ```bash
-# Start the complete system
-cd api
-python start_server.py
+# Install Python dependencies
+pip install -r requirements.txt
 
-# Access dashboard at http://localhost:8000
-# Interactive control with live game selection
+# Install frontend dependencies (for dashboard)
+cd dashboard
+npm install
+cd ..
 ```
 
-### **🤖 Command Line Monitoring**
+### **🎯 Start the System (2 Steps)**
+
+**Step 1: Start Backend (Terminal 1)**
 ```bash
-# NFL Multi-Game Monitoring
-python dynamic_nfl_monitor.py
+python start.py
+# Or: python -m app
+```
 
-# College Football Monitoring  
-cd College/src
-python college_game_monitor.py
+**Step 2: Start Dashboard (Terminal 2)**
+```bash
+cd dashboard
+npm run dev
+```
 
-# Bills-Only Classic Mode
-python bills_launcher.py
+**Access:**
+- 🌐 Dashboard: http://localhost:5173
+- 📡 API: http://localhost:8000
+- 📚 API Docs: http://localhost:8000/docs
+
+### **💡 Development Tips**
+```bash
+# Auto-reload backend on code changes
+python start.py --reload
+
+# Custom port
+python start.py --port 8080
+
+# Allow external connections
+python start.py --host 0.0.0.0
+
+# Help
+python start.py --help
 ```
 
 ### **🎮 Manual Testing**
 ```bash
-# Test all celebrations
-cd src
-python bills_celebrations.py
-# Select option 12 for full celebration sequence
+# Test celebration via API
+curl -X POST http://localhost:8000/api/celebrations/trigger \
+  -H "Content-Type: application/json" \
+  -d '{"team_abbr":"BUF","team_name":"Buffalo Bills","event_type":"touchdown"}'
 
-# Test college team colors
-cd College/src  
-python college_celebrations.py
+# Test device connectivity
+curl http://localhost:8000/api/devices/
+
+# View all API endpoints
+open http://localhost:8000/docs
 ```
+
+### **📱 Dashboard Features**
+- **Live Games**: Real-time scores and game status
+- **Device Control**: Toggle lights, run tests
+- **Manual Celebrations**: Trigger any celebration type
+- **Celebration History**: View past 20 celebrations
+- **WebSocket Updates**: Real-time event notifications
 
 ## 📁 Project Structure
 
 ```
-Smart_Stadium/
-├── 📁 api/                    # 🚀 FastAPI Backend Server
-│   ├── main.py               # 🌟 FastAPI application entry
-│   ├── start_server.py       # 🚀 Production server launcher
-│   ├── models.py             # 📋 Pydantic data models
-│   ├── websocket_manager.py  # 🔌 Real-time WebSocket management
-│   ├── espn_service.py       # 📊 ESPN API integration service
-│   └── routers/              # 📡 API endpoint organization
-│       ├── celebrations.py   # 🎉 Celebration control endpoints
-│       ├── devices.py        # 💡 Device management endpoints
-│       ├── teams.py          # 🏈 Team data endpoints
-│       └── games.py          # 🎮 Game data endpoints
-├── 📁 frontend/              # ⚛️ React TypeScript Dashboard
-│   ├── package.json         # 📦 Dependencies & scripts
-│   ├── vite.config.ts       # ⚡ Optimized build configuration
-│   ├── tsconfig.json        # 🔧 TypeScript configuration
-│   ├── src/                 # 🎨 React components & logic
-│   │   ├── App.tsx          # 📱 Main application component
-│   │   ├── components/      # 🧩 Reusable UI components
-│   │   ├── services/        # 🔌 API & WebSocket services
-│   │   └── types/           # 📋 TypeScript type definitions
-│   └── dist/                # 🏗️ Production build output
-├── 📁 src/                   # 🦬 Bills Classic System
-│   ├── bills_celebrations.py       # 🎮 Bills light control
-│   ├── bills_score_monitor.py      # 🤖 Bills game monitoring
-│   ├── dynamic_nfl_monitor.py      # 🏈 Multi-game NFL monitoring
-│   └── enhanced_nfl_monitor.py     # ⚡ Advanced monitoring
-├── 📁 College/               # 🎓 College Football System
-│   ├── src/
-│   │   ├── college_celebrations.py # 🎮 College light control
-│   │   └── college_game_monitor.py # 🤖 College game monitoring
-│   └── requirements.txt     # College-specific dependencies
-├── 📁 config/               # ⚙️ Configuration files
-│   └── wiz_lights_config.json # 💡 Light IP addresses (auto-generated)
-├── bills_launcher.py        # 🚀 Classic Bills launcher
-├── requirements.txt         # 📦 Python dependencies
-└── LICENSE                 # 📄 MIT License
+smart-stadium/
+├── 📁 app/                      # 🚀 Modern FastAPI Backend
+│   ├── main.py                  # 🌟 FastAPI factory entry point
+│   ├── __main__.py              # � Package entry (python -m app)
+│   ├── dependencies.py          # � Dependency injection
+│   ├── api/routes/              # 📡 REST API endpoints
+│   │   ├── celebrations.py      # 🎉 Celebration triggers
+│   │   ├── devices.py           # 💡 Device management
+│   │   ├── games.py             # � Live game data
+│   │   ├── history.py           # 📜 Event history
+│   │   ├── status.py            # 📊 System status
+│   │   └── teams.py             # 🏈 Team information
+│   ├── core/                    # 🧠 Business logic core
+│   │   ├── container.py         # 📦 Service DI container
+│   │   ├── config_manager.py    # ⚙️ Configuration management
+│   │   └── device_manager.py    # 🎮 Device orchestration
+│   ├── models/                  # 📋 Pydantic data models
+│   ├── services/                # 🔧 Business services
+│   │   ├── lights_service.py    # 💡 Light control service
+│   │   ├── scoreboard_service.py # 📊 ESPN integration
+│   │   └── game_monitor_service.py # 🤖 Game monitoring
+│   ├── websocket/               # 🔌 Real-time updates
+│   │   └── manager.py           # WebSocket connection manager
+│   └── utils/                   # 🛠️ Utilities
+├── 📁 dashboard/                # ⚛️ React TypeScript Frontend
+│   ├── src/                     # 🎨 React components
+│   │   ├── api/client.ts        # � API client
+│   │   ├── hooks/               # � Custom React hooks
+│   │   ├── components/          # 🧩 UI components
+│   │   └── types.ts             # 📋 TypeScript definitions
+│   ├── vite.config.ts           # ⚡ Vite configuration
+│   └── package.json             # 📦 npm dependencies
+├── 📁 src/                      # 🔧 Shared modules
+│   ├── devices/                 # 💡 Hardware controllers
+│   │   └── smart_lights.py      # 🌈 WiZ light bridge (ACTIVE)
+│   ├── sports/                  # 🏈 Sport-specific logic
+│   └── core/                    # 🧠 Core utilities
+├── 📁 config/                   # ⚙️ Configuration
+│   ├── team_colors.json         # 🎨 Team color database
+│   ├── stadium_config.json      # ⚙️ Stadium settings
+│   └── celebrations.json        # � Celebration configs
+├── 📁 archive/                  # 📦 Legacy code (reference only)
+│   ├── legacy_backend/          # Old API implementation
+│   └── legacy_scripts/          # Old CLI tools
+├── 📁 College/                  # 🎓 College Football (separate)
+├── 📁 tests/                    # 🧪 Unit tests
+├── start.py                     # 🚀 Main launcher
+├── requirements.txt             # 📦 Python dependencies
+└── README.md                    # � This file
 ```
 
 ## 🏈 Team Support
@@ -193,22 +236,21 @@ Popular teams with authentic colors:
 
 ## 🎯 Usage Examples
 
-### **🏟️ Multi-Game NFL Dashboard**
-1. Start backend: `cd api && python start_server.py`
-2. Access dashboard: `http://localhost:8000`
-3. Select sport: NFL or College Football
-4. Choose games: Bills auto-added, select additional games
-5. Pick teams: Monitor home, away, or both teams per game
-6. Live monitoring: Real-time celebrations with team colors
+### **🏟️ Using the Dashboard**
+1. **Start Backend**: `python start.py` (Terminal 1)
+2. **Start Dashboard**: `cd dashboard && npm run dev` (Terminal 2)
+3. **Access**: Open `http://localhost:5173` in browser
+4. **Select Sport**: Choose NFL or College Football
+5. **Pick Games**: Select which games to monitor
+6. **Choose Teams**: Monitor home, away, or both teams
+7. **Watch**: Automatic celebrations with authentic team colors
 
-### **🎓 College Football Monitoring**
+### **🎓 College Football (Separate System)**
+The College Football module has its own implementation:
 ```bash
-cd College/src
-python college_game_monitor.py
-# 1. Discover live college games
-# 2. Select games to monitor
-# 3. Choose teams (home/away/both)
-# 4. Enjoy authentic college celebrations
+cd College
+python main.py
+# See College/README.md for full documentation
 ```
 
 ### **⚡ Advanced Play Detection**
@@ -271,19 +313,22 @@ python -c "from src.bills_celebrations import setup_lights; setup_lights()"
 
 ## 🧪 Testing & Development
 
-### **🎮 Complete System Testing**
+### **🎮 System Testing**
 ```bash
-# Test dashboard with backend
-cd api && python start_server.py
-# Visit http://localhost:8000 for full testing
+# Run unit tests
+pytest tests/
 
-# Test light connectivity
-cd src && python bills_celebrations.py
-# Option 13: Test all lights
+# Test API endpoints
+curl http://localhost:8000/api/status/
+curl http://localhost:8000/api/devices/
 
-# Test celebration sequence
-cd src && python bills_celebrations.py  
-# Option 12: Run all celebration types
+# Test celebration trigger
+curl -X POST http://localhost:8000/api/celebrations/trigger \
+  -H "Content-Type: application/json" \
+  -d '{"team_abbr":"BUF","team_name":"Buffalo Bills","event_type":"touchdown"}'
+
+# View API documentation
+open http://localhost:8000/docs
 ```
 
 ### **🛠️ Development Environment**
