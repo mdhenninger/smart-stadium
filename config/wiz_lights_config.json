@@ -2,22 +2,22 @@
   "devices": [
     {
       "ip": "192.168.86.41",
-      "name": "Living Room Light",
-      "location": "Living Room",
+      "name": "Stadium Light 1",
+      "location": "Zone 1",
       "enabled": true
     },
     {
       "ip": "192.168.86.47", 
-      "name": "Kitchen Light",
-      "location": "Kitchen",
+      "name": "Stadium Light 2",
+      "location": "Zone 2",
       "enabled": true
     },
     {
       "ip": "192.168.86.48",
-      "name": "Bedroom Light", 
-      "location": "Bedroom",
+      "name": "Stadium Light 3", 
+      "location": "Zone 3",
       "enabled": true
     }
   ],
-  "last_updated": "2025-10-02 18:30:00"
+  "last_updated": "2025-10-04 16:25:00"
 }

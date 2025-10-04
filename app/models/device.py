@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 
 class DeviceType(str, Enum):
     WIZ = "wiz"
+    GOVEE = "govee"
 
 
 class DeviceStatus(str, Enum):

@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from typing import Dict, Iterable
 
 from app.core.config_manager import AppConfig
-from app.models.device import DeviceInfo, DeviceStatus, DeviceSummary
+from app.models.device import DeviceInfo, DeviceStatus, DeviceSummary, DeviceType
 from app.services.history_store import HistoryStore
 from app.services.lights_service import LightsService
 from app.utils.logging import get_logger
@@ -26,6 +26,7 @@ class DeviceManager:
         self._load_from_config()
 
     def _load_from_config(self) -> None:
+        # Load WiZ devices
         wiz_devices = self._config.wiz_config.get("devices", [])
         for entry in wiz_devices:
             ip = entry.get("ip")
@@ -38,6 +39,25 @@ class DeviceManager:
                 name=entry.get("name", device_id),
                 location=entry.get("location"),
                 enabled=bool(entry.get("enabled", True)),
+                device_type=DeviceType.WIZ,
+            )
+            self._devices[device_id] = device
+        
+        # Load Govee devices
+        govee_devices = self._config.govee_config.get("devices", [])
+        for entry in govee_devices:
+            device_id_mac = entry.get("device_id")
+            if not device_id_mac:
+                continue
+            # Use last 8 chars of MAC for shorter device_id
+            device_id = f"govee_{device_id_mac[-8:].replace(':', '_')}"
+            device = DeviceInfo(
+                device_id=device_id,
+                ip_address="cloud",  # Govee uses cloud API, not direct IP
+                name=entry.get("name", device_id),
+                location=entry.get("location"),
+                enabled=bool(entry.get("enabled", True)),
+                device_type=DeviceType.GOVEE,
             )
             self._devices[device_id] = device
 

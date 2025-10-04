@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 
 from app.config.loaders import (
     load_celebrations,
+    load_govee_config,
     load_stadium_config,
     load_team_colors,
     load_teams_database,
@@ -23,6 +24,7 @@ class AppConfig:
     teams_database: Dict[str, Any]
     celebrations: Dict[str, Any]
     wiz_config: Dict[str, Any]
+    govee_config: Dict[str, Any]
     light_ips: List[str]
 
     @property
@@ -62,6 +64,11 @@ class ConfigManager:
         except ConfigLoadError:
             wiz_config = {"devices": []}
 
+        try:
+            govee_config = load_govee_config(self._settings)
+        except ConfigLoadError:
+            govee_config = {"api_key": "", "devices": []}
+
         light_ips = self._settings.get_light_ips()
         if light_ips is None:
             light_ips = _extract_light_ips(stadium, wiz_config)
@@ -72,6 +79,7 @@ class ConfigManager:
             teams_database=teams_database,
             celebrations=celebrations,
             wiz_config=wiz_config,
+            govee_config=govee_config,
             light_ips=light_ips,
         )
         return self._config

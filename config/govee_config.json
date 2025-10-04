@@ -1,0 +1,12 @@
+{
+  "api_key": "f1454325-8c4e-456a-9f36-1954a45c762c",
+  "devices": [
+    {
+      "device_id": "F3:1C:D0:C9:07:DE:C6:14",
+      "model": "H6009",
+      "name": "Stadium Light 4",
+      "location": "Zone 4",
+      "enabled": true
+    }
+  ]
+}

@@ -8,6 +8,7 @@ from typing import Any, Dict
 
 from .settings import Settings
 
+__all__ = ["load_govee_config"]
 
 class ConfigLoadError(RuntimeError):
     """Raised when configuration files cannot be loaded or parsed."""
@@ -45,6 +46,12 @@ def load_wiz_config(settings: Settings) -> Dict[str, Any]:
     """Load WiZ light configuration file."""
 
     return _read_json(settings.config_dir / "wiz_lights_config.json")
+
+
+def load_govee_config(settings: Settings) -> Dict[str, Any]:
+    """Load Govee light configuration file."""
+
+    return _read_json(settings.config_dir / "govee_config.json")
 
 
 def load_teams_database(settings: Settings) -> Dict[str, Any]:

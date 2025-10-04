@@ -77,7 +77,7 @@ def _initialize_team_colors(lights_service: LightsService, teams_database: Dict[
 
 def build_container(config_manager: ConfigManager, websocket_manager: WebSocketManager) -> ServiceContainer:
     config = config_manager.get_config()
-    lights_service = LightsService(config.light_ips)
+    lights_service = LightsService(config.light_ips, govee_config=config.govee_config)
     
     # Load all team colors into lights service from teams database
     _initialize_team_colors(lights_service, config.teams_database)
