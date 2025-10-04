@@ -139,35 +139,42 @@ class SportMonitor:
         
         self._last_status[game.game_id] = game.status
 
-        # Red zone detection - only trigger on state transitions and for monitored games
+        # Red zone detection - check if team is currently in monitored red zone
         current_red_zone = game.red_zone.active and game.red_zone.team_abbr
-        previous_red_zone = self._last_red_zone_state.get(game.game_id, False)
+        previous_red_zone_active = self._last_red_zone_state.get(game.game_id, False)
         
-        if current_red_zone and not previous_red_zone:
-            # Entering red zone - check if team is monitored
+        if current_red_zone:
+            # Team is in red zone - check if monitored
             is_monitored = await self._monitoring_store.is_team_monitored(game.game_id, game.red_zone.team_abbr)
-            if is_monitored:
-                # Map sport enum to simple identifier for color lookup
+            
+            if is_monitored and not previous_red_zone_active:
+                # Entering red zone OR newly monitoring a game already in red zone
                 sport_id = "nfl" if self._config.sport.value == "nfl" else "cfb"
                 await self._lights.start_red_zone(game.red_zone.team_abbr, sport=sport_id)
                 logger.info(
-                    "Red zone detected for monitored game %s: %s at %s",
+                    "Red zone activated for monitored game %s: %s at %s",
                     game.game_id,
                     game.red_zone.team_abbr,
                     game.red_zone.yard_line,
                 )
-            else:
+                self._last_red_zone_state[game.game_id] = True
+            elif not is_monitored and previous_red_zone_active:
+                # Was monitored but now unmonitored - stop lighting
+                await self._lights.stop_red_zone()
+                logger.info("Red zone deactivated - team %s no longer monitored", game.red_zone.team_abbr)
+                self._last_red_zone_state[game.game_id] = False
+            elif not is_monitored:
+                # In red zone but not monitored - just log at debug level
                 logger.debug(
                     "Red zone detected but team not monitored: %s at %s",
                     game.red_zone.team_abbr,
                     game.red_zone.yard_line,
                 )
-            self._last_red_zone_state[game.game_id] = True
-        elif not current_red_zone and previous_red_zone:
-            # Exiting red zone
+        elif previous_red_zone_active:
+            # Exiting red zone (was active, now not in red zone)
             await self._lights.stop_red_zone()
+            logger.info("Red zone cleared for game %s", game.game_id)
             self._last_red_zone_state[game.game_id] = False
-        # Otherwise, no change - don't do anything
 
     async def _handle_score_event(self, game: GameSnapshot, team_abbr: str, delta: int) -> None:
         # Check if this team is being monitored

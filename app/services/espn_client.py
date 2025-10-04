@@ -56,9 +56,20 @@ class EspnScoreboardClient:
         status = self._map_status(status_info.get("state") or status_info.get("name"))
 
         situation_data = competition.get("situation", {}) or {}
+        
+        # Determine which team has possession for red zone
+        possession_team_abbr = None
+        if situation_data.get("possession"):
+            possession_team_id = situation_data.get("possession")
+            # Match possession team ID to home or away team
+            if home_comp.get("team", {}).get("id") == possession_team_id:
+                possession_team_abbr = home_team.abbreviation
+            elif away_comp.get("team", {}).get("id") == possession_team_id:
+                possession_team_abbr = away_team.abbreviation
+        
         red_zone = RedZoneInfo(
             active=bool(situation_data.get("isRedZone")),
-            team_abbr=situation_data.get("possessionText"),
+            team_abbr=possession_team_abbr,
             yard_line=situation_data.get("yardLine"),
         )
 
