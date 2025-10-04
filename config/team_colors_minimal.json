@@ -1,0 +1,44 @@
+{
+  "nfl_teams": {
+    "AFC_East": {
+      "BUF": {
+        "name": "Buffalo Bills",
+        "primary_color": [0, 51, 141],
+        "secondary_color": [198, 12, 48],
+        "colors_description": "Blue & Red"
+      },
+      "MIA": {
+        "name": "Miami Dolphins", 
+        "primary_color": [0, 142, 204],
+        "secondary_color": [252, 76, 2],
+        "colors_description": "Aqua & Orange"
+      },
+      "NE": {
+        "name": "New England Patriots",
+        "primary_color": [0, 34, 68],
+        "secondary_color": [198, 12, 48],
+        "colors_description": "Navy & Red"
+      },
+      "NYJ": {
+        "name": "New York Jets",
+        "primary_color": [18, 87, 64],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Green & White"
+      }
+    }
+  },
+  "college_teams": {
+    "ACC": {
+      "SYR": {
+        "name": "Syracuse Orange",
+        "abbreviation": "SYR",
+        "primary_color": [255, 101, 0],
+        "secondary_color": [0, 14, 84],
+        "colors_description": "Orange & Navy"
+      }
+    }
+  },
+  "other_sports": {
+    "note": "NBA, NHL, MLB team colors will be added here as needed"
+  }
+}

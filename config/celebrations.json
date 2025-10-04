@@ -1,26 +1,61 @@
 {
   "touchdown": {
-    "duration": 10,
+    "duration": 30,
     "pattern": "pulse_team_colors",
     "intensity": "high"
   },
   "field_goal": {
-    "duration": 5,
+    "duration": 10,
     "pattern": "flash_team_colors",
     "intensity": "medium"
+  },
+  "extra_point": {
+    "duration": 5,
+    "pattern": "quick_flash",
+    "intensity": "medium"
+  },
+  "two_point_conversion": {
+    "duration": 5,
+    "pattern": "split_primary_secondary",
+    "intensity": "high"
+  },
+  "safety": {
+    "duration": 6,
+    "pattern": "defense_wave",
+    "intensity": "high"
+  },
+  "turnover": {
+    "duration": 8,
+    "pattern": "strobe_team_colors",
+    "intensity": "high"
+  },
+  "sack": {
+    "duration": 4,
+    "pattern": "rapid_flash",
+    "intensity": "high"
+  },
+  "big_play": {
+    "duration": 8,
+    "pattern": "alternating",
+    "intensity": "medium"
+  },
+  "defensive_stop": {
+    "duration": 4,
+    "pattern": "secondary_pulse",
+    "intensity": "medium"
+  },
+  "score": {
+    "duration": 12,
+    "pattern": "alternating",
+    "intensity": "high"
   },
   "red_zone": {
     "style": "solid_team_color",
     "brightness": 150
   },
   "victory": {
-    "duration": 30,
+    "duration": 60,
     "pattern": "celebration_wave",
     "intensity": "maximum"
-  },
-  "turnover": {
-    "duration": 8,
-    "pattern": "strobe_team_colors",
-    "intensity": "high"
   }
 }

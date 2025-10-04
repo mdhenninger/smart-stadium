@@ -20,6 +20,7 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from devices.smart_lights import SmartStadiumLights
 from sports.nfl_monitor import NFLMonitor
+from sports.college_monitor import CollegeFootballMonitor
 from core.config_manager import ConfigManager
 
 class SmartStadiumController:
@@ -86,10 +87,18 @@ class SmartStadiumController:
         monitoring_config = self.config.get('monitoring', {})
         sports_enabled = monitoring_config.get('sports_enabled', {})
         
+        self.logger.info(f"🔍 Sports config: {sports_enabled}")
+        self.logger.info(f"🔍 Lights controller available: {self.lights_controller is not None}")
+        
         # Initialize NFL monitor
         if sports_enabled.get('nfl', False) and self.lights_controller:
             self.sport_monitors['nfl'] = NFLMonitor(self.lights_controller)
             self.logger.info("🏈 NFL monitor initialized")
+        
+        # Initialize College Football monitor
+        if sports_enabled.get('college_football', False) and self.lights_controller:
+            self.sport_monitors['college_football'] = CollegeFootballMonitor(self.lights_controller)
+            self.logger.info("🏈 College Football monitor initialized")
         
         # Future: Add other sports monitors here
         # if sports_enabled.get('nba', False):

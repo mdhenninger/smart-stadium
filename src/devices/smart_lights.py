@@ -20,6 +20,7 @@ class SmartStadiumLights:
     def __init__(self, light_ips: List[str]):
         self.lights = [wizlight(ip) for ip in light_ips]
         self.light_ips = light_ips
+        # Store colors by sport+team: {"nfl:BUF": {...}, "cfb:BUF": {...}}
         self.team_colors: Dict[str, Dict[str, Tuple[int, int, int]]] = {}
         
         # Current active team colors
@@ -37,15 +38,25 @@ class SmartStadiumLights:
         self.default_color_temp = 2700  # Warm white
     
     def set_team_colors(self, team_abbr: str, primary_color: Tuple[int, int, int], 
-                       secondary_color: Tuple[int, int, int]) -> None:
-        """Set team colors for celebrations"""
-        # Only log if this is a new team or the colors changed
-        is_new_team = team_abbr not in self.team_colors
-        colors_changed = (not is_new_team and 
-                         (self.team_colors[team_abbr]['primary'] != primary_color or
-                          self.team_colors[team_abbr]['secondary'] != secondary_color))
+                       secondary_color: Tuple[int, int, int], sport: Optional[str] = None) -> None:
+        """Set team colors for celebrations. 
         
-        self.team_colors[team_abbr] = {
+        Args:
+            team_abbr: Team abbreviation (e.g., "BUF")
+            primary_color: Primary RGB color tuple
+            secondary_color: Secondary RGB color tuple
+            sport: Optional sport identifier (e.g., "nfl", "cfb") to disambiguate teams with same abbreviation
+        """
+        # Create unique key: "sport:ABBR" or just "ABBR" if no sport
+        key = f"{sport}:{team_abbr}" if sport else team_abbr
+        
+        # Only log if this is a new team or the colors changed
+        is_new_team = key not in self.team_colors
+        colors_changed = (not is_new_team and 
+                         (self.team_colors[key]['primary'] != primary_color or
+                          self.team_colors[key]['secondary'] != secondary_color))
+        
+        self.team_colors[key] = {
             'primary': primary_color,
             'secondary': secondary_color
         }
@@ -56,12 +67,30 @@ class SmartStadiumLights:
         
         # Only log when colors are actually new or changed
         if is_new_team or colors_changed:
-            print(f"🎨 Set {team_abbr} colors: {primary_color} / {secondary_color}")
+            sport_prefix = f"[{sport.upper()}] " if sport else ""
+            print(f"🎨 Set {sport_prefix}{team_abbr} colors: {primary_color} / {secondary_color}")
     
-    def get_team_colors(self, team_abbr: str) -> Tuple[Tuple[int, int, int], Tuple[int, int, int]]:
-        """Get team colors or return current defaults"""
-        if team_abbr in self.team_colors:
-            return self.team_colors[team_abbr]['primary'], self.team_colors[team_abbr]['secondary']
+    def get_team_colors(self, team_abbr: str, sport: Optional[str] = None) -> Tuple[Tuple[int, int, int], Tuple[int, int, int]]:
+        """Get team colors or return current defaults. Prefers lighting-optimized colors for bulb control.
+        
+        Args:
+            team_abbr: Team abbreviation (e.g., "BUF")
+            sport: Optional sport identifier to disambiguate (e.g., "nfl", "cfb")
+        """
+        # Try sport-specific lookup first, then fallback to generic
+        keys_to_try = []
+        if sport:
+            keys_to_try.append(f"{sport}:{team_abbr}")
+        keys_to_try.append(team_abbr)
+        
+        for key in keys_to_try:
+            if key in self.team_colors:
+                colors = self.team_colors[key]
+                # Prefer lighting-optimized colors (pure/bright colors) for bulb visibility
+                primary = colors.get('lighting_primary', colors['primary'])
+                secondary = colors.get('lighting_secondary', colors['secondary'])
+                return primary, secondary
+        
         return self.current_primary_color, self.current_secondary_color
     
     async def test_connectivity(self) -> bool:
@@ -116,18 +145,21 @@ class SmartStadiumLights:
 
     # CELEBRATION METHODS
     
-    async def celebrate_touchdown(self, team_name: str = "TEAM") -> None:
+    async def celebrate_touchdown(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         """Epic 30-second touchdown celebration"""
         print(f"\n🏈 {team_name} TOUCHDOWN! 🏈")
         print("🎉 30-second epic celebration starting...")
         start_time = time.time()
+        
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
         
         # Epic celebration sequence - 5 cycles of 6 flashes each
         flash_count = 0
         for cycle in range(5):
             for i in range(6):
                 flash_count += 1
-                color = self.current_primary_color if i % 2 == 0 else self.current_secondary_color
+                color = primary if i % 2 == 0 else secondary
                 color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
                 print(f"   Epic Flash {flash_count}/30: {color_name}")
                 await self.flash_color(color, 0.4)
@@ -136,15 +168,18 @@ class SmartStadiumLights:
         print(f"🏈 Touchdown celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_field_goal(self, team_name: str = "TEAM") -> None:
+    async def celebrate_field_goal(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         """10-second field goal celebration"""
         print(f"\n🥅 {team_name} FIELD GOAL! 🥅")
         print("⚡ 10-second celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # 10 alternating flashes
         for i in range(10):
-            color = self.current_primary_color if i % 2 == 0 else self.current_secondary_color
+            color = primary if i % 2 == 0 else secondary
             color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
             print(f"   Field Goal Flash {i+1}/10: {color_name}")
             await self.flash_color(color, 0.5)
@@ -153,15 +188,18 @@ class SmartStadiumLights:
         print(f"🥅 Field goal celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_extra_point(self, team_name: str = "TEAM") -> None:
+    async def celebrate_extra_point(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         """Quick 5-second extra point celebration"""
         print(f"\n✅ {team_name} EXTRA POINT! ✅")
         print("⚡ 5-second quick celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # 5 quick alternating flashes
         for i in range(5):
-            color = self.current_primary_color if i % 2 == 0 else self.current_secondary_color
+            color = primary if i % 2 == 0 else secondary
             color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
             print(f"   Extra Point Flash {i+1}/5: {color_name}")
             await self.flash_color(color, 0.5)
@@ -170,20 +208,23 @@ class SmartStadiumLights:
         print(f"✅ Extra point celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_two_point(self, team_name: str = "TEAM") -> None:
+    async def celebrate_two_point(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         """Special 5-second two-point conversion celebration"""
         print(f"\n💪 {team_name} 2-POINT CONVERSION! 💪")
         print("💥 Special 2-point celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # Unique pattern for 2-point conversions
         for i in range(8):
             if i < 4:
                 # First 4 flashes: primary color
-                await self.flash_color(self.current_primary_color, 0.3)
+                await self.flash_color(primary, 0.3)
             else:
                 # Last 4 flashes: secondary color
-                await self.flash_color(self.current_secondary_color, 0.3)
+                await self.flash_color(secondary, 0.3)
         
         elapsed = time.time() - start_time
         print(f"💪 2-point conversion celebration complete! ({elapsed:.1f}s)")
@@ -281,6 +322,36 @@ class SmartStadiumLights:
         
         elapsed = time.time() - start_time
         print(f"🏆 VICTORY CELEBRATION COMPLETE! ({elapsed:.1f}s)")
+        await self.set_default_lighting()
+
+    async def celebrate_score(self, team_name: str = "TEAM", points: int = 3, team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
+        """Generic celebration for any score amount"""
+        print(f"\n🎯 {team_name.upper()} SCORES {points} POINTS! 🎯")
+        
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
+        # Determine celebration length based on points
+        if points >= 6:
+            flash_count = 15  # Longer for touchdowns
+            duration = 0.4
+        elif points >= 3:
+            flash_count = 8   # Medium for field goals
+            duration = 0.5
+        else:
+            flash_count = 5   # Short for smaller scores
+            duration = 0.6
+            
+        print(f"🎉 {flash_count * duration:.1f}-second celebration starting...")
+        start_time = time.time()
+        
+        for i in range(flash_count):
+            color = primary if i % 2 == 0 else secondary
+            color_name = "PRIMARY" if i % 2 == 0 else "SECONDARY"
+            print(f"   Score Flash {i+1}/{flash_count}: {color_name}")
+            await self.flash_color(color, duration)
+        
+        elapsed = time.time() - start_time
+        print(f"🎯 {points}-point celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
     # RED ZONE AMBIENT LIGHTING

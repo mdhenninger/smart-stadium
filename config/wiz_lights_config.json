@@ -1,0 +1,23 @@
+{
+  "devices": [
+    {
+      "ip": "192.168.86.41",
+      "name": "Living Room Light",
+      "location": "Living Room",
+      "enabled": true
+    },
+    {
+      "ip": "192.168.86.47", 
+      "name": "Kitchen Light",
+      "location": "Kitchen",
+      "enabled": true
+    },
+    {
+      "ip": "192.168.86.48",
+      "name": "Bedroom Light", 
+      "location": "Bedroom",
+      "enabled": true
+    }
+  ],
+  "last_updated": "2025-10-02 18:30:00"
+}

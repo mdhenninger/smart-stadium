@@ -1,0 +1,77 @@
+# Smart Stadium .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# React/Node.js Frontend
+frontend/smart-stadium-dashboard/node_modules/
+frontend/smart-stadium-dashboard/build/
+frontend/smart-stadium-dashboard/dist/
+frontend/smart-stadium-dashboard/.env.local
+frontend/smart-stadium-dashboard/.env.development.local
+frontend/smart-stadium-dashboard/.env.test.local
+frontend/smart-stadium-dashboard/.env.production.local
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Production builds
+/api/build/
+/frontend/build/

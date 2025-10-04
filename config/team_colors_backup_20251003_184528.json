@@ -1,0 +1,355 @@
+{
+  "nfl_teams": {
+    "AFC_East": {
+      "BUF": {
+        "name": "Buffalo Bills",
+        "primary_color": [0, 51, 141],
+        "secondary_color": [198, 12, 48],
+        "colors_description": "Blue & Red"
+      },
+      "MIA": {
+        "name": "Miami Dolphins", 
+        "primary_color": [0, 142, 204],
+        "secondary_color": [252, 76, 2],
+        "colors_description": "Aqua & Orange"
+      },
+      "NE": {
+        "name": "New England Patriots",
+        "primary_color": [0, 34, 68],
+        "secondary_color": [198, 12, 48],
+        "colors_description": "Navy & Red"
+      },
+      "NYJ": {
+        "name": "New York Jets",
+        "primary_color": [18, 87, 64],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Green & White"
+      }
+    },
+    "AFC_North": {
+      "BAL": {
+        "name": "Baltimore Ravens",
+        "primary_color": [26, 25, 95],
+        "secondary_color": [158, 124, 12],
+        "colors_description": "Purple & Gold"
+      },
+      "CIN": {
+        "name": "Cincinnati Bengals",
+        "primary_color": [251, 79, 20],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Orange & Black"
+      },
+      "CLE": {
+        "name": "Cleveland Browns",
+        "primary_color": [49, 29, 0],
+        "secondary_color": [255, 60, 0],
+        "colors_description": "Brown & Orange"
+      },
+      "PIT": {
+        "name": "Pittsburgh Steelers",
+        "primary_color": [255, 182, 18],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Gold & Black"
+      }
+    },
+    "AFC_South": {
+      "HOU": {
+        "name": "Houston Texans",
+        "primary_color": [3, 32, 47],
+        "secondary_color": [167, 25, 48],
+        "colors_description": "Navy & Red"
+      },
+      "IND": {
+        "name": "Indianapolis Colts",
+        "primary_color": [0, 44, 95],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Blue & White"
+      },
+      "JAX": {
+        "name": "Jacksonville Jaguars",
+        "primary_color": [0, 103, 120],
+        "secondary_color": [215, 162, 42],
+        "colors_description": "Teal & Gold"
+      },
+      "TEN": {
+        "name": "Tennessee Titans",
+        "primary_color": [12, 35, 64],
+        "secondary_color": [75, 146, 219],
+        "colors_description": "Navy & Light Blue"
+      }
+    },
+    "AFC_West": {
+      "DEN": {
+        "name": "Denver Broncos",
+        "primary_color": [251, 79, 20],
+        "secondary_color": [0, 34, 68],
+        "colors_description": "Orange & Navy"
+      },
+      "KC": {
+        "name": "Kansas City Chiefs",
+        "primary_color": [227, 24, 55],
+        "secondary_color": [255, 184, 28],
+        "colors_description": "Red & Gold"
+      },
+      "LV": {
+        "name": "Las Vegas Raiders",
+        "primary_color": [165, 172, 175],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Silver & Black"
+      },
+      "LAC": {
+        "name": "Los Angeles Chargers",
+        "primary_color": [0, 128, 198],
+        "secondary_color": [255, 194, 14],
+        "colors_description": "Blue & Gold"
+      }
+    },
+    "NFC_East": {
+      "DAL": {
+        "name": "Dallas Cowboys",
+        "primary_color": [0, 34, 68],
+        "secondary_color": [134, 147, 151],
+        "colors_description": "Navy & Silver"
+      },
+      "NYG": {
+        "name": "New York Giants",
+        "primary_color": [1, 35, 82],
+        "secondary_color": [163, 13, 45],
+        "colors_description": "Blue & Red"
+      },
+      "PHI": {
+        "name": "Philadelphia Eagles",
+        "primary_color": [0, 76, 84],
+        "secondary_color": [165, 172, 175],
+        "colors_description": "Green & Silver"
+      },
+      "WAS": {
+        "name": "Washington Commanders",
+        "primary_color": [90, 20, 20],
+        "secondary_color": [255, 182, 18],
+        "colors_description": "Burgundy & Gold"
+      }
+    },
+    "NFC_North": {
+      "CHI": {
+        "name": "Chicago Bears",
+        "primary_color": [11, 22, 42],
+        "secondary_color": [200, 56, 3],
+        "colors_description": "Navy & Orange"
+      },
+      "DET": {
+        "name": "Detroit Lions",
+        "primary_color": [0, 118, 182],
+        "secondary_color": [165, 172, 175],
+        "colors_description": "Blue & Silver"
+      },
+      "GB": {
+        "name": "Green Bay Packers",
+        "primary_color": [24, 48, 40],
+        "secondary_color": [255, 184, 28],
+        "colors_description": "Green & Gold"
+      },
+      "MIN": {
+        "name": "Minnesota Vikings",
+        "primary_color": [79, 38, 131],
+        "secondary_color": [255, 198, 47],
+        "colors_description": "Purple & Gold"
+      }
+    },
+    "NFC_South": {
+      "ATL": {
+        "name": "Atlanta Falcons",
+        "primary_color": [167, 25, 48],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Red & Black"
+      },
+      "CAR": {
+        "name": "Carolina Panthers",
+        "primary_color": [0, 133, 202],
+        "secondary_color": [165, 172, 175],
+        "colors_description": "Blue & Silver"
+      },
+      "NO": {
+        "name": "New Orleans Saints",
+        "primary_color": [211, 188, 141],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Gold & Black"
+      },
+      "TB": {
+        "name": "Tampa Bay Buccaneers",
+        "primary_color": [213, 10, 10],
+        "secondary_color": [52, 48, 43],
+        "colors_description": "Red & Pewter"
+      }
+    },
+    "NFC_West": {
+      "ARI": {
+        "name": "Arizona Cardinals",
+        "primary_color": [151, 35, 63],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Red & White"
+      },
+      "LAR": {
+        "name": "Los Angeles Rams",
+        "primary_color": [0, 53, 148],
+        "secondary_color": [255, 209, 0],
+        "colors_description": "Blue & Gold"
+      },
+      "SF": {
+        "name": "San Francisco 49ers",
+        "primary_color": [170, 0, 0],
+        "secondary_color": [173, 153, 93],
+        "colors_description": "Red & Gold"
+      },
+      "SEA": {
+        "name": "Seattle Seahawks",
+        "primary_color": [0, 34, 68],
+        "secondary_color": [105, 190, 40],
+        "colors_description": "Navy & Green"
+      }
+    }
+  },
+  "college_teams": {
+    "SEC": {
+      "Alabama": {
+        "name": "Alabama Crimson Tide",
+        "primary_color": [158, 27, 50],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Crimson & White"
+      },
+      "Georgia": {
+        "name": "Georgia Bulldogs",
+        "primary_color": [186, 12, 47],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Red & Black"
+      },
+      "Florida": {
+        "name": "Florida Gators",
+        "primary_color": [0, 33, 165],
+        "secondary_color": [255, 103, 0],
+        "colors_description": "Blue & Orange"
+      },
+      "LSU": {
+        "name": "LSU Tigers",
+        "primary_color": [70, 29, 124],
+        "secondary_color": [253, 208, 35],
+        "colors_description": "Purple & Gold"
+      },
+      "Auburn": {
+        "name": "Auburn Tigers",
+        "primary_color": [12, 35, 64],
+        "secondary_color": [232, 119, 34],
+        "colors_description": "Navy & Orange"
+      },
+      "Tennessee": {
+        "name": "Tennessee Volunteers",
+        "primary_color": [255, 130, 0],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Orange & White"
+      },
+      "Kentucky": {
+        "name": "Kentucky Wildcats",
+        "primary_color": [0, 51, 160],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Blue & White"
+      },
+      "Arkansas": {
+        "name": "Arkansas Razorbacks",
+        "primary_color": [157, 34, 53],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Red & White"
+      },
+      "Mississippi": {
+        "name": "Ole Miss Rebels",
+        "primary_color": [20, 35, 75],
+        "secondary_color": [206, 17, 65],
+        "colors_description": "Navy & Red"
+      },
+      "South Carolina": {
+        "name": "South Carolina Gamecocks",
+        "primary_color": [115, 0, 10],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Garnet & White"
+      }
+    },
+    "Big_Ten": {
+      "Ohio State": {
+        "name": "Ohio State Buckeyes",
+        "primary_color": [187, 0, 0],
+        "secondary_color": [102, 102, 102],
+        "colors_description": "Scarlet & Gray"
+      },
+      "Michigan": {
+        "name": "Michigan Wolverines",
+        "primary_color": [0, 39, 76],
+        "secondary_color": [255, 203, 5],
+        "colors_description": "Blue & Maize"
+      },
+      "Penn State": {
+        "name": "Penn State Nittany Lions",
+        "primary_color": [4, 30, 66],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Navy & White"
+      },
+      "Wisconsin": {
+        "name": "Wisconsin Badgers",
+        "primary_color": [197, 5, 12],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Red & White"
+      }
+    },
+    "Big_12": {
+      "Texas": {
+        "name": "Texas Longhorns",
+        "primary_color": [191, 87, 0],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Burnt Orange & White"
+      },
+      "Oklahoma": {
+        "name": "Oklahoma Sooners",
+        "primary_color": [153, 27, 30],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Crimson & Cream"
+      }
+    },
+    "Pac_12": {
+      "USC": {
+        "name": "USC Trojans",
+        "primary_color": [153, 27, 30],
+        "secondary_color": [255, 204, 0],
+        "colors_description": "Cardinal & Gold"
+      },
+      "Oregon": {
+        "name": "Oregon Ducks",
+        "primary_color": [0, 71, 49],
+        "secondary_color": [254, 225, 35],
+        "colors_description": "Green & Yellow"
+      }
+    },
+    "ACC": {
+      "Clemson": {
+        "name": "Clemson Tigers",
+        "primary_color": [245, 102, 0],
+        "secondary_color": [82, 45, 128],
+        "colors_description": "Orange & Purple"
+      },
+      "Miami": {
+        "name": "Miami Hurricanes",
+        "primary_color": [240, 81, 35],
+        "secondary_color": [0, 71, 27],
+        "colors_description": "Orange & Green"
+      }
+    },
+    "Independent": {
+      "Notre Dame": {
+        "name": "Notre Dame Fighting Irish",
+        "primary_color": [0, 51, 102],
+        "secondary_color": [201, 151, 0],
+        "colors_description": "Navy & Gold"
+      }
+    }
+  },
+  "other_sports": {
+    "note": "NBA, NHL, MLB team colors will be added here as needed"
+  }
+}

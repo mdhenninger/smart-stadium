@@ -1,0 +1,43 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #dae2f8;
+  background-color: #050b1e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #050b1e;
+  --panel: #0f172a;
+  --panel-border: rgba(148, 163, 184, 0.1);
+  --primary: #38bdf8;
+  --primary-hover: #0ea5e9;
+  --text-muted: #94a3b8;
+  --success: #22c55e;
+  --warning: #facc15;
+  --error: #f87171;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%), var(--bg);
+  color: inherit;
+}
+
+a {
+  color: var(--primary);
+}
+
+button {
+  font: inherit;
+}

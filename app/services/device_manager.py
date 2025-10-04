@@ -1,0 +1,91 @@
+"""Device management service for Smart Stadium."""
+
+from __future__ import annotations
+
+import asyncio
+from datetime import datetime, timezone
+from typing import Dict, Iterable
+
+from app.core.config_manager import AppConfig
+from app.models.device import DeviceInfo, DeviceStatus, DeviceSummary
+from app.services.history_store import HistoryStore
+from app.services.lights_service import LightsService
+from app.utils.logging import get_logger
+
+logger = get_logger(__name__)
+
+
+class DeviceManager:
+    """Tracks configured devices and provides control hooks."""
+
+    def __init__(self, config: AppConfig, lights_service: LightsService, history_store: HistoryStore):
+        self._config = config
+        self._lights = lights_service
+        self._history = history_store
+        self._devices: Dict[str, DeviceInfo] = {}
+        self._load_from_config()
+
+    def _load_from_config(self) -> None:
+        wiz_devices = self._config.wiz_config.get("devices", [])
+        for entry in wiz_devices:
+            ip = entry.get("ip")
+            if not ip:
+                continue
+            device_id = f"wiz_{ip.replace('.', '_')}"
+            device = DeviceInfo(
+                device_id=device_id,
+                ip_address=ip,
+                name=entry.get("name", device_id),
+                location=entry.get("location"),
+                enabled=bool(entry.get("enabled", True)),
+            )
+            self._devices[device_id] = device
+
+    def list_devices(self) -> Iterable[DeviceInfo]:
+        return self._devices.values()
+
+    def get_device(self, device_id: str) -> DeviceInfo | None:
+        return self._devices.get(device_id)
+
+    def summary(self) -> DeviceSummary:
+        total = len(self._devices)
+        enabled_devices = sum(1 for d in self._devices.values() if d.enabled)
+        online_devices = sum(1 for d in self._devices.values() if d.status == DeviceStatus.ONLINE)
+        offline_devices = sum(1 for d in self._devices.values() if d.status == DeviceStatus.OFFLINE)
+        return DeviceSummary(
+            total_devices=total,
+            enabled_devices=enabled_devices,
+            online_devices=online_devices,
+            offline_devices=offline_devices,
+        )
+
+    async def refresh_status(self) -> None:
+        """Ping lights and update cached metadata."""
+
+        logger.debug("Refreshing device status for %s devices", len(self._devices))
+        start = datetime.now(timezone.utc)
+        success = await self._lights.test_connectivity()
+        status = DeviceStatus.ONLINE if success else DeviceStatus.OFFLINE
+        for device in self._devices.values():
+            device.status = status
+            device.last_seen = start if success else device.last_seen
+            await self._history.record_device_event(device.device_id, device.status.value)
+
+    async def set_default_lighting(self) -> None:
+        await self._lights.set_default_lighting()
+
+    async def disable_device(self, device_id: str) -> bool:
+        device = self._devices.get(device_id)
+        if not device:
+            return False
+        device.enabled = False
+        device.status = DeviceStatus.OFFLINE
+        return True
+
+    async def enable_device(self, device_id: str) -> bool:
+        device = self._devices.get(device_id)
+        if not device:
+            return False
+        device.enabled = True
+        # we don't immediately mark online until next refresh
+        return True

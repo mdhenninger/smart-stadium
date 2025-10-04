@@ -1,0 +1,7406 @@
+{
+  "metadata": {
+    "generated": "2025-10-01 13:56:20",
+    "total_teams": 324,
+    "sports_count": {
+      "NFL": 32,
+      "CFB": 200,
+      "NHL": 32,
+      "MLB": 30,
+      "NBA": 30
+    }
+  },
+  "teams": {
+    "NFL-ARIZONA-CARDINALS": {
+      "sport": "NFL",
+      "espn_id": "22",
+      "display_name": "Arizona Cardinals",
+      "location": "Arizona",
+      "nickname": "Cardinals",
+      "abbreviation": "ARI",
+      "primary_color": [
+        164,
+        2,
+        39
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "a40227",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+      "unified_key": "NFL-ARIZONA-CARDINALS"
+    },
+    "NFL-ATLANTA-FALCONS": {
+      "sport": "NFL",
+      "espn_id": "1",
+      "display_name": "Atlanta Falcons",
+      "location": "Atlanta",
+      "nickname": "Falcons",
+      "abbreviation": "ATL",
+      "primary_color": [
+        167,
+        25,
+        48
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "a71930",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+      "unified_key": "NFL-ATLANTA-FALCONS"
+    },
+    "NFL-BALTIMORE-RAVENS": {
+      "sport": "NFL",
+      "espn_id": "33",
+      "display_name": "Baltimore Ravens",
+      "location": "Baltimore",
+      "nickname": "Ravens",
+      "abbreviation": "BAL",
+      "primary_color": [
+        41,
+        18,
+        111
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "29126f",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+      "unified_key": "NFL-BALTIMORE-RAVENS"
+    },
+    "NFL-BUFFALO-BILLS": {
+      "sport": "NFL",
+      "espn_id": "2",
+      "display_name": "Buffalo Bills",
+      "location": "Buffalo",
+      "nickname": "Bills",
+      "abbreviation": "BUF",
+      "primary_color": [
+        0,
+        51,
+        141
+      ],
+      "secondary_color": [
+        213,
+        10,
+        10
+      ],
+      "primary_hex": "00338d",
+      "secondary_hex": "d50a0a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+      "unified_key": "NFL-BUFFALO-BILLS"
+    },
+    "NFL-CAROLINA-PANTHERS": {
+      "sport": "NFL",
+      "espn_id": "29",
+      "display_name": "Carolina Panthers",
+      "location": "Carolina",
+      "nickname": "Panthers",
+      "abbreviation": "CAR",
+      "primary_color": [
+        0,
+        133,
+        202
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "0085ca",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
+      "unified_key": "NFL-CAROLINA-PANTHERS"
+    },
+    "NFL-CHICAGO-BEARS": {
+      "sport": "NFL",
+      "espn_id": "3",
+      "display_name": "Chicago Bears",
+      "location": "Chicago",
+      "nickname": "Bears",
+      "abbreviation": "CHI",
+      "primary_color": [
+        11,
+        28,
+        58
+      ],
+      "secondary_color": [
+        230,
+        65,
+        0
+      ],
+      "primary_hex": "0b1c3a",
+      "secondary_hex": "e64100",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+      "unified_key": "NFL-CHICAGO-BEARS"
+    },
+    "NFL-CINCINNATI-BENGALS": {
+      "sport": "NFL",
+      "espn_id": "4",
+      "display_name": "Cincinnati Bengals",
+      "location": "Cincinnati",
+      "nickname": "Bengals",
+      "abbreviation": "CIN",
+      "primary_color": [
+        251,
+        79,
+        20
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "fb4f14",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+      "unified_key": "NFL-CINCINNATI-BENGALS"
+    },
+    "NFL-CLEVELAND-BROWNS": {
+      "sport": "NFL",
+      "espn_id": "5",
+      "display_name": "Cleveland Browns",
+      "location": "Cleveland",
+      "nickname": "Browns",
+      "abbreviation": "CLE",
+      "primary_color": [
+        71,
+        42,
+        8
+      ],
+      "secondary_color": [
+        255,
+        60,
+        0
+      ],
+      "primary_hex": "472a08",
+      "secondary_hex": "ff3c00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+      "unified_key": "NFL-CLEVELAND-BROWNS"
+    },
+    "NFL-DALLAS-COWBOYS": {
+      "sport": "NFL",
+      "espn_id": "6",
+      "display_name": "Dallas Cowboys",
+      "location": "Dallas",
+      "nickname": "Cowboys",
+      "abbreviation": "DAL",
+      "primary_color": [
+        0,
+        42,
+        92
+      ],
+      "secondary_color": [
+        176,
+        183,
+        188
+      ],
+      "primary_hex": "002a5c",
+      "secondary_hex": "b0b7bc",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+      "unified_key": "NFL-DALLAS-COWBOYS"
+    },
+    "NFL-DENVER-BRONCOS": {
+      "sport": "NFL",
+      "espn_id": "7",
+      "display_name": "Denver Broncos",
+      "location": "Denver",
+      "nickname": "Broncos",
+      "abbreviation": "DEN",
+      "primary_color": [
+        10,
+        35,
+        67
+      ],
+      "secondary_color": [
+        252,
+        76,
+        2
+      ],
+      "primary_hex": "0a2343",
+      "secondary_hex": "fc4c02",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+      "unified_key": "NFL-DENVER-BRONCOS"
+    },
+    "NFL-DETROIT-LIONS": {
+      "sport": "NFL",
+      "espn_id": "8",
+      "display_name": "Detroit Lions",
+      "location": "Detroit",
+      "nickname": "Lions",
+      "abbreviation": "DET",
+      "primary_color": [
+        0,
+        118,
+        182
+      ],
+      "secondary_color": [
+        187,
+        187,
+        187
+      ],
+      "primary_hex": "0076b6",
+      "secondary_hex": "bbbbbb",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+      "unified_key": "NFL-DETROIT-LIONS"
+    },
+    "NFL-GREEN_BAY-PACKERS": {
+      "sport": "NFL",
+      "espn_id": "9",
+      "display_name": "Green Bay Packers",
+      "location": "Green Bay",
+      "nickname": "Packers",
+      "abbreviation": "GB",
+      "primary_color": [
+        32,
+        78,
+        50
+      ],
+      "secondary_color": [
+        255,
+        182,
+        18
+      ],
+      "primary_hex": "204e32",
+      "secondary_hex": "ffb612",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+      "unified_key": "NFL-GREEN_BAY-PACKERS"
+    },
+    "NFL-HOUSTON-TEXANS": {
+      "sport": "NFL",
+      "espn_id": "34",
+      "display_name": "Houston Texans",
+      "location": "Houston",
+      "nickname": "Texans",
+      "abbreviation": "HOU",
+      "primary_color": [
+        0,
+        20,
+        63
+      ],
+      "secondary_color": [
+        196,
+        18,
+        48
+      ],
+      "primary_hex": "00143f",
+      "secondary_hex": "c41230",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+      "unified_key": "NFL-HOUSTON-TEXANS"
+    },
+    "NFL-INDIANAPOLIS-COLTS": {
+      "sport": "NFL",
+      "espn_id": "11",
+      "display_name": "Indianapolis Colts",
+      "location": "Indianapolis",
+      "nickname": "Colts",
+      "abbreviation": "IND",
+      "primary_color": [
+        0,
+        59,
+        117
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003b75",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+      "unified_key": "NFL-INDIANAPOLIS-COLTS"
+    },
+    "NFL-JACKSONVILLE-JAGUARS": {
+      "sport": "NFL",
+      "espn_id": "30",
+      "display_name": "Jacksonville Jaguars",
+      "location": "Jacksonville",
+      "nickname": "Jaguars",
+      "abbreviation": "JAX",
+      "primary_color": [
+        0,
+        116,
+        135
+      ],
+      "secondary_color": [
+        215,
+        162,
+        42
+      ],
+      "primary_hex": "007487",
+      "secondary_hex": "d7a22a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+      "unified_key": "NFL-JACKSONVILLE-JAGUARS"
+    },
+    "NFL-KANSAS_CITY-CHIEFS": {
+      "sport": "NFL",
+      "espn_id": "12",
+      "display_name": "Kansas City Chiefs",
+      "location": "Kansas City",
+      "nickname": "Chiefs",
+      "abbreviation": "KC",
+      "primary_color": [
+        227,
+        24,
+        55
+      ],
+      "secondary_color": [
+        255,
+        182,
+        18
+      ],
+      "primary_hex": "e31837",
+      "secondary_hex": "ffb612",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+      "unified_key": "NFL-KANSAS_CITY-CHIEFS"
+    },
+    "NFL-LAS_VEGAS-RAIDERS": {
+      "sport": "NFL",
+      "espn_id": "13",
+      "display_name": "Las Vegas Raiders",
+      "location": "Las Vegas",
+      "nickname": "Raiders",
+      "abbreviation": "LV",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        165,
+        172,
+        175
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "a5acaf",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+      "unified_key": "NFL-LAS_VEGAS-RAIDERS"
+    },
+    "NFL-LOS_ANGELES-CHARGERS": {
+      "sport": "NFL",
+      "espn_id": "24",
+      "display_name": "Los Angeles Chargers",
+      "location": "Los Angeles",
+      "nickname": "Chargers",
+      "abbreviation": "LAC",
+      "primary_color": [
+        0,
+        128,
+        198
+      ],
+      "secondary_color": [
+        255,
+        194,
+        14
+      ],
+      "primary_hex": "0080c6",
+      "secondary_hex": "ffc20e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+      "unified_key": "NFL-LOS_ANGELES-CHARGERS"
+    },
+    "NFL-LOS_ANGELES-RAMS": {
+      "sport": "NFL",
+      "espn_id": "14",
+      "display_name": "Los Angeles Rams",
+      "location": "Los Angeles",
+      "nickname": "Rams",
+      "abbreviation": "LAR",
+      "primary_color": [
+        0,
+        53,
+        148
+      ],
+      "secondary_color": [
+        255,
+        209,
+        0
+      ],
+      "primary_hex": "003594",
+      "secondary_hex": "ffd100",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+      "unified_key": "NFL-LOS_ANGELES-RAMS"
+    },
+    "NFL-MIAMI-DOLPHINS": {
+      "sport": "NFL",
+      "espn_id": "15",
+      "display_name": "Miami Dolphins",
+      "location": "Miami",
+      "nickname": "Dolphins",
+      "abbreviation": "MIA",
+      "primary_color": [
+        0,
+        142,
+        151
+      ],
+      "secondary_color": [
+        252,
+        76,
+        2
+      ],
+      "primary_hex": "008e97",
+      "secondary_hex": "fc4c02",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+      "unified_key": "NFL-MIAMI-DOLPHINS"
+    },
+    "NFL-MINNESOTA-VIKINGS": {
+      "sport": "NFL",
+      "espn_id": "16",
+      "display_name": "Minnesota Vikings",
+      "location": "Minnesota",
+      "nickname": "Vikings",
+      "abbreviation": "MIN",
+      "primary_color": [
+        79,
+        38,
+        131
+      ],
+      "secondary_color": [
+        255,
+        198,
+        47
+      ],
+      "primary_hex": "4f2683",
+      "secondary_hex": "ffc62f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+      "unified_key": "NFL-MINNESOTA-VIKINGS"
+    },
+    "NFL-NEW_ENGLAND-PATRIOTS": {
+      "sport": "NFL",
+      "espn_id": "17",
+      "display_name": "New England Patriots",
+      "location": "New England",
+      "nickname": "Patriots",
+      "abbreviation": "NE",
+      "primary_color": [
+        0,
+        42,
+        92
+      ],
+      "secondary_color": [
+        198,
+        12,
+        48
+      ],
+      "primary_hex": "002a5c",
+      "secondary_hex": "c60c30",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+      "unified_key": "NFL-NEW_ENGLAND-PATRIOTS"
+    },
+    "NFL-NEW_ORLEANS-SAINTS": {
+      "sport": "NFL",
+      "espn_id": "18",
+      "display_name": "New Orleans Saints",
+      "location": "New Orleans",
+      "nickname": "Saints",
+      "abbreviation": "NO",
+      "primary_color": [
+        211,
+        188,
+        141
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "d3bc8d",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+      "unified_key": "NFL-NEW_ORLEANS-SAINTS"
+    },
+    "NFL-NEW_YORK-GIANTS": {
+      "sport": "NFL",
+      "espn_id": "19",
+      "display_name": "New York Giants",
+      "location": "New York",
+      "nickname": "Giants",
+      "abbreviation": "NYG",
+      "primary_color": [
+        0,
+        60,
+        127
+      ],
+      "secondary_color": [
+        201,
+        36,
+        63
+      ],
+      "primary_hex": "003c7f",
+      "secondary_hex": "c9243f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+      "unified_key": "NFL-NEW_YORK-GIANTS"
+    },
+    "NFL-NEW_YORK-JETS": {
+      "sport": "NFL",
+      "espn_id": "20",
+      "display_name": "New York Jets",
+      "location": "New York",
+      "nickname": "Jets",
+      "abbreviation": "NYJ",
+      "primary_color": [
+        17,
+        87,
+        64
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "115740",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+      "unified_key": "NFL-NEW_YORK-JETS"
+    },
+    "NFL-PHILADELPHIA-EAGLES": {
+      "sport": "NFL",
+      "espn_id": "21",
+      "display_name": "Philadelphia Eagles",
+      "location": "Philadelphia",
+      "nickname": "Eagles",
+      "abbreviation": "PHI",
+      "primary_color": [
+        6,
+        66,
+        77
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "06424d",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+      "unified_key": "NFL-PHILADELPHIA-EAGLES"
+    },
+    "NFL-PITTSBURGH-STEELERS": {
+      "sport": "NFL",
+      "espn_id": "23",
+      "display_name": "Pittsburgh Steelers",
+      "location": "Pittsburgh",
+      "nickname": "Steelers",
+      "abbreviation": "PIT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        182,
+        18
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "ffb612",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+      "unified_key": "NFL-PITTSBURGH-STEELERS"
+    },
+    "NFL-SAN_FRANCISCO-49ERS": {
+      "sport": "NFL",
+      "espn_id": "25",
+      "display_name": "San Francisco 49ers",
+      "location": "San Francisco",
+      "nickname": "49ers",
+      "abbreviation": "SF",
+      "primary_color": [
+        170,
+        0,
+        0
+      ],
+      "secondary_color": [
+        179,
+        153,
+        93
+      ],
+      "primary_hex": "aa0000",
+      "secondary_hex": "b3995d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "unified_key": "NFL-SAN_FRANCISCO-49ERS"
+    },
+    "NFL-SEATTLE-SEAHAWKS": {
+      "sport": "NFL",
+      "espn_id": "26",
+      "display_name": "Seattle Seahawks",
+      "location": "Seattle",
+      "nickname": "Seahawks",
+      "abbreviation": "SEA",
+      "primary_color": [
+        0,
+        42,
+        92
+      ],
+      "secondary_color": [
+        105,
+        190,
+        40
+      ],
+      "primary_hex": "002a5c",
+      "secondary_hex": "69be28",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+      "unified_key": "NFL-SEATTLE-SEAHAWKS"
+    },
+    "NFL-TAMPA_BAY-BUCCANEERS": {
+      "sport": "NFL",
+      "espn_id": "27",
+      "display_name": "Tampa Bay Buccaneers",
+      "location": "Tampa Bay",
+      "nickname": "Buccaneers",
+      "abbreviation": "TB",
+      "primary_color": [
+        189,
+        28,
+        54
+      ],
+      "secondary_color": [
+        62,
+        58,
+        53
+      ],
+      "primary_hex": "bd1c36",
+      "secondary_hex": "3e3a35",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+      "unified_key": "NFL-TAMPA_BAY-BUCCANEERS"
+    },
+    "NFL-TENNESSEE-TITANS": {
+      "sport": "NFL",
+      "espn_id": "10",
+      "display_name": "Tennessee Titans",
+      "location": "Tennessee",
+      "nickname": "Titans",
+      "abbreviation": "TEN",
+      "primary_color": [
+        75,
+        146,
+        219
+      ],
+      "secondary_color": [
+        0,
+        42,
+        92
+      ],
+      "primary_hex": "4b92db",
+      "secondary_hex": "002a5c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+      "unified_key": "NFL-TENNESSEE-TITANS"
+    },
+    "NFL-WASHINGTON-COMMANDERS": {
+      "sport": "NFL",
+      "espn_id": "28",
+      "display_name": "Washington Commanders",
+      "location": "Washington",
+      "nickname": "Commanders",
+      "abbreviation": "WSH",
+      "primary_color": [
+        90,
+        20,
+        20
+      ],
+      "secondary_color": [
+        255,
+        182,
+        18
+      ],
+      "primary_hex": "5a1414",
+      "secondary_hex": "ffb612",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+      "unified_key": "NFL-WASHINGTON-COMMANDERS"
+    },
+    "CFB-AMHERST-MAMMOTHS": {
+      "sport": "CFB",
+      "espn_id": "7",
+      "display_name": "Amherst Mammoths",
+      "location": "Amherst",
+      "nickname": "Mammoths",
+      "abbreviation": "AMH",
+      "primary_color": [
+        63,
+        31,
+        105
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "3f1f69",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/7.png",
+      "unified_key": "CFB-AMHERST-MAMMOTHS"
+    },
+    "CFB-ANNA_MARIA_COLLEGE-AMCATS": {
+      "sport": "CFB",
+      "espn_id": "15",
+      "display_name": "Anna Maria College Amcats",
+      "location": "Anna Maria College",
+      "nickname": "Amcats",
+      "abbreviation": "ANN",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/15.png",
+      "unified_key": "CFB-ANNA_MARIA_COLLEGE-AMCATS"
+    },
+    "CFB-ARIZONA_STATE-SUN_DEVILS": {
+      "sport": "CFB",
+      "espn_id": "9",
+      "display_name": "Arizona State Sun Devils",
+      "location": "Arizona State",
+      "nickname": "Sun Devils",
+      "abbreviation": "ASU",
+      "primary_color": [
+        142,
+        12,
+        58
+      ],
+      "secondary_color": [
+        255,
+        199,
+        44
+      ],
+      "primary_hex": "8e0c3a",
+      "secondary_hex": "ffc72c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "unified_key": "CFB-ARIZONA_STATE-SUN_DEVILS"
+    },
+    "CFB-ARIZONA-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "12",
+      "display_name": "Arizona Wildcats",
+      "location": "Arizona",
+      "nickname": "Wildcats",
+      "abbreviation": "ARIZ",
+      "primary_color": [
+        12,
+        35,
+        75
+      ],
+      "secondary_color": [
+        171,
+        5,
+        32
+      ],
+      "primary_hex": "0c234b",
+      "secondary_hex": "ab0520",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+      "unified_key": "CFB-ARIZONA-WILDCATS"
+    },
+    "CFB-ARKANSAS-RAZORBACKS": {
+      "sport": "CFB",
+      "espn_id": "8",
+      "display_name": "Arkansas Razorbacks",
+      "location": "Arkansas",
+      "nickname": "Razorbacks",
+      "abbreviation": "ARK",
+      "primary_color": [
+        164,
+        31,
+        53
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "a41f35",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "unified_key": "CFB-ARKANSAS-RAZORBACKS"
+    },
+    "CFB-AUBURN-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "2",
+      "display_name": "Auburn Tigers",
+      "location": "Auburn",
+      "nickname": "Tigers",
+      "abbreviation": "AUB",
+      "primary_color": [
+        0,
+        43,
+        92
+      ],
+      "secondary_color": [
+        242,
+        101,
+        34
+      ],
+      "primary_hex": "002b5c",
+      "secondary_hex": "f26522",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "unified_key": "CFB-AUBURN-TIGERS"
+    },
+    "CFB-BOISE_STATE-BRONCOS": {
+      "sport": "CFB",
+      "espn_id": "68",
+      "display_name": "Boise State Broncos",
+      "location": "Boise State",
+      "nickname": "Broncos",
+      "abbreviation": "BOIS",
+      "primary_color": [
+        0,
+        51,
+        160
+      ],
+      "secondary_color": [
+        250,
+        70,
+        22
+      ],
+      "primary_hex": "0033a0",
+      "secondary_hex": "fa4616",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+      "unified_key": "CFB-BOISE_STATE-BRONCOS"
+    },
+    "CFB-BRIDGEWATER_STATE-BEARS": {
+      "sport": "CFB",
+      "espn_id": "18",
+      "display_name": "Bridgewater State Bears",
+      "location": "Bridgewater State",
+      "nickname": "Bears",
+      "abbreviation": "BRST",
+      "primary_color": [
+        191,
+        47,
+        56
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "bf2f38",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/18.png",
+      "unified_key": "CFB-BRIDGEWATER_STATE-BEARS"
+    },
+    "CFB-BUENA_VISTA-BEAVERS": {
+      "sport": "CFB",
+      "espn_id": "63",
+      "display_name": "Buena Vista Beavers",
+      "location": "Buena Vista",
+      "nickname": "Beavers",
+      "abbreviation": "BUENA",
+      "primary_color": [
+        254,
+        186,
+        18
+      ],
+      "secondary_color": [
+        0,
+        20,
+        64
+      ],
+      "primary_hex": "feba12",
+      "secondary_hex": "001440",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/63.png",
+      "unified_key": "CFB-BUENA_VISTA-BEAVERS"
+    },
+    "CFB-CAL_POLY-MUSTANGS": {
+      "sport": "CFB",
+      "espn_id": "13",
+      "display_name": "Cal Poly Mustangs",
+      "location": "Cal Poly",
+      "nickname": "Mustangs",
+      "abbreviation": "CP",
+      "primary_color": [
+        30,
+        77,
+        43
+      ],
+      "secondary_color": [
+        238,
+        216,
+        151
+      ],
+      "primary_hex": "1E4D2B",
+      "secondary_hex": "eed897",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+      "unified_key": "CFB-CAL_POLY-MUSTANGS"
+    },
+    "CFB-CALIFORNIA-GOLDEN_BEARS": {
+      "sport": "CFB",
+      "espn_id": "25",
+      "display_name": "California Golden Bears",
+      "location": "California",
+      "nickname": "Golden Bears",
+      "abbreviation": "CAL",
+      "primary_color": [
+        3,
+        21,
+        34
+      ],
+      "secondary_color": [
+        255,
+        196,
+        35
+      ],
+      "primary_hex": "031522",
+      "secondary_hex": "ffc423",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+      "unified_key": "CFB-CALIFORNIA-GOLDEN_BEARS"
+    },
+    "CFB-CARROLL_UNIVERSITY_(WI)-PIONEERS": {
+      "sport": "CFB",
+      "espn_id": "32",
+      "display_name": "Carroll University (WI) Pioneers",
+      "location": "Carroll University (WI)",
+      "nickname": "Pioneers",
+      "abbreviation": "CAR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/32.png",
+      "unified_key": "CFB-CARROLL_UNIVERSITY_(WI)-PIONEERS"
+    },
+    "CFB-CLAREMONT-MUDD-SCRIPPS_COLLEGE-STAGS": {
+      "sport": "CFB",
+      "espn_id": "17",
+      "display_name": "Claremont-Mudd-Scripps College Stags",
+      "location": "Claremont-Mudd-Scripps College",
+      "nickname": "Stags",
+      "abbreviation": "CLA",
+      "primary_color": [
+        152,
+        26,
+        49
+      ],
+      "secondary_color": [
+        254,
+        186,
+        21
+      ],
+      "primary_hex": "981a31",
+      "secondary_hex": "feba15",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/17.png",
+      "unified_key": "CFB-CLAREMONT-MUDD-SCRIPPS_COLLEGE-STAGS"
+    },
+    "CFB-COLBY_COLLEGE-WHITE_MULES": {
+      "sport": "CFB",
+      "espn_id": "33",
+      "display_name": "Colby College White Mules",
+      "location": "Colby College",
+      "nickname": "White Mules",
+      "abbreviation": "COLBY",
+      "primary_color": [
+        1,
+        39,
+        120
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "012778",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/33.png",
+      "unified_key": "CFB-COLBY_COLLEGE-WHITE_MULES"
+    },
+    "CFB-COLORADO-BUFFALOES": {
+      "sport": "CFB",
+      "espn_id": "38",
+      "display_name": "Colorado Buffaloes",
+      "location": "Colorado",
+      "nickname": "Buffaloes",
+      "abbreviation": "COLO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        207,
+        184,
+        124
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "cfb87c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "unified_key": "CFB-COLORADO-BUFFALOES"
+    },
+    "CFB-COLORADO_MESA-MAVERICKS": {
+      "sport": "CFB",
+      "espn_id": "11",
+      "display_name": "Colorado Mesa Mavericks",
+      "location": "Colorado Mesa",
+      "nickname": "Mavericks",
+      "abbreviation": "MESA",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/11.png",
+      "unified_key": "CFB-COLORADO_MESA-MAVERICKS"
+    },
+    "CFB-COLORADO_STATE-RAMS": {
+      "sport": "CFB",
+      "espn_id": "36",
+      "display_name": "Colorado State Rams",
+      "location": "Colorado State",
+      "nickname": "Rams",
+      "abbreviation": "CSU",
+      "primary_color": [
+        30,
+        77,
+        43
+      ],
+      "secondary_color": [
+        200,
+        195,
+        114
+      ],
+      "primary_hex": "1e4d2b",
+      "secondary_hex": "c8c372",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+      "unified_key": "CFB-COLORADO_STATE-RAMS"
+    },
+    "CFB-CURRY_COLLEGE-COLONELS": {
+      "sport": "CFB",
+      "espn_id": "40",
+      "display_name": "Curry College Colonels",
+      "location": "Curry College",
+      "nickname": "Colonels",
+      "abbreviation": "CUR",
+      "primary_color": [
+        101,
+        68,
+        139
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "65448b",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/40.png",
+      "unified_key": "CFB-CURRY_COLLEGE-COLONELS"
+    },
+    "CFB-DELAWARE-BLUE_HENS": {
+      "sport": "CFB",
+      "espn_id": "48",
+      "display_name": "Delaware Blue Hens",
+      "location": "Delaware",
+      "nickname": "Blue Hens",
+      "abbreviation": "DEL",
+      "primary_color": [
+        3,
+        53,
+        148
+      ],
+      "secondary_color": [
+        232,
+        206,
+        49
+      ],
+      "primary_hex": "033594",
+      "secondary_hex": "e8ce31",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+      "unified_key": "CFB-DELAWARE-BLUE_HENS"
+    },
+    "CFB-DUBUQUE-SPARTANS": {
+      "sport": "CFB",
+      "espn_id": "49",
+      "display_name": "Dubuque Spartans",
+      "location": "Dubuque",
+      "nickname": "Spartans",
+      "abbreviation": "DUB",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/49.png",
+      "unified_key": "CFB-DUBUQUE-SPARTANS"
+    },
+    "CFB-ELMHURST-BLUEJAYS": {
+      "sport": "CFB",
+      "espn_id": "72",
+      "display_name": "Elmhurst Bluejays",
+      "location": "Elmhurst",
+      "nickname": "Bluejays",
+      "abbreviation": "ELM",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/72.png",
+      "unified_key": "CFB-ELMHURST-BLUEJAYS"
+    },
+    "CFB-FLORIDA_A&M-RATTLERS": {
+      "sport": "CFB",
+      "espn_id": "50",
+      "display_name": "Florida A&M Rattlers",
+      "location": "Florida A&M",
+      "nickname": "Rattlers",
+      "abbreviation": "FAMU",
+      "primary_color": [
+        248,
+        151,
+        40
+      ],
+      "secondary_color": [
+        0,
+        132,
+        61
+      ],
+      "primary_hex": "F89728",
+      "secondary_hex": "00843d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png",
+      "unified_key": "CFB-FLORIDA_A&M-RATTLERS"
+    },
+    "CFB-FLORIDA-GATORS": {
+      "sport": "CFB",
+      "espn_id": "57",
+      "display_name": "Florida Gators",
+      "location": "Florida",
+      "nickname": "Gators",
+      "abbreviation": "FLA",
+      "primary_color": [
+        0,
+        33,
+        165
+      ],
+      "secondary_color": [
+        250,
+        70,
+        22
+      ],
+      "primary_hex": "0021a5",
+      "secondary_hex": "fa4616",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "unified_key": "CFB-FLORIDA-GATORS"
+    },
+    "CFB-FLORIDA_STATE-SEMINOLES": {
+      "sport": "CFB",
+      "espn_id": "52",
+      "display_name": "Florida State Seminoles",
+      "location": "Florida State",
+      "nickname": "Seminoles",
+      "abbreviation": "FSU",
+      "primary_color": [
+        120,
+        47,
+        64
+      ],
+      "secondary_color": [
+        206,
+        184,
+        136
+      ],
+      "primary_hex": "782f40",
+      "secondary_hex": "ceb888",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "unified_key": "CFB-FLORIDA_STATE-SEMINOLES"
+    },
+    "CFB-GEORGETOWN-HOYAS": {
+      "sport": "CFB",
+      "espn_id": "46",
+      "display_name": "Georgetown Hoyas",
+      "location": "Georgetown",
+      "nickname": "Hoyas",
+      "abbreviation": "GTWN",
+      "primary_color": [
+        17,
+        14,
+        66
+      ],
+      "secondary_color": [
+        0,
+        28,
+        88
+      ],
+      "primary_hex": "110E42",
+      "secondary_hex": "001c58",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
+      "unified_key": "CFB-GEORGETOWN-HOYAS"
+    },
+    "CFB-GEORGIA-BULLDOGS": {
+      "sport": "CFB",
+      "espn_id": "61",
+      "display_name": "Georgia Bulldogs",
+      "location": "Georgia",
+      "nickname": "Bulldogs",
+      "abbreviation": "UGA",
+      "primary_color": [
+        186,
+        12,
+        47
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "ba0c2f",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "unified_key": "CFB-GEORGIA-BULLDOGS"
+    },
+    "CFB-GEORGIA_TECH-YELLOW_JACKETS": {
+      "sport": "CFB",
+      "espn_id": "59",
+      "display_name": "Georgia Tech Yellow Jackets",
+      "location": "Georgia Tech",
+      "nickname": "Yellow Jackets",
+      "abbreviation": "GT",
+      "primary_color": [
+        0,
+        48,
+        87
+      ],
+      "secondary_color": [
+        179,
+        163,
+        105
+      ],
+      "primary_hex": "003057",
+      "secondary_hex": "b3a369",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+      "unified_key": "CFB-GEORGIA_TECH-YELLOW_JACKETS"
+    },
+    "CFB-GRINNELL-PIONEERS": {
+      "sport": "CFB",
+      "espn_id": "65",
+      "display_name": "Grinnell Pioneers",
+      "location": "Grinnell",
+      "nickname": "Pioneers",
+      "abbreviation": "GRI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/65.png",
+      "unified_key": "CFB-GRINNELL-PIONEERS"
+    },
+    "CFB-HAWAI'I-RAINBOW_WARRIORS": {
+      "sport": "CFB",
+      "espn_id": "62",
+      "display_name": "Hawai'i Rainbow Warriors",
+      "location": "Hawai'i",
+      "nickname": "Rainbow Warriors",
+      "abbreviation": "HAW",
+      "primary_color": [
+        0,
+        52,
+        32
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003420",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+      "unified_key": "CFB-HAWAI'I-RAINBOW_WARRIORS"
+    },
+    "CFB-HOWARD-BISON": {
+      "sport": "CFB",
+      "espn_id": "47",
+      "display_name": "Howard Bison",
+      "location": "Howard",
+      "nickname": "Bison",
+      "abbreviation": "HOW",
+      "primary_color": [
+        0,
+        58,
+        99
+      ],
+      "secondary_color": [
+        229,
+        25,
+        55
+      ],
+      "primary_hex": "003a63",
+      "secondary_hex": "e51937",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+      "unified_key": "CFB-HOWARD-BISON"
+    },
+    "CFB-IDAHO-VANDALS": {
+      "sport": "CFB",
+      "espn_id": "70",
+      "display_name": "Idaho Vandals",
+      "location": "Idaho",
+      "nickname": "Vandals",
+      "abbreviation": "IDHO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        140,
+        110,
+        74
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "8c6e4a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+      "unified_key": "CFB-IDAHO-VANDALS"
+    },
+    "CFB-IOWA_STATE-CYCLONES": {
+      "sport": "CFB",
+      "espn_id": "66",
+      "display_name": "Iowa State Cyclones",
+      "location": "Iowa State",
+      "nickname": "Cyclones",
+      "abbreviation": "ISU",
+      "primary_color": [
+        130,
+        36,
+        51
+      ],
+      "secondary_color": [
+        253,
+        202,
+        47
+      ],
+      "primary_hex": "822433",
+      "secondary_hex": "fdca2f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+      "unified_key": "CFB-IOWA_STATE-CYCLONES"
+    },
+    "CFB-JACKSONVILLE_STATE-GAMECOCKS": {
+      "sport": "CFB",
+      "espn_id": "55",
+      "display_name": "Jacksonville State Gamecocks",
+      "location": "Jacksonville State",
+      "nickname": "Gamecocks",
+      "abbreviation": "JXST",
+      "primary_color": [
+        181,
+        5,
+        0
+      ],
+      "secondary_color": [
+        181,
+        183,
+        186
+      ],
+      "primary_hex": "b50500",
+      "secondary_hex": "b5b7ba",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+      "unified_key": "CFB-JACKSONVILLE_STATE-GAMECOCKS"
+    },
+    "CFB-LUTHER-NORSE": {
+      "sport": "CFB",
+      "espn_id": "67",
+      "display_name": "Luther Norse",
+      "location": "Luther",
+      "nickname": "Norse",
+      "abbreviation": "LUT",
+      "primary_color": [
+        1,
+        90,
+        156
+      ],
+      "secondary_color": [
+        165,
+        187,
+        218
+      ],
+      "primary_hex": "015a9c",
+      "secondary_hex": "a5bbda",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/67.png",
+      "unified_key": "CFB-LUTHER-NORSE"
+    },
+    "CFB-MILLIKIN-BIG_BLUE": {
+      "sport": "CFB",
+      "espn_id": "74",
+      "display_name": "Millikin Big Blue",
+      "location": "Millikin",
+      "nickname": "Big Blue",
+      "abbreviation": "MIL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/74.png",
+      "unified_key": "CFB-MILLIKIN-BIG_BLUE"
+    },
+    "CFB-MOREHOUSE_COLLEGE-MAROON_TIGERS": {
+      "sport": "CFB",
+      "espn_id": "60",
+      "display_name": "Morehouse College Maroon Tigers",
+      "location": "Morehouse College",
+      "nickname": "Maroon Tigers",
+      "abbreviation": "MOR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/60.png",
+      "unified_key": "CFB-MOREHOUSE_COLLEGE-MAROON_TIGERS"
+    },
+    "CFB-NORTH_PARK-VIKINGS": {
+      "sport": "CFB",
+      "espn_id": "75",
+      "display_name": "North Park Vikings",
+      "location": "North Park",
+      "nickname": "Vikings",
+      "abbreviation": "NOR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/75.png",
+      "unified_key": "CFB-NORTH_PARK-VIKINGS"
+    },
+    "CFB-REDLANDS-BULLDOGS": {
+      "sport": "CFB",
+      "espn_id": "29",
+      "display_name": "Redlands Bulldogs",
+      "location": "Redlands",
+      "nickname": "Bulldogs",
+      "abbreviation": "RED",
+      "primary_color": [
+        117,
+        23,
+        8
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "751708",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/29.png",
+      "unified_key": "CFB-REDLANDS-BULLDOGS"
+    },
+    "CFB-SACRAMENTO_STATE-HORNETS": {
+      "sport": "CFB",
+      "espn_id": "16",
+      "display_name": "Sacramento State Hornets",
+      "location": "Sacramento State",
+      "nickname": "Hornets",
+      "abbreviation": "SAC",
+      "primary_color": [
+        0,
+        87,
+        60
+      ],
+      "secondary_color": [
+        205,
+        185,
+        125
+      ],
+      "primary_hex": "00573C",
+      "secondary_hex": "cdb97d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+      "unified_key": "CFB-SACRAMENTO_STATE-HORNETS"
+    },
+    "CFB-SAN_DIEGO_STATE-AZTECS": {
+      "sport": "CFB",
+      "espn_id": "21",
+      "display_name": "San Diego State Aztecs",
+      "location": "San Diego State",
+      "nickname": "Aztecs",
+      "abbreviation": "SDSU",
+      "primary_color": [
+        196,
+        18,
+        48
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "c41230",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "unified_key": "CFB-SAN_DIEGO_STATE-AZTECS"
+    },
+    "CFB-SAN_JOSÉ_STATE-SPARTANS": {
+      "sport": "CFB",
+      "espn_id": "23",
+      "display_name": "San José State Spartans",
+      "location": "San José State",
+      "nickname": "Spartans",
+      "abbreviation": "SJSU",
+      "primary_color": [
+        0,
+        88,
+        147
+      ],
+      "secondary_color": [
+        253,
+        186,
+        49
+      ],
+      "primary_hex": "005893",
+      "secondary_hex": "fdba31",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+      "unified_key": "CFB-SAN_JOSÉ_STATE-SPARTANS"
+    },
+    "CFB-SOUTH_ALABAMA-JAGUARS": {
+      "sport": "CFB",
+      "espn_id": "6",
+      "display_name": "South Alabama Jaguars",
+      "location": "South Alabama",
+      "nickname": "Jaguars",
+      "abbreviation": "USA",
+      "primary_color": [
+        0,
+        62,
+        126
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003E7E",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+      "unified_key": "CFB-SOUTH_ALABAMA-JAGUARS"
+    },
+    "CFB-SOUTH_FLORIDA-BULLS": {
+      "sport": "CFB",
+      "espn_id": "58",
+      "display_name": "South Florida Bulls",
+      "location": "South Florida",
+      "nickname": "Bulls",
+      "abbreviation": "USF",
+      "primary_color": [
+        0,
+        74,
+        54
+      ],
+      "secondary_color": [
+        35,
+        31,
+        32
+      ],
+      "primary_hex": "004A36",
+      "secondary_hex": "231f20",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "unified_key": "CFB-SOUTH_FLORIDA-BULLS"
+    },
+    "CFB-STANFORD-CARDINAL": {
+      "sport": "CFB",
+      "espn_id": "24",
+      "display_name": "Stanford Cardinal",
+      "location": "Stanford",
+      "nickname": "Cardinal",
+      "abbreviation": "STAN",
+      "primary_color": [
+        140,
+        21,
+        21
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "8c1515",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "unified_key": "CFB-STANFORD-CARDINAL"
+    },
+    "CFB-STETSON-HATTERS": {
+      "sport": "CFB",
+      "espn_id": "56",
+      "display_name": "Stetson Hatters",
+      "location": "Stetson",
+      "nickname": "Hatters",
+      "abbreviation": "STET",
+      "primary_color": [
+        10,
+        86,
+        64
+      ],
+      "secondary_color": [
+        86,
+        133,
+        78
+      ],
+      "primary_hex": "0a5640",
+      "secondary_hex": "56854e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
+      "unified_key": "CFB-STETSON-HATTERS"
+    },
+    "CFB-UAB-BLAZERS": {
+      "sport": "CFB",
+      "espn_id": "5",
+      "display_name": "UAB Blazers",
+      "location": "UAB",
+      "nickname": "Blazers",
+      "abbreviation": "UAB",
+      "primary_color": [
+        0,
+        59,
+        40
+      ],
+      "secondary_color": [
+        255,
+        200,
+        69
+      ],
+      "primary_hex": "003b28",
+      "secondary_hex": "ffc845",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+      "unified_key": "CFB-UAB-BLAZERS"
+    },
+    "CFB-UCLA-BRUINS": {
+      "sport": "CFB",
+      "espn_id": "26",
+      "display_name": "UCLA Bruins",
+      "location": "UCLA",
+      "nickname": "Bruins",
+      "abbreviation": "UCLA",
+      "primary_color": [
+        39,
+        116,
+        174
+      ],
+      "secondary_color": [
+        242,
+        169,
+        0
+      ],
+      "primary_hex": "2774ae",
+      "secondary_hex": "f2a900",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+      "unified_key": "CFB-UCLA-BRUINS"
+    },
+    "CFB-UCONN-HUSKIES": {
+      "sport": "CFB",
+      "espn_id": "41",
+      "display_name": "UConn Huskies",
+      "location": "UConn",
+      "nickname": "Huskies",
+      "abbreviation": "CONN",
+      "primary_color": [
+        12,
+        35,
+        64
+      ],
+      "secondary_color": [
+        241,
+        242,
+        243
+      ],
+      "primary_hex": "0c2340",
+      "secondary_hex": "f1f2f3",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+      "unified_key": "CFB-UCONN-HUSKIES"
+    },
+    "CFB-USC-TROJANS": {
+      "sport": "CFB",
+      "espn_id": "30",
+      "display_name": "USC Trojans",
+      "location": "USC",
+      "nickname": "Trojans",
+      "abbreviation": "USC",
+      "primary_color": [
+        158,
+        34,
+        55
+      ],
+      "secondary_color": [
+        255,
+        204,
+        0
+      ],
+      "primary_hex": "9e2237",
+      "secondary_hex": "ffcc00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "unified_key": "CFB-USC-TROJANS"
+    },
+    "CFB-YALE-BULLDOGS": {
+      "sport": "CFB",
+      "espn_id": "43",
+      "display_name": "Yale Bulldogs",
+      "location": "Yale",
+      "nickname": "Bulldogs",
+      "abbreviation": "YALE",
+      "primary_color": [
+        0,
+        74,
+        129
+      ],
+      "secondary_color": [
+        40,
+        109,
+        192
+      ],
+      "primary_hex": "004a81",
+      "secondary_hex": "286dc0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png",
+      "unified_key": "CFB-YALE-BULLDOGS"
+    },
+    "CFB-ASHLAND-EAGLES": {
+      "sport": "CFB",
+      "espn_id": "308",
+      "display_name": "Ashland Eagles",
+      "location": "Ashland",
+      "nickname": "Eagles",
+      "abbreviation": "ASH",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/308.png",
+      "unified_key": "CFB-ASHLAND-EAGLES"
+    },
+    "CFB-AUGSBURG-AUGGIES": {
+      "sport": "CFB",
+      "espn_id": "124",
+      "display_name": "Augsburg Auggies",
+      "location": "Augsburg",
+      "nickname": "Auggies",
+      "abbreviation": "AUG",
+      "primary_color": [
+        116,
+        35,
+        61
+      ],
+      "secondary_color": [
+        169,
+        169,
+        170
+      ],
+      "primary_hex": "74233d",
+      "secondary_hex": "a9a9aa",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/124.png",
+      "unified_key": "CFB-AUGSBURG-AUGGIES"
+    },
+    "CFB-BYU-COUGARS": {
+      "sport": "CFB",
+      "espn_id": "252",
+      "display_name": "BYU Cougars",
+      "location": "BYU",
+      "nickname": "Cougars",
+      "abbreviation": "BYU",
+      "primary_color": [
+        0,
+        61,
+        165
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003da5",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+      "unified_key": "CFB-BYU-COUGARS"
+    },
+    "CFB-BALDWIN_WALLACE-YELLOW_JACKETS": {
+      "sport": "CFB",
+      "espn_id": "188",
+      "display_name": "Baldwin Wallace Yellow Jackets",
+      "location": "Baldwin Wallace",
+      "nickname": "Yellow Jackets",
+      "abbreviation": "BAL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/188.png",
+      "unified_key": "CFB-BALDWIN_WALLACE-YELLOW_JACKETS"
+    },
+    "CFB-BATES-BOBCATS": {
+      "sport": "CFB",
+      "espn_id": "121",
+      "display_name": "Bates Bobcats",
+      "location": "Bates",
+      "nickname": "Bobcats",
+      "abbreviation": "BAT",
+      "primary_color": [
+        165,
+        30,
+        54
+      ],
+      "secondary_color": [
+        178,
+        179,
+        178
+      ],
+      "primary_hex": "a51e36",
+      "secondary_hex": "b2b3b2",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/121.png",
+      "unified_key": "CFB-BATES-BOBCATS"
+    },
+    "CFB-BAYLOR-BEARS": {
+      "sport": "CFB",
+      "espn_id": "239",
+      "display_name": "Baylor Bears",
+      "location": "Baylor",
+      "nickname": "Bears",
+      "abbreviation": "BAY",
+      "primary_color": [
+        21,
+        71,
+        52
+      ],
+      "secondary_color": [
+        255,
+        184,
+        28
+      ],
+      "primary_hex": "154734",
+      "secondary_hex": "ffb81c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "unified_key": "CFB-BAYLOR-BEARS"
+    },
+    "CFB-BELOIT-BUCCANEERS": {
+      "sport": "CFB",
+      "espn_id": "266",
+      "display_name": "Beloit Buccaneers",
+      "location": "Beloit",
+      "nickname": "Buccaneers",
+      "abbreviation": "BEL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/266.png",
+      "unified_key": "CFB-BELOIT-BUCCANEERS"
+    },
+    "CFB-BEMIDJI_STATE-BEAVERS": {
+      "sport": "CFB",
+      "espn_id": "132",
+      "display_name": "Bemidji State Beavers",
+      "location": "Bemidji State",
+      "nickname": "Beavers",
+      "abbreviation": "BST",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/132.png",
+      "unified_key": "CFB-BEMIDJI_STATE-BEAVERS"
+    },
+    "CFB-BOSTON_COLLEGE-EAGLES": {
+      "sport": "CFB",
+      "espn_id": "103",
+      "display_name": "Boston College Eagles",
+      "location": "Boston College",
+      "nickname": "Eagles",
+      "abbreviation": "BC",
+      "primary_color": [
+        140,
+        34,
+        50
+      ],
+      "secondary_color": [
+        219,
+        204,
+        166
+      ],
+      "primary_hex": "8c2232",
+      "secondary_hex": "dbcca6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+      "unified_key": "CFB-BOSTON_COLLEGE-EAGLES"
+    },
+    "CFB-BOWLING_GREEN-FALCONS": {
+      "sport": "CFB",
+      "espn_id": "189",
+      "display_name": "Bowling Green Falcons",
+      "location": "Bowling Green",
+      "nickname": "Falcons",
+      "abbreviation": "BGSU",
+      "primary_color": [
+        43,
+        16,
+        0
+      ],
+      "secondary_color": [
+        73,
+        32,
+        0
+      ],
+      "primary_hex": "2b1000",
+      "secondary_hex": "492000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+      "unified_key": "CFB-BOWLING_GREEN-FALCONS"
+    },
+    "CFB-BROWN-BEARS": {
+      "sport": "CFB",
+      "espn_id": "225",
+      "display_name": "Brown Bears",
+      "location": "Brown",
+      "nickname": "Bears",
+      "abbreviation": "BRWN",
+      "primary_color": [
+        65,
+        30,
+        9
+      ],
+      "secondary_color": [
+        148,
+        147,
+        0
+      ],
+      "primary_hex": "411e09",
+      "secondary_hex": "949300",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/225.png",
+      "unified_key": "CFB-BROWN-BEARS"
+    },
+    "CFB-CASTLETON-SPARTANS": {
+      "sport": "CFB",
+      "espn_id": "293",
+      "display_name": "Castleton Spartans",
+      "location": "Castleton",
+      "nickname": "Spartans",
+      "abbreviation": "CAS",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/293.png",
+      "unified_key": "CFB-CASTLETON-SPARTANS"
+    },
+    "CFB-CHATTANOOGA-MOCS": {
+      "sport": "CFB",
+      "espn_id": "236",
+      "display_name": "Chattanooga Mocs",
+      "location": "Chattanooga",
+      "nickname": "Mocs",
+      "abbreviation": "UTC",
+      "primary_color": [
+        0,
+        56,
+        107
+      ],
+      "secondary_color": [
+        220,
+        167,
+        29
+      ],
+      "primary_hex": "00386b",
+      "secondary_hex": "dca71d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+      "unified_key": "CFB-CHATTANOOGA-MOCS"
+    },
+    "CFB-CHICAGO-MAROONS": {
+      "sport": "CFB",
+      "espn_id": "80",
+      "display_name": "Chicago Maroons",
+      "location": "Chicago",
+      "nickname": "Maroons",
+      "abbreviation": "CHI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/80.png",
+      "unified_key": "CFB-CHICAGO-MAROONS"
+    },
+    "CFB-CLEMSON-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "228",
+      "display_name": "Clemson Tigers",
+      "location": "Clemson",
+      "nickname": "Tigers",
+      "abbreviation": "CLEM",
+      "primary_color": [
+        245,
+        102,
+        0
+      ],
+      "secondary_color": [
+        82,
+        45,
+        128
+      ],
+      "primary_hex": "f56600",
+      "secondary_hex": "522d80",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "unified_key": "CFB-CLEMSON-TIGERS"
+    },
+    "CFB-COLUMBIA-LIONS": {
+      "sport": "CFB",
+      "espn_id": "171",
+      "display_name": "Columbia Lions",
+      "location": "Columbia",
+      "nickname": "Lions",
+      "abbreviation": "COLU",
+      "primary_color": [
+        123,
+        164,
+        219
+      ],
+      "secondary_color": [
+        24,
+        56,
+        99
+      ],
+      "primary_hex": "7ba4db",
+      "secondary_hex": "183863",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png",
+      "unified_key": "CFB-COLUMBIA-LIONS"
+    },
+    "CFB-CORNELL-BIG_RED": {
+      "sport": "CFB",
+      "espn_id": "172",
+      "display_name": "Cornell Big Red",
+      "location": "Cornell",
+      "nickname": "Big Red",
+      "abbreviation": "COR",
+      "primary_color": [
+        214,
+        0,
+        39
+      ],
+      "secondary_color": [
+        16,
+        16,
+        16
+      ],
+      "primary_hex": "d60027",
+      "secondary_hex": "101010",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png",
+      "unified_key": "CFB-CORNELL-BIG_RED"
+    },
+    "CFB-DARTMOUTH-BIG_GREEN": {
+      "sport": "CFB",
+      "espn_id": "159",
+      "display_name": "Dartmouth Big Green",
+      "location": "Dartmouth",
+      "nickname": "Big Green",
+      "abbreviation": "DART",
+      "primary_color": [
+        0,
+        87,
+        48
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "005730",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png",
+      "unified_key": "CFB-DARTMOUTH-BIG_GREEN"
+    },
+    "CFB-DEFIANCE_COLLEGE-YELLOW_JACKETS": {
+      "sport": "CFB",
+      "espn_id": "190",
+      "display_name": "Defiance College Yellow Jackets",
+      "location": "Defiance College",
+      "nickname": "Yellow Jackets",
+      "abbreviation": "DEF",
+      "primary_color": [
+        78,
+        45,
+        138
+      ],
+      "secondary_color": [
+        222,
+        210,
+        124
+      ],
+      "primary_hex": "4e2d8a",
+      "secondary_hex": "ded27c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/190.png",
+      "unified_key": "CFB-DEFIANCE_COLLEGE-YELLOW_JACKETS"
+    },
+    "CFB-DEPAUW-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "83",
+      "display_name": "Depauw Tigers",
+      "location": "Depauw",
+      "nickname": "Tigers",
+      "abbreviation": "DEP",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/83.png",
+      "unified_key": "CFB-DEPAUW-TIGERS"
+    },
+    "CFB-DUKE-BLUE_DEVILS": {
+      "sport": "CFB",
+      "espn_id": "150",
+      "display_name": "Duke Blue Devils",
+      "location": "Duke",
+      "nickname": "Blue Devils",
+      "abbreviation": "DUKE",
+      "primary_color": [
+        1,
+        48,
+        136
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "013088",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+      "unified_key": "CFB-DUKE-BLUE_DEVILS"
+    },
+    "CFB-EAST_CAROLINA-PIRATES": {
+      "sport": "CFB",
+      "espn_id": "151",
+      "display_name": "East Carolina Pirates",
+      "location": "East Carolina",
+      "nickname": "Pirates",
+      "abbreviation": "ECU",
+      "primary_color": [
+        75,
+        24,
+        105
+      ],
+      "secondary_color": [
+        240,
+        144,
+        123
+      ],
+      "primary_hex": "4b1869",
+      "secondary_hex": "f0907b",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+      "unified_key": "CFB-EAST_CAROLINA-PIRATES"
+    },
+    "CFB-EUREKA_COLLEGE-RED_DEVILS": {
+      "sport": "CFB",
+      "espn_id": "101",
+      "display_name": "Eureka College Red Devils",
+      "location": "Eureka College",
+      "nickname": "Red Devils",
+      "abbreviation": "EUR",
+      "primary_color": [
+        150,
+        10,
+        44
+      ],
+      "secondary_color": [
+        192,
+        154,
+        5
+      ],
+      "primary_hex": "960a2c",
+      "secondary_hex": "c09a05",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/101.png",
+      "unified_key": "CFB-EUREKA_COLLEGE-RED_DEVILS"
+    },
+    "CFB-FITCHBURG_STATE-FALCONS": {
+      "sport": "CFB",
+      "espn_id": "114",
+      "display_name": "Fitchburg State Falcons",
+      "location": "Fitchburg State",
+      "nickname": "Falcons",
+      "abbreviation": "FITCH",
+      "primary_color": [
+        2,
+        77,
+        54
+      ],
+      "secondary_color": [
+        251,
+        191,
+        22
+      ],
+      "primary_hex": "024d36",
+      "secondary_hex": "fbbf16",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/114.png",
+      "unified_key": "CFB-FITCHBURG_STATE-FALCONS"
+    },
+    "CFB-FRESNO_STATE-BULLDOGS": {
+      "sport": "CFB",
+      "espn_id": "278",
+      "display_name": "Fresno State Bulldogs",
+      "location": "Fresno State",
+      "nickname": "Bulldogs",
+      "abbreviation": "FRES",
+      "primary_color": [
+        196,
+        18,
+        48
+      ],
+      "secondary_color": [
+        19,
+        40,
+        76
+      ],
+      "primary_hex": "c41230",
+      "secondary_hex": "13284c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+      "unified_key": "CFB-FRESNO_STATE-BULLDOGS"
+    },
+    "CFB-FURMAN-PALADINS": {
+      "sport": "CFB",
+      "espn_id": "231",
+      "display_name": "Furman Paladins",
+      "location": "Furman",
+      "nickname": "Paladins",
+      "abbreviation": "FUR",
+      "primary_color": [
+        88,
+        44,
+        131
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "582c83",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+      "unified_key": "CFB-FURMAN-PALADINS"
+    },
+    "CFB-GEORGIA_SOUTHERN-EAGLES": {
+      "sport": "CFB",
+      "espn_id": "290",
+      "display_name": "Georgia Southern Eagles",
+      "location": "Georgia Southern",
+      "nickname": "Eagles",
+      "abbreviation": "GASO",
+      "primary_color": [
+        0,
+        55,
+        117
+      ],
+      "secondary_color": [
+        240,
+        240,
+        240
+      ],
+      "primary_hex": "003775",
+      "secondary_hex": "f0f0f0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+      "unified_key": "CFB-GEORGIA_SOUTHERN-EAGLES"
+    },
+    "CFB-GRAND_VALLEY_STATE_UNIVERSITY-LAKERS": {
+      "sport": "CFB",
+      "espn_id": "125",
+      "display_name": "Grand Valley State University Lakers",
+      "location": "Grand Valley State University",
+      "nickname": "Lakers",
+      "abbreviation": "GVSU",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/125.png",
+      "unified_key": "CFB-GRAND_VALLEY_STATE_UNIVERSITY-LAKERS"
+    },
+    "CFB-GROVE_CITY_COLLEGE-WOLVERINES": {
+      "sport": "CFB",
+      "espn_id": "146",
+      "display_name": "Grove City College Wolverines",
+      "location": "Grove City College",
+      "nickname": "Wolverines",
+      "abbreviation": "GRO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/146.png",
+      "unified_key": "CFB-GROVE_CITY_COLLEGE-WOLVERINES"
+    },
+    "CFB-HAMLINE_UNIVERSITY-PIPERS": {
+      "sport": "CFB",
+      "espn_id": "162",
+      "display_name": "Hamline University Pipers",
+      "location": "Hamline University",
+      "nickname": "Pipers",
+      "abbreviation": "HAM",
+      "primary_color": [
+        152,
+        1,
+        46
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "98012e",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/162.png",
+      "unified_key": "CFB-HAMLINE_UNIVERSITY-PIPERS"
+    },
+    "CFB-HAMPDEN-SYDNEY-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "297",
+      "display_name": "Hampden-Sydney Tigers",
+      "location": "Hampden-Sydney",
+      "nickname": "Tigers",
+      "abbreviation": "HAM",
+      "primary_color": [
+        144,
+        0,
+        40
+      ],
+      "secondary_color": [
+        168,
+        177,
+        183
+      ],
+      "primary_hex": "900028",
+      "secondary_hex": "a8b1b7",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/297.png",
+      "unified_key": "CFB-HAMPDEN-SYDNEY-TIGERS"
+    },
+    "CFB-HARTWICK-HAWKS": {
+      "sport": "CFB",
+      "espn_id": "173",
+      "display_name": "Hartwick Hawks",
+      "location": "Hartwick",
+      "nickname": "Hawks",
+      "abbreviation": "HAR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/173.png",
+      "unified_key": "CFB-HARTWICK-HAWKS"
+    },
+    "CFB-HARVARD-CRIMSON": {
+      "sport": "CFB",
+      "espn_id": "108",
+      "display_name": "Harvard Crimson",
+      "location": "Harvard",
+      "nickname": "Crimson",
+      "abbreviation": "HARV",
+      "primary_color": [
+        153,
+        0,
+        0
+      ],
+      "secondary_color": [
+        219,
+        219,
+        219
+      ],
+      "primary_hex": "990000",
+      "secondary_hex": "dbdbdb",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png",
+      "unified_key": "CFB-HARVARD-CRIMSON"
+    },
+    "CFB-HEIDELBERG-STUDENT_PRINCES": {
+      "sport": "CFB",
+      "espn_id": "191",
+      "display_name": "Heidelberg Student Princes",
+      "location": "Heidelberg",
+      "nickname": "Student Princes",
+      "abbreviation": "HEI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/191.png",
+      "unified_key": "CFB-HEIDELBERG-STUDENT_PRINCES"
+    },
+    "CFB-HOBART_COLLEGE-STATESMEN": {
+      "sport": "CFB",
+      "espn_id": "174",
+      "display_name": "Hobart College Statesmen",
+      "location": "Hobart College",
+      "nickname": "Statesmen",
+      "abbreviation": "HBRT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/174.png",
+      "unified_key": "CFB-HOBART_COLLEGE-STATESMEN"
+    },
+    "CFB-HOLY_CROSS-CRUSADERS": {
+      "sport": "CFB",
+      "espn_id": "107",
+      "display_name": "Holy Cross Crusaders",
+      "location": "Holy Cross",
+      "nickname": "Crusaders",
+      "abbreviation": "HC",
+      "primary_color": [
+        10,
+        10,
+        10
+      ],
+      "secondary_color": [
+        8,
+        8,
+        8
+      ],
+      "primary_hex": "0a0a0a",
+      "secondary_hex": "080808",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
+      "unified_key": "CFB-HOLY_CROSS-CRUSADERS"
+    },
+    "CFB-HOUSTON-COUGARS": {
+      "sport": "CFB",
+      "espn_id": "248",
+      "display_name": "Houston Cougars",
+      "location": "Houston",
+      "nickname": "Cougars",
+      "abbreviation": "HOU",
+      "primary_color": [
+        201,
+        42,
+        57
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "c92a39",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+      "unified_key": "CFB-HOUSTON-COUGARS"
+    },
+    "CFB-IDAHO_STATE-BENGALS": {
+      "sport": "CFB",
+      "espn_id": "304",
+      "display_name": "Idaho State Bengals",
+      "location": "Idaho State",
+      "nickname": "Bengals",
+      "abbreviation": "IDST",
+      "primary_color": [
+        239,
+        140,
+        0
+      ],
+      "secondary_color": [
+        233,
+        161,
+        38
+      ],
+      "primary_hex": "ef8c00",
+      "secondary_hex": "e9a126",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+      "unified_key": "CFB-IDAHO_STATE-BENGALS"
+    },
+    "CFB-ILLINOIS_WESLEYAN-TITANS": {
+      "sport": "CFB",
+      "espn_id": "306",
+      "display_name": "Illinois Wesleyan Titans",
+      "location": "Illinois Wesleyan",
+      "nickname": "Titans",
+      "abbreviation": "ILLWES",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/306.png",
+      "unified_key": "CFB-ILLINOIS_WESLEYAN-TITANS"
+    },
+    "CFB-INDIANA-HOOSIERS": {
+      "sport": "CFB",
+      "espn_id": "84",
+      "display_name": "Indiana Hoosiers",
+      "location": "Indiana",
+      "nickname": "Hoosiers",
+      "abbreviation": "IU",
+      "primary_color": [
+        153,
+        0,
+        0
+      ],
+      "secondary_color": [
+        237,
+        235,
+        235
+      ],
+      "primary_hex": "990000",
+      "secondary_hex": "edebeb",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "unified_key": "CFB-INDIANA-HOOSIERS"
+    },
+    "CFB-INDIANA_STATE-SYCAMORES": {
+      "sport": "CFB",
+      "espn_id": "282",
+      "display_name": "Indiana State Sycamores",
+      "location": "Indiana State",
+      "nickname": "Sycamores",
+      "abbreviation": "INST",
+      "primary_color": [
+        0,
+        102,
+        154
+      ],
+      "secondary_color": [
+        240,
+        240,
+        240
+      ],
+      "primary_hex": "00669a",
+      "secondary_hex": "f0f0f0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
+      "unified_key": "CFB-INDIANA_STATE-SYCAMORES"
+    },
+    "CFB-ITHACA_COLLEGE-BOMBERS": {
+      "sport": "CFB",
+      "espn_id": "175",
+      "display_name": "Ithaca College Bombers",
+      "location": "Ithaca College",
+      "nickname": "Bombers",
+      "abbreviation": "ITH",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/175.png",
+      "unified_key": "CFB-ITHACA_COLLEGE-BOMBERS"
+    },
+    "CFB-JAMES_MADISON-DUKES": {
+      "sport": "CFB",
+      "espn_id": "256",
+      "display_name": "James Madison Dukes",
+      "location": "James Madison",
+      "nickname": "Dukes",
+      "abbreviation": "JMU",
+      "primary_color": [
+        69,
+        0,
+        132
+      ],
+      "secondary_color": [
+        181,
+        160,
+        104
+      ],
+      "primary_hex": "450084",
+      "secondary_hex": "b5a068",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+      "unified_key": "CFB-JAMES_MADISON-DUKES"
+    },
+    "CFB-JOHNS_HOPKINS_UNIVERSITY-BLUE_JAYS": {
+      "sport": "CFB",
+      "espn_id": "118",
+      "display_name": "Johns Hopkins University Blue Jays",
+      "location": "Johns Hopkins University",
+      "nickname": "Blue Jays",
+      "abbreviation": "JHU",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/118.png",
+      "unified_key": "CFB-JOHNS_HOPKINS_UNIVERSITY-BLUE_JAYS"
+    },
+    "CFB-JUNIATA_COLLEGE-EAGLES": {
+      "sport": "CFB",
+      "espn_id": "246",
+      "display_name": "Juniata College Eagles",
+      "location": "Juniata College",
+      "nickname": "Eagles",
+      "abbreviation": "JUN",
+      "primary_color": [
+        3,
+        24,
+        50
+      ],
+      "secondary_color": [
+        172,
+        156,
+        102
+      ],
+      "primary_hex": "031832",
+      "secondary_hex": "ac9c66",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/246.png",
+      "unified_key": "CFB-JUNIATA_COLLEGE-EAGLES"
+    },
+    "CFB-KALAMAZOO-HORNETS": {
+      "sport": "CFB",
+      "espn_id": "126",
+      "display_name": "Kalamazoo Hornets",
+      "location": "Kalamazoo",
+      "nickname": "Hornets",
+      "abbreviation": "KAL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/126.png",
+      "unified_key": "CFB-KALAMAZOO-HORNETS"
+    },
+    "CFB-KENTUCKY-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "96",
+      "display_name": "Kentucky Wildcats",
+      "location": "Kentucky",
+      "nickname": "Wildcats",
+      "abbreviation": "UK",
+      "primary_color": [
+        0,
+        51,
+        160
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "0033a0",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "unified_key": "CFB-KENTUCKY-WILDCATS"
+    },
+    "CFB-KING'S_COLLEGE_(PA)-MONARCHS": {
+      "sport": "CFB",
+      "espn_id": "247",
+      "display_name": "King's College (PA) Monarchs",
+      "location": "King's College (PA)",
+      "nickname": "Monarchs",
+      "abbreviation": "KIN",
+      "primary_color": [
+        196,
+        18,
+        48
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "c41230",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/247.png",
+      "unified_key": "CFB-KING'S_COLLEGE_(PA)-MONARCHS"
+    },
+    "CFB-KNOX_COLLEGE-PRAIRIE_FIRE": {
+      "sport": "CFB",
+      "espn_id": "255",
+      "display_name": "Knox College Prairie Fire",
+      "location": "Knox College",
+      "nickname": "Prairie Fire",
+      "abbreviation": "KNO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/255.png",
+      "unified_key": "CFB-KNOX_COLLEGE-PRAIRIE_FIRE"
+    },
+    "CFB-LAKELAND-FIRES": {
+      "sport": "CFB",
+      "espn_id": "267",
+      "display_name": "LAKELAND Fires",
+      "location": "LAKELAND",
+      "nickname": "Fires",
+      "abbreviation": "SEU",
+      "primary_color": [
+        0,
+        125,
+        195
+      ],
+      "secondary_color": [
+        255,
+        196,
+        35
+      ],
+      "primary_hex": "007dc3",
+      "secondary_hex": "ffc423",
+      "logo_url": "",
+      "unified_key": "CFB-LAKELAND-FIRES"
+    },
+    "CFB-LSU-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "99",
+      "display_name": "LSU Tigers",
+      "location": "LSU",
+      "nickname": "Tigers",
+      "abbreviation": "LSU",
+      "primary_color": [
+        70,
+        29,
+        124
+      ],
+      "secondary_color": [
+        253,
+        208,
+        35
+      ],
+      "primary_hex": "461d7c",
+      "secondary_hex": "fdd023",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "unified_key": "CFB-LSU-TIGERS"
+    },
+    "CFB-LAKE_FOREST_COLLEGE-FORESTERS": {
+      "sport": "CFB",
+      "espn_id": "262",
+      "display_name": "Lake Forest College Foresters",
+      "location": "Lake Forest College",
+      "nickname": "Foresters",
+      "abbreviation": "LAK",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/262.png",
+      "unified_key": "CFB-LAKE_FOREST_COLLEGE-FORESTERS"
+    },
+    "CFB-LAWRENCE_UNIVERSITY-VIKINGS": {
+      "sport": "CFB",
+      "espn_id": "268",
+      "display_name": "Lawrence University Vikings",
+      "location": "Lawrence University",
+      "nickname": "Vikings",
+      "abbreviation": "LAW",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/268.png",
+      "unified_key": "CFB-LAWRENCE_UNIVERSITY-VIKINGS"
+    },
+    "CFB-LINFIELD_COLLEGE-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "203",
+      "display_name": "Linfield College Wildcats",
+      "location": "Linfield College",
+      "nickname": "Wildcats",
+      "abbreviation": "LIN",
+      "primary_color": [
+        70,
+        37,
+        106
+      ],
+      "secondary_color": [
+        212,
+        30,
+        71
+      ],
+      "primary_hex": "46256a",
+      "secondary_hex": "d41e47",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/203.png",
+      "unified_key": "CFB-LINFIELD_COLLEGE-WILDCATS"
+    },
+    "CFB-LOCK_HAVEN_UNIVERSITY-BALD_EAGLES": {
+      "sport": "CFB",
+      "espn_id": "209",
+      "display_name": "Lock Haven University Bald Eagles",
+      "location": "Lock Haven University",
+      "nickname": "Bald Eagles",
+      "abbreviation": "LHU",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/209.png",
+      "unified_key": "CFB-LOCK_HAVEN_UNIVERSITY-BALD_EAGLES"
+    },
+    "CFB-LORAS_COLLEGE-DUHAWKS": {
+      "sport": "CFB",
+      "espn_id": "263",
+      "display_name": "Loras College Duhawks",
+      "location": "Loras College",
+      "nickname": "Duhawks",
+      "abbreviation": "LOR",
+      "primary_color": [
+        69,
+        45,
+        125
+      ],
+      "secondary_color": [
+        210,
+        184,
+        136
+      ],
+      "primary_hex": "452d7d",
+      "secondary_hex": "d2b888",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/263.png",
+      "unified_key": "CFB-LORAS_COLLEGE-DUHAWKS"
+    },
+    "CFB-LOUISIANA-RAGIN'_CAJUNS": {
+      "sport": "CFB",
+      "espn_id": "309",
+      "display_name": "Louisiana Ragin' Cajuns",
+      "location": "Louisiana",
+      "nickname": "Ragin' Cajuns",
+      "abbreviation": "UL",
+      "primary_color": [
+        206,
+        24,
+        30
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "ce181e",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+      "unified_key": "CFB-LOUISIANA-RAGIN'_CAJUNS"
+    },
+    "CFB-LOUISVILLE-CARDINALS": {
+      "sport": "CFB",
+      "espn_id": "97",
+      "display_name": "Louisville Cardinals",
+      "location": "Louisville",
+      "nickname": "Cardinals",
+      "abbreviation": "LOU",
+      "primary_color": [
+        201,
+        0,
+        31
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "c9001f",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "unified_key": "CFB-LOUISVILLE-CARDINALS"
+    },
+    "CFB-MIT-ENGINEERS": {
+      "sport": "CFB",
+      "espn_id": "109",
+      "display_name": "MIT Engineers",
+      "location": "MIT",
+      "nickname": "Engineers",
+      "abbreviation": "MIT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/109.png",
+      "unified_key": "CFB-MIT-ENGINEERS"
+    },
+    "CFB-MAINE_MARITIME-MARINERS": {
+      "sport": "CFB",
+      "espn_id": "274",
+      "display_name": "Maine Maritime Mariners",
+      "location": "Maine Maritime",
+      "nickname": "Mariners",
+      "abbreviation": "MAI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "",
+      "unified_key": "CFB-MAINE_MARITIME-MARINERS"
+    },
+    "CFB-MARSHALL-THUNDERING_HERD": {
+      "sport": "CFB",
+      "espn_id": "276",
+      "display_name": "Marshall Thundering Herd",
+      "location": "Marshall",
+      "nickname": "Thundering Herd",
+      "abbreviation": "MRSH",
+      "primary_color": [
+        0,
+        174,
+        66
+      ],
+      "secondary_color": [
+        190,
+        133,
+        76
+      ],
+      "primary_hex": "00ae42",
+      "secondary_hex": "be854c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+      "unified_key": "CFB-MARSHALL-THUNDERING_HERD"
+    },
+    "CFB-MARYLAND-TERRAPINS": {
+      "sport": "CFB",
+      "espn_id": "120",
+      "display_name": "Maryland Terrapins",
+      "location": "Maryland",
+      "nickname": "Terrapins",
+      "abbreviation": "MD",
+      "primary_color": [
+        213,
+        0,
+        43
+      ],
+      "secondary_color": [
+        255,
+        205,
+        0
+      ],
+      "primary_hex": "D5002B",
+      "secondary_hex": "ffcd00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+      "unified_key": "CFB-MARYLAND-TERRAPINS"
+    },
+    "CFB-MASS_MARITIME-BUCCANEERS": {
+      "sport": "CFB",
+      "espn_id": "110",
+      "display_name": "Mass Maritime Buccaneers",
+      "location": "Mass Maritime",
+      "nickname": "Buccaneers",
+      "abbreviation": "MAMARI",
+      "primary_color": [
+        33,
+        44,
+        98
+      ],
+      "secondary_color": [
+        254,
+        213,
+        35
+      ],
+      "primary_hex": "212c62",
+      "secondary_hex": "fed523",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/110.png",
+      "unified_key": "CFB-MASS_MARITIME-BUCCANEERS"
+    },
+    "CFB-MASSACHUSETTS-MINUTEMEN": {
+      "sport": "CFB",
+      "espn_id": "113",
+      "display_name": "Massachusetts Minutemen",
+      "location": "Massachusetts",
+      "nickname": "Minutemen",
+      "abbreviation": "MASS",
+      "primary_color": [
+        136,
+        0,
+        7
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "880007",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+      "unified_key": "CFB-MASSACHUSETTS-MINUTEMEN"
+    },
+    "CFB-MCMURRY-WAR_HAWKS": {
+      "sport": "CFB",
+      "espn_id": "241",
+      "display_name": "McMurry War Hawks",
+      "location": "McMurry",
+      "nickname": "War Hawks",
+      "abbreviation": "MCM",
+      "primary_color": [
+        152,
+        0,
+        46
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "98002e",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/241.png",
+      "unified_key": "CFB-MCMURRY-WAR_HAWKS"
+    },
+    "CFB-MEMPHIS-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "235",
+      "display_name": "Memphis Tigers",
+      "location": "Memphis",
+      "nickname": "Tigers",
+      "abbreviation": "MEM",
+      "primary_color": [
+        0,
+        73,
+        145
+      ],
+      "secondary_color": [
+        142,
+        144,
+        143
+      ],
+      "primary_hex": "004991",
+      "secondary_hex": "8e908f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+      "unified_key": "CFB-MEMPHIS-TIGERS"
+    },
+    "CFB-METHODIST-MONARCHS": {
+      "sport": "CFB",
+      "espn_id": "291",
+      "display_name": "Methodist Monarchs",
+      "location": "Methodist",
+      "nickname": "Monarchs",
+      "abbreviation": "MTH",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/291.png",
+      "unified_key": "CFB-METHODIST-MONARCHS"
+    },
+    "CFB-MIAMI_(OH)-REDHAWKS": {
+      "sport": "CFB",
+      "espn_id": "193",
+      "display_name": "Miami (OH) RedHawks",
+      "location": "Miami (OH)",
+      "nickname": "RedHawks",
+      "abbreviation": "M-OH",
+      "primary_color": [
+        164,
+        0,
+        12
+      ],
+      "secondary_color": [
+        240,
+        240,
+        240
+      ],
+      "primary_hex": "a4000c",
+      "secondary_hex": "f0f0f0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "unified_key": "CFB-MIAMI_(OH)-REDHAWKS"
+    },
+    "CFB-MICHIGAN_STATE-SPARTANS": {
+      "sport": "CFB",
+      "espn_id": "127",
+      "display_name": "Michigan State Spartans",
+      "location": "Michigan State",
+      "nickname": "Spartans",
+      "abbreviation": "MSU",
+      "primary_color": [
+        24,
+        69,
+        59
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "18453b",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+      "unified_key": "CFB-MICHIGAN_STATE-SPARTANS"
+    },
+    "CFB-MICHIGAN-WOLVERINES": {
+      "sport": "CFB",
+      "espn_id": "130",
+      "display_name": "Michigan Wolverines",
+      "location": "Michigan",
+      "nickname": "Wolverines",
+      "abbreviation": "MICH",
+      "primary_color": [
+        0,
+        39,
+        76
+      ],
+      "secondary_color": [
+        255,
+        203,
+        5
+      ],
+      "primary_hex": "00274c",
+      "secondary_hex": "ffcb05",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+      "unified_key": "CFB-MICHIGAN-WOLVERINES"
+    },
+    "CFB-MILLERSVILLE-MARAUDERS": {
+      "sport": "CFB",
+      "espn_id": "210",
+      "display_name": "Millersville Marauders",
+      "location": "Millersville",
+      "nickname": "Marauders",
+      "abbreviation": "MIL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/210.png",
+      "unified_key": "CFB-MILLERSVILLE-MARAUDERS"
+    },
+    "CFB-MINNESOTA_DULUTH-BULLDOGS": {
+      "sport": "CFB",
+      "espn_id": "134",
+      "display_name": "Minnesota Duluth Bulldogs",
+      "location": "Minnesota Duluth",
+      "nickname": "Bulldogs",
+      "abbreviation": "UMD",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/134.png",
+      "unified_key": "CFB-MINNESOTA_DULUTH-BULLDOGS"
+    },
+    "CFB-MINNESOTA-GOLDEN_GOPHERS": {
+      "sport": "CFB",
+      "espn_id": "135",
+      "display_name": "Minnesota Golden Gophers",
+      "location": "Minnesota",
+      "nickname": "Golden Gophers",
+      "abbreviation": "MINN",
+      "primary_color": [
+        94,
+        10,
+        47
+      ],
+      "secondary_color": [
+        250,
+        180,
+        28
+      ],
+      "primary_hex": "5e0a2f",
+      "secondary_hex": "fab41c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+      "unified_key": "CFB-MINNESOTA-GOLDEN_GOPHERS"
+    },
+    "CFB-MISSOURI-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "142",
+      "display_name": "Missouri Tigers",
+      "location": "Missouri",
+      "nickname": "Tigers",
+      "abbreviation": "MIZ",
+      "primary_color": [
+        241,
+        184,
+        45
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "f1b82d",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "unified_key": "CFB-MISSOURI-TIGERS"
+    },
+    "CFB-MISSOURI_WESTERN-GRIFFONS": {
+      "sport": "CFB",
+      "espn_id": "137",
+      "display_name": "Missouri Western Griffons",
+      "location": "Missouri Western",
+      "nickname": "Griffons",
+      "abbreviation": "MOW",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/137.png",
+      "unified_key": "CFB-MISSOURI_WESTERN-GRIFFONS"
+    },
+    "CFB-MONTANA-GRIZZLIES": {
+      "sport": "CFB",
+      "espn_id": "149",
+      "display_name": "Montana Grizzlies",
+      "location": "Montana",
+      "nickname": "Grizzlies",
+      "abbreviation": "MONT",
+      "primary_color": [
+        117,
+        29,
+        74
+      ],
+      "secondary_color": [
+        102,
+        102,
+        102
+      ],
+      "primary_hex": "751D4A",
+      "secondary_hex": "666666",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
+      "unified_key": "CFB-MONTANA-GRIZZLIES"
+    },
+    "CFB-MONTANA_STATE-BOBCATS": {
+      "sport": "CFB",
+      "espn_id": "147",
+      "display_name": "Montana State Bobcats",
+      "location": "Montana State",
+      "nickname": "Bobcats",
+      "abbreviation": "MTST",
+      "primary_color": [
+        0,
+        32,
+        92
+      ],
+      "secondary_color": [
+        188,
+        149,
+        92
+      ],
+      "primary_hex": "00205c",
+      "secondary_hex": "bc955c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
+      "unified_key": "CFB-MONTANA_STATE-BOBCATS"
+    },
+    "CFB-MURRAY_STATE-RACERS": {
+      "sport": "CFB",
+      "espn_id": "93",
+      "display_name": "Murray State Racers",
+      "location": "Murray State",
+      "nickname": "Racers",
+      "abbreviation": "MUR",
+      "primary_color": [
+        0,
+        33,
+        72
+      ],
+      "secondary_color": [
+        0,
+        14,
+        0
+      ],
+      "primary_hex": "002148",
+      "secondary_hex": "000e00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+      "unified_key": "CFB-MURRAY_STATE-RACERS"
+    },
+    "CFB-NC_STATE-WOLFPACK": {
+      "sport": "CFB",
+      "espn_id": "152",
+      "display_name": "NC State Wolfpack",
+      "location": "NC State",
+      "nickname": "Wolfpack",
+      "abbreviation": "NCSU",
+      "primary_color": [
+        204,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "cc0000",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "unified_key": "CFB-NC_STATE-WOLFPACK"
+    },
+    "CFB-NEBRASKA-CORNHUSKERS": {
+      "sport": "CFB",
+      "espn_id": "158",
+      "display_name": "Nebraska Cornhuskers",
+      "location": "Nebraska",
+      "nickname": "Cornhuskers",
+      "abbreviation": "NEB",
+      "primary_color": [
+        208,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "d00000",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+      "unified_key": "CFB-NEBRASKA-CORNHUSKERS"
+    },
+    "CFB-NEW_HAMPSHIRE-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "160",
+      "display_name": "New Hampshire Wildcats",
+      "location": "New Hampshire",
+      "nickname": "Wildcats",
+      "abbreviation": "UNH",
+      "primary_color": [
+        0,
+        73,
+        144
+      ],
+      "secondary_color": [
+        195,
+        196,
+        198
+      ],
+      "primary_hex": "004990",
+      "secondary_hex": "c3c4c6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png",
+      "unified_key": "CFB-NEW_HAMPSHIRE-WILDCATS"
+    },
+    "CFB-NEW_MEXICO-LOBOS": {
+      "sport": "CFB",
+      "espn_id": "167",
+      "display_name": "New Mexico Lobos",
+      "location": "New Mexico",
+      "nickname": "Lobos",
+      "abbreviation": "UNM",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        35,
+        31,
+        32
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "231f20",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "unified_key": "CFB-NEW_MEXICO-LOBOS"
+    },
+    "CFB-NEW_MEXICO_STATE-AGGIES": {
+      "sport": "CFB",
+      "espn_id": "166",
+      "display_name": "New Mexico State Aggies",
+      "location": "New Mexico State",
+      "nickname": "Aggies",
+      "abbreviation": "NMSU",
+      "primary_color": [
+        137,
+        18,
+        22
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "891216",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+      "unified_key": "CFB-NEW_MEXICO_STATE-AGGIES"
+    },
+    "CFB-NORTH_CAROLINA-TAR_HEELS": {
+      "sport": "CFB",
+      "espn_id": "153",
+      "display_name": "North Carolina Tar Heels",
+      "location": "North Carolina",
+      "nickname": "Tar Heels",
+      "abbreviation": "UNC",
+      "primary_color": [
+        123,
+        175,
+        212
+      ],
+      "secondary_color": [
+        19,
+        41,
+        75
+      ],
+      "primary_hex": "7bafd4",
+      "secondary_hex": "13294b",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+      "unified_key": "CFB-NORTH_CAROLINA-TAR_HEELS"
+    },
+    "CFB-NORTH_CAROLINA_WESLEYAN-BATTLING_BISHOPS": {
+      "sport": "CFB",
+      "espn_id": "286",
+      "display_name": "North Carolina Wesleyan Battling Bishops",
+      "location": "North Carolina Wesleyan",
+      "nickname": "Battling Bishops",
+      "abbreviation": "NORTH",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/286.png",
+      "unified_key": "CFB-NORTH_CAROLINA_WESLEYAN-BATTLING_BISHOPS"
+    },
+    "CFB-NORTH_DAKOTA-FIGHTING_HAWKS": {
+      "sport": "CFB",
+      "espn_id": "155",
+      "display_name": "North Dakota Fighting Hawks",
+      "location": "North Dakota",
+      "nickname": "Fighting Hawks",
+      "abbreviation": "UND",
+      "primary_color": [
+        0,
+        162,
+        107
+      ],
+      "secondary_color": [
+        194,
+        195,
+        192
+      ],
+      "primary_hex": "00A26B",
+      "secondary_hex": "c2c3c0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+      "unified_key": "CFB-NORTH_DAKOTA-FIGHTING_HAWKS"
+    },
+    "CFB-NORTH_TEXAS-MEAN_GREEN": {
+      "sport": "CFB",
+      "espn_id": "249",
+      "display_name": "North Texas Mean Green",
+      "location": "North Texas",
+      "nickname": "Mean Green",
+      "abbreviation": "UNT",
+      "primary_color": [
+        255,
+        255,
+        255
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "ffffff",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+      "unified_key": "CFB-NORTH_TEXAS-MEAN_GREEN"
+    },
+    "CFB-NORTHEASTERN_STATE-RIVERHAWKS": {
+      "sport": "CFB",
+      "espn_id": "196",
+      "display_name": "Northeastern State RiverHawks",
+      "location": "Northeastern State",
+      "nickname": "RiverHawks",
+      "abbreviation": "NOR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png",
+      "unified_key": "CFB-NORTHEASTERN_STATE-RIVERHAWKS"
+    },
+    "CFB-NORTHERN_MICHIGAN-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "128",
+      "display_name": "Northern Michigan Wildcats",
+      "location": "Northern Michigan",
+      "nickname": "Wildcats",
+      "abbreviation": "NMI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/128.png",
+      "unified_key": "CFB-NORTHERN_MICHIGAN-WILDCATS"
+    },
+    "CFB-NORTHWEST_MISSOURI_ST-BEARCATS": {
+      "sport": "CFB",
+      "espn_id": "138",
+      "display_name": "Northwest Missouri St Bearcats",
+      "location": "Northwest Missouri St",
+      "nickname": "Bearcats",
+      "abbreviation": "NWMS",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/138.png",
+      "unified_key": "CFB-NORTHWEST_MISSOURI_ST-BEARCATS"
+    },
+    "CFB-NORTHWESTERN-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "77",
+      "display_name": "Northwestern Wildcats",
+      "location": "Northwestern",
+      "nickname": "Wildcats",
+      "abbreviation": "NU",
+      "primary_color": [
+        88,
+        44,
+        131
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "582c83",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+      "unified_key": "CFB-NORTHWESTERN-WILDCATS"
+    },
+    "CFB-NOTRE_DAME-FIGHTING_IRISH": {
+      "sport": "CFB",
+      "espn_id": "87",
+      "display_name": "Notre Dame Fighting Irish",
+      "location": "Notre Dame",
+      "nickname": "Fighting Irish",
+      "abbreviation": "ND",
+      "primary_color": [
+        12,
+        35,
+        64
+      ],
+      "secondary_color": [
+        201,
+        151,
+        0
+      ],
+      "primary_hex": "0c2340",
+      "secondary_hex": "c99700",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "unified_key": "CFB-NOTRE_DAME-FIGHTING_IRISH"
+    },
+    "CFB-OHIO-BOBCATS": {
+      "sport": "CFB",
+      "espn_id": "195",
+      "display_name": "Ohio Bobcats",
+      "location": "Ohio",
+      "nickname": "Bobcats",
+      "abbreviation": "OHIO",
+      "primary_color": [
+        41,
+        90,
+        41
+      ],
+      "secondary_color": [
+        228,
+        187,
+        133
+      ],
+      "primary_hex": "295A29",
+      "secondary_hex": "e4bb85",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+      "unified_key": "CFB-OHIO-BOBCATS"
+    },
+    "CFB-OHIO_STATE-BUCKEYES": {
+      "sport": "CFB",
+      "espn_id": "194",
+      "display_name": "Ohio State Buckeyes",
+      "location": "Ohio State",
+      "nickname": "Buckeyes",
+      "abbreviation": "OSU",
+      "primary_color": [
+        206,
+        17,
+        65
+      ],
+      "secondary_color": [
+        80,
+        80,
+        86
+      ],
+      "primary_hex": "ce1141",
+      "secondary_hex": "505056",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "unified_key": "CFB-OHIO_STATE-BUCKEYES"
+    },
+    "CFB-OKLAHOMA-SOONERS": {
+      "sport": "CFB",
+      "espn_id": "201",
+      "display_name": "Oklahoma Sooners",
+      "location": "Oklahoma",
+      "nickname": "Sooners",
+      "abbreviation": "OU",
+      "primary_color": [
+        163,
+        32,
+        54
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "a32036",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "unified_key": "CFB-OKLAHOMA-SOONERS"
+    },
+    "CFB-OKLAHOMA_STATE-COWBOYS": {
+      "sport": "CFB",
+      "espn_id": "197",
+      "display_name": "Oklahoma State Cowboys",
+      "location": "Oklahoma State",
+      "nickname": "Cowboys",
+      "abbreviation": "OKST",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        221,
+        221,
+        221
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "dddddd",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "unified_key": "CFB-OKLAHOMA_STATE-COWBOYS"
+    },
+    "CFB-OLD_DOMINION-MONARCHS": {
+      "sport": "CFB",
+      "espn_id": "295",
+      "display_name": "Old Dominion Monarchs",
+      "location": "Old Dominion",
+      "nickname": "Monarchs",
+      "abbreviation": "ODU",
+      "primary_color": [
+        0,
+        80,
+        125
+      ],
+      "secondary_color": [
+        161,
+        210,
+        241
+      ],
+      "primary_hex": "00507d",
+      "secondary_hex": "a1d2f1",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+      "unified_key": "CFB-OLD_DOMINION-MONARCHS"
+    },
+    "CFB-OLE_MISS-REBELS": {
+      "sport": "CFB",
+      "espn_id": "145",
+      "display_name": "Ole Miss Rebels",
+      "location": "Ole Miss",
+      "nickname": "Rebels",
+      "abbreviation": "MISS",
+      "primary_color": [
+        19,
+        41,
+        75
+      ],
+      "secondary_color": [
+        200,
+        16,
+        46
+      ],
+      "primary_hex": "13294b",
+      "secondary_hex": "c8102e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "unified_key": "CFB-OLE_MISS-REBELS"
+    },
+    "CFB-OREGON_STATE-BEAVERS": {
+      "sport": "CFB",
+      "espn_id": "204",
+      "display_name": "Oregon State Beavers",
+      "location": "Oregon State",
+      "nickname": "Beavers",
+      "abbreviation": "ORST",
+      "primary_color": [
+        35,
+        31,
+        32
+      ],
+      "secondary_color": [
+        215,
+        63,
+        9
+      ],
+      "primary_hex": "231f20",
+      "secondary_hex": "d73f09",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "unified_key": "CFB-OREGON_STATE-BEAVERS"
+    },
+    "CFB-PACIFIC_(OR)-BOXERS": {
+      "sport": "CFB",
+      "espn_id": "205",
+      "display_name": "Pacific (OR) Boxers",
+      "location": "Pacific (OR)",
+      "nickname": "Boxers",
+      "abbreviation": "PAC",
+      "primary_color": [
+        180,
+        24,
+        58
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "b4183a",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/205.png",
+      "unified_key": "CFB-PACIFIC_(OR)-BOXERS"
+    },
+    "CFB-PENN_STATE-NITTANY_LIONS": {
+      "sport": "CFB",
+      "espn_id": "213",
+      "display_name": "Penn State Nittany Lions",
+      "location": "Penn State",
+      "nickname": "Nittany Lions",
+      "abbreviation": "PSU",
+      "primary_color": [
+        0,
+        38,
+        93
+      ],
+      "secondary_color": [
+        0,
+        46,
+        92
+      ],
+      "primary_hex": "00265D",
+      "secondary_hex": "002e5c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+      "unified_key": "CFB-PENN_STATE-NITTANY_LIONS"
+    },
+    "CFB-PENNSYLVANIA-QUAKERS": {
+      "sport": "CFB",
+      "espn_id": "219",
+      "display_name": "Pennsylvania Quakers",
+      "location": "Pennsylvania",
+      "nickname": "Quakers",
+      "abbreviation": "PENN",
+      "primary_color": [
+        8,
+        42,
+        116
+      ],
+      "secondary_color": [
+        166,
+        22,
+        61
+      ],
+      "primary_hex": "082A74",
+      "secondary_hex": "a6163d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/219.png",
+      "unified_key": "CFB-PENNSYLVANIA-QUAKERS"
+    },
+    "CFB-PIKEVILLE-BEARS": {
+      "sport": "CFB",
+      "espn_id": "95",
+      "display_name": "Pikeville Bears",
+      "location": "Pikeville",
+      "nickname": "Bears",
+      "abbreviation": "PIKEV",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "#000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "",
+      "unified_key": "CFB-PIKEVILLE-BEARS"
+    },
+    "CFB-PITTSBURG_ST-GORILLAS": {
+      "sport": "CFB",
+      "espn_id": "90",
+      "display_name": "Pittsburg St Gorillas",
+      "location": "Pittsburg St",
+      "nickname": "Gorillas",
+      "abbreviation": "PIT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/90.png",
+      "unified_key": "CFB-PITTSBURG_ST-GORILLAS"
+    },
+    "CFB-PITTSBURGH-PANTHERS": {
+      "sport": "CFB",
+      "espn_id": "221",
+      "display_name": "Pittsburgh Panthers",
+      "location": "Pittsburgh",
+      "nickname": "Panthers",
+      "abbreviation": "PITT",
+      "primary_color": [
+        0,
+        50,
+        99
+      ],
+      "secondary_color": [
+        35,
+        31,
+        32
+      ],
+      "primary_hex": "003263",
+      "secondary_hex": "231f20",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "unified_key": "CFB-PITTSBURGH-PANTHERS"
+    },
+    "CFB-PRINCETON-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "163",
+      "display_name": "Princeton Tigers",
+      "location": "Princeton",
+      "nickname": "Tigers",
+      "abbreviation": "PRIN",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        96,
+        0
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "ff6000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/163.png",
+      "unified_key": "CFB-PRINCETON-TIGERS"
+    },
+    "CFB-RHODE_ISLAND-RAMS": {
+      "sport": "CFB",
+      "espn_id": "227",
+      "display_name": "Rhode Island Rams",
+      "location": "Rhode Island",
+      "nickname": "Rams",
+      "abbreviation": "URI",
+      "primary_color": [
+        9,
+        31,
+        63
+      ],
+      "secondary_color": [
+        90,
+        179,
+        232
+      ],
+      "primary_hex": "091f3f",
+      "secondary_hex": "5ab3e8",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
+      "unified_key": "CFB-RHODE_ISLAND-RAMS"
+    },
+    "CFB-RICE-OWLS": {
+      "sport": "CFB",
+      "espn_id": "242",
+      "display_name": "Rice Owls",
+      "location": "Rice",
+      "nickname": "Owls",
+      "abbreviation": "RICE",
+      "primary_color": [
+        209,
+        213,
+        216
+      ],
+      "secondary_color": [
+        0,
+        61,
+        125
+      ],
+      "primary_hex": "d1d5d8",
+      "secondary_hex": "003d7d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+      "unified_key": "CFB-RICE-OWLS"
+    },
+    "CFB-RICHMOND-SPIDERS": {
+      "sport": "CFB",
+      "espn_id": "257",
+      "display_name": "Richmond Spiders",
+      "location": "Richmond",
+      "nickname": "Spiders",
+      "abbreviation": "RICH",
+      "primary_color": [
+        158,
+        7,
+        18
+      ],
+      "secondary_color": [
+        185,
+        11,
+        46
+      ],
+      "primary_hex": "9e0712",
+      "secondary_hex": "b90b2e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
+      "unified_key": "CFB-RICHMOND-SPIDERS"
+    },
+    "CFB-ROSE-HULMAN-FIGHTIN'_ENGINEERS": {
+      "sport": "CFB",
+      "espn_id": "86",
+      "display_name": "Rose-Hulman Fightin' Engineers",
+      "location": "Rose-Hulman",
+      "nickname": "Fightin' Engineers",
+      "abbreviation": "ROSEHUL",
+      "primary_color": [
+        128,
+        0,
+        0
+      ],
+      "secondary_color": [
+        179,
+        178,
+        177
+      ],
+      "primary_hex": "800000",
+      "secondary_hex": "b3b2b1",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/86.png",
+      "unified_key": "CFB-ROSE-HULMAN-FIGHTIN'_ENGINEERS"
+    },
+    "CFB-RUTGERS-SCARLET_KNIGHTS": {
+      "sport": "CFB",
+      "espn_id": "164",
+      "display_name": "Rutgers Scarlet Knights",
+      "location": "Rutgers",
+      "nickname": "Scarlet Knights",
+      "abbreviation": "RUTG",
+      "primary_color": [
+        210,
+        16,
+        52
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "d21034",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+      "unified_key": "CFB-RUTGERS-SCARLET_KNIGHTS"
+    },
+    "CFB-SAGINAW_VALLEY_STATE-CARDINALS": {
+      "sport": "CFB",
+      "espn_id": "129",
+      "display_name": "Saginaw Valley State Cardinals",
+      "location": "Saginaw Valley State",
+      "nickname": "Cardinals",
+      "abbreviation": "SAGI",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/129.png",
+      "unified_key": "CFB-SAGINAW_VALLEY_STATE-CARDINALS"
+    },
+    "CFB-SAN_DIEGO-TOREROS": {
+      "sport": "CFB",
+      "espn_id": "301",
+      "display_name": "San Diego Toreros",
+      "location": "San Diego",
+      "nickname": "Toreros",
+      "abbreviation": "USD",
+      "primary_color": [
+        47,
+        153,
+        212
+      ],
+      "secondary_color": [
+        47,
+        153,
+        212
+      ],
+      "primary_hex": "2f99d4",
+      "secondary_hex": "2f99d4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
+      "unified_key": "CFB-SAN_DIEGO-TOREROS"
+    },
+    "CFB-SLIPPERY_ROCK-THE_ROCK": {
+      "sport": "CFB",
+      "espn_id": "215",
+      "display_name": "Slippery Rock The Rock",
+      "location": "Slippery Rock",
+      "nickname": "The Rock",
+      "abbreviation": "SRU",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/215.png",
+      "unified_key": "CFB-SLIPPERY_ROCK-THE_ROCK"
+    },
+    "CFB-SOUTH_DAKOTA-COYOTES": {
+      "sport": "CFB",
+      "espn_id": "233",
+      "display_name": "South Dakota Coyotes",
+      "location": "South Dakota",
+      "nickname": "Coyotes",
+      "abbreviation": "SDAK",
+      "primary_color": [
+        205,
+        18,
+        65
+      ],
+      "secondary_color": [
+        240,
+        240,
+        240
+      ],
+      "primary_hex": "CD1241",
+      "secondary_hex": "f0f0f0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
+      "unified_key": "CFB-SOUTH_DAKOTA-COYOTES"
+    },
+    "CFB-SOUTHEASTERN_OKLAHOMA_STATE-SAVAGE_STORM": {
+      "sport": "CFB",
+      "espn_id": "199",
+      "display_name": "Southeastern Oklahoma State Savage Storm",
+      "location": "Southeastern Oklahoma State",
+      "nickname": "Savage Storm",
+      "abbreviation": "SEOS",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/199.png",
+      "unified_key": "CFB-SOUTHEASTERN_OKLAHOMA_STATE-SAVAGE_STORM"
+    },
+    "CFB-SOUTHERN_ILLINOIS-SALUKIS": {
+      "sport": "CFB",
+      "espn_id": "79",
+      "display_name": "Southern Illinois Salukis",
+      "location": "Southern Illinois",
+      "nickname": "Salukis",
+      "abbreviation": "SIU",
+      "primary_color": [
+        133,
+        40,
+        61
+      ],
+      "secondary_color": [
+        194,
+        195,
+        192
+      ],
+      "primary_hex": "85283D",
+      "secondary_hex": "c2c3c0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
+      "unified_key": "CFB-SOUTHERN_ILLINOIS-SALUKIS"
+    },
+    "CFB-SOUTHERN_NAZARENE-CRIMSON_STORM": {
+      "sport": "CFB",
+      "espn_id": "200",
+      "display_name": "Southern Nazarene Crimson Storm",
+      "location": "Southern Nazarene",
+      "nickname": "Crimson Storm",
+      "abbreviation": "STN",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/200.png",
+      "unified_key": "CFB-SOUTHERN_NAZARENE-CRIMSON_STORM"
+    },
+    "CFB-SOUTHERN_UTAH-THUNDERBIRDS": {
+      "sport": "CFB",
+      "espn_id": "253",
+      "display_name": "Southern Utah Thunderbirds",
+      "location": "Southern Utah",
+      "nickname": "Thunderbirds",
+      "abbreviation": "SUU",
+      "primary_color": [
+        199,
+        32,
+        38
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "c72026",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+      "unified_key": "CFB-SOUTHERN_UTAH-THUNDERBIRDS"
+    },
+    "CFB-SPRINGFIELD-PRIDE": {
+      "sport": "CFB",
+      "espn_id": "81",
+      "display_name": "Springfield Pride",
+      "location": "Springfield",
+      "nickname": "Pride",
+      "abbreviation": "SPR",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/81.png",
+      "unified_key": "CFB-SPRINGFIELD-PRIDE"
+    },
+    "CFB-ST._OLAF-OLES": {
+      "sport": "CFB",
+      "espn_id": "133",
+      "display_name": "St. Olaf Oles",
+      "location": "St. Olaf",
+      "nickname": "Oles",
+      "abbreviation": "STO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        209,
+        140,
+        41
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "d18c29",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/133.png",
+      "unified_key": "CFB-ST._OLAF-OLES"
+    },
+    "CFB-STONEHILL-SKYHAWKS": {
+      "sport": "CFB",
+      "espn_id": "284",
+      "display_name": "Stonehill Skyhawks",
+      "location": "Stonehill",
+      "nickname": "Skyhawks",
+      "abbreviation": "STO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png",
+      "unified_key": "CFB-STONEHILL-SKYHAWKS"
+    },
+    "CFB-SUSQUEHANNA-RIVER_HAWKS": {
+      "sport": "CFB",
+      "espn_id": "216",
+      "display_name": "Susquehanna River Hawks",
+      "location": "Susquehanna",
+      "nickname": "River Hawks",
+      "abbreviation": "SUS",
+      "primary_color": [
+        107,
+        26,
+        49
+      ],
+      "secondary_color": [
+        253,
+        107,
+        13
+      ],
+      "primary_hex": "6b1a31",
+      "secondary_hex": "fd6b0d",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/216.png",
+      "unified_key": "CFB-SUSQUEHANNA-RIVER_HAWKS"
+    },
+    "CFB-SYRACUSE-ORANGE": {
+      "sport": "CFB",
+      "espn_id": "183",
+      "display_name": "Syracuse Orange",
+      "location": "Syracuse",
+      "nickname": "Orange",
+      "abbreviation": "SYR",
+      "primary_color": [
+        255,
+        101,
+        0
+      ],
+      "secondary_color": [
+        0,
+        14,
+        84
+      ],
+      "primary_hex": "ff6500",
+      "secondary_hex": "000e54",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "unified_key": "CFB-SYRACUSE-ORANGE"
+    },
+    "CFB-TEMPLE-OWLS": {
+      "sport": "CFB",
+      "espn_id": "218",
+      "display_name": "Temple Owls",
+      "location": "Temple",
+      "nickname": "Owls",
+      "abbreviation": "TEM",
+      "primary_color": [
+        168,
+        5,
+        50
+      ],
+      "secondary_color": [
+        167,
+        169,
+        172
+      ],
+      "primary_hex": "A80532",
+      "secondary_hex": "a7a9ac",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+      "unified_key": "CFB-TEMPLE-OWLS"
+    },
+    "CFB-TEXAS_A&M-AGGIES": {
+      "sport": "CFB",
+      "espn_id": "245",
+      "display_name": "Texas A&M Aggies",
+      "location": "Texas A&M",
+      "nickname": "Aggies",
+      "abbreviation": "TA&M",
+      "primary_color": [
+        80,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "500000",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "unified_key": "CFB-TEXAS_A&M-AGGIES"
+    },
+    "CFB-TEXAS-LONGHORNS": {
+      "sport": "CFB",
+      "espn_id": "251",
+      "display_name": "Texas Longhorns",
+      "location": "Texas",
+      "nickname": "Longhorns",
+      "abbreviation": "TEX",
+      "primary_color": [
+        193,
+        93,
+        38
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "c15d26",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "unified_key": "CFB-TEXAS-LONGHORNS"
+    },
+    "CFB-TOWSON-TIGERS": {
+      "sport": "CFB",
+      "espn_id": "119",
+      "display_name": "Towson Tigers",
+      "location": "Towson",
+      "nickname": "Tigers",
+      "abbreviation": "TOW",
+      "primary_color": [
+        255,
+        194,
+        41
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "FFC229",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
+      "unified_key": "CFB-TOWSON-TIGERS"
+    },
+    "CFB-TUFTS-JUMBOS": {
+      "sport": "CFB",
+      "espn_id": "112",
+      "display_name": "Tufts Jumbos",
+      "location": "Tufts",
+      "nickname": "Jumbos",
+      "abbreviation": "TUF",
+      "primary_color": [
+        62,
+        142,
+        222
+      ],
+      "secondary_color": [
+        198,
+        190,
+        182
+      ],
+      "primary_hex": "3e8ede",
+      "secondary_hex": "c6beb6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/112.png",
+      "unified_key": "CFB-TUFTS-JUMBOS"
+    },
+    "CFB-TULSA-GOLDEN_HURRICANE": {
+      "sport": "CFB",
+      "espn_id": "202",
+      "display_name": "Tulsa Golden Hurricane",
+      "location": "Tulsa",
+      "nickname": "Golden Hurricane",
+      "abbreviation": "TLSA",
+      "primary_color": [
+        0,
+        53,
+        149
+      ],
+      "secondary_color": [
+        208,
+        183,
+        135
+      ],
+      "primary_hex": "003595",
+      "secondary_hex": "d0b787",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+      "unified_key": "CFB-TULSA-GOLDEN_HURRICANE"
+    },
+    "CFB-UC_DAVIS-AGGIES": {
+      "sport": "CFB",
+      "espn_id": "302",
+      "display_name": "UC Davis Aggies",
+      "location": "UC Davis",
+      "nickname": "Aggies",
+      "abbreviation": "UCD",
+      "primary_color": [
+        0,
+        40,
+        85
+      ],
+      "secondary_color": [
+        195,
+        196,
+        198
+      ],
+      "primary_hex": "002855",
+      "secondary_hex": "c3c4c6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+      "unified_key": "CFB-UC_DAVIS-AGGIES"
+    },
+    "CFB-UNION-GARNET_CHARGERS": {
+      "sport": "CFB",
+      "espn_id": "237",
+      "display_name": "Union Garnet Chargers",
+      "location": "Union",
+      "nickname": "Garnet Chargers",
+      "abbreviation": "UNNY",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/237.png",
+      "unified_key": "CFB-UNION-GARNET_CHARGERS"
+    },
+    "CFB-UNIVERSITY_OF_ROCHESTER_(NY)-YELLOW_JACKETS": {
+      "sport": "CFB",
+      "espn_id": "184",
+      "display_name": "University of Rochester (NY) Yellow Jackets",
+      "location": "University of Rochester (NY)",
+      "nickname": "Yellow Jackets",
+      "abbreviation": "ROC",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/184.png",
+      "unified_key": "CFB-UNIVERSITY_OF_ROCHESTER_(NY)-YELLOW_JACKETS"
+    },
+    "CFB-UTAH-UTES": {
+      "sport": "CFB",
+      "espn_id": "254",
+      "display_name": "Utah Utes",
+      "location": "Utah",
+      "nickname": "Utes",
+      "abbreviation": "UTAH",
+      "primary_color": [
+        234,
+        0,
+        42
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "ea002a",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+      "unified_key": "CFB-UTAH-UTES"
+    },
+    "CFB-VANDERBILT-COMMODORES": {
+      "sport": "CFB",
+      "espn_id": "238",
+      "display_name": "Vanderbilt Commodores",
+      "location": "Vanderbilt",
+      "nickname": "Commodores",
+      "abbreviation": "VAN",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        35,
+        31,
+        32
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "231f20",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "unified_key": "CFB-VANDERBILT-COMMODORES"
+    },
+    "CFB-VILLANOVA-WILDCATS": {
+      "sport": "CFB",
+      "espn_id": "222",
+      "display_name": "Villanova Wildcats",
+      "location": "Villanova",
+      "nickname": "Wildcats",
+      "abbreviation": "VILL",
+      "primary_color": [
+        0,
+        32,
+        91
+      ],
+      "secondary_color": [
+        19,
+        181,
+        234
+      ],
+      "primary_hex": "00205b",
+      "secondary_hex": "13b5ea",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
+      "unified_key": "CFB-VILLANOVA-WILDCATS"
+    },
+    "CFB-VIRGINIA-CAVALIERS": {
+      "sport": "CFB",
+      "espn_id": "258",
+      "display_name": "Virginia Cavaliers",
+      "location": "Virginia",
+      "nickname": "Cavaliers",
+      "abbreviation": "UVA",
+      "primary_color": [
+        35,
+        45,
+        75
+      ],
+      "secondary_color": [
+        248,
+        76,
+        30
+      ],
+      "primary_hex": "232d4b",
+      "secondary_hex": "f84c1e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+      "unified_key": "CFB-VIRGINIA-CAVALIERS"
+    },
+    "CFB-VIRGINIA_TECH-HOKIES": {
+      "sport": "CFB",
+      "espn_id": "259",
+      "display_name": "Virginia Tech Hokies",
+      "location": "Virginia Tech",
+      "nickname": "Hokies",
+      "abbreviation": "VT",
+      "primary_color": [
+        99,
+        0,
+        49
+      ],
+      "secondary_color": [
+        207,
+        69,
+        32
+      ],
+      "primary_hex": "630031",
+      "secondary_hex": "cf4520",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "unified_key": "CFB-VIRGINIA_TECH-HOKIES"
+    },
+    "CFB-WABASH_COLLEGE-LITTLE_GIANTS": {
+      "sport": "CFB",
+      "espn_id": "89",
+      "display_name": "Wabash College Little Giants",
+      "location": "Wabash College",
+      "nickname": "Little Giants",
+      "abbreviation": "WAB",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/89.png",
+      "unified_key": "CFB-WABASH_COLLEGE-LITTLE_GIANTS"
+    },
+    "CFB-WAKE_FOREST-DEMON_DEACONS": {
+      "sport": "CFB",
+      "espn_id": "154",
+      "display_name": "Wake Forest Demon Deacons",
+      "location": "Wake Forest",
+      "nickname": "Demon Deacons",
+      "abbreviation": "WAKE",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        206,
+        184,
+        136
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "ceb888",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "unified_key": "CFB-WAKE_FOREST-DEMON_DEACONS"
+    },
+    "CFB-WASHINGTON-HUSKIES": {
+      "sport": "CFB",
+      "espn_id": "264",
+      "display_name": "Washington Huskies",
+      "location": "Washington",
+      "nickname": "Huskies",
+      "abbreviation": "WASH",
+      "primary_color": [
+        51,
+        0,
+        111
+      ],
+      "secondary_color": [
+        232,
+        211,
+        162
+      ],
+      "primary_hex": "33006f",
+      "secondary_hex": "e8d3a2",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+      "unified_key": "CFB-WASHINGTON-HUSKIES"
+    },
+    "CFB-WASHINGTON_STATE-COUGARS": {
+      "sport": "CFB",
+      "espn_id": "265",
+      "display_name": "Washington State Cougars",
+      "location": "Washington State",
+      "nickname": "Cougars",
+      "abbreviation": "WSU",
+      "primary_color": [
+        152,
+        30,
+        50
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "981e32",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+      "unified_key": "CFB-WASHINGTON_STATE-COUGARS"
+    },
+    "CFB-WASHINGTON_UNIVERSITY_(ST._LOUIS)-BEARS": {
+      "sport": "CFB",
+      "espn_id": "143",
+      "display_name": "Washington University (St. Louis) Bears",
+      "location": "Washington University (St. Louis)",
+      "nickname": "Bears",
+      "abbreviation": "WSTL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/143.png",
+      "unified_key": "CFB-WASHINGTON_UNIVERSITY_(ST._LOUIS)-BEARS"
+    },
+    "CFB-WAYNE_STATE_(MI)-WARRIORS": {
+      "sport": "CFB",
+      "espn_id": "131",
+      "display_name": "Wayne State (MI) Warriors",
+      "location": "Wayne State (MI)",
+      "nickname": "Warriors",
+      "abbreviation": "WAY",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/131.png",
+      "unified_key": "CFB-WAYNE_STATE_(MI)-WARRIORS"
+    },
+    "CFB-WEST_CHESTER-GOLDEN_RAMS": {
+      "sport": "CFB",
+      "espn_id": "223",
+      "display_name": "West Chester Golden Rams",
+      "location": "West Chester",
+      "nickname": "Golden Rams",
+      "abbreviation": "WES",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/223.png",
+      "unified_key": "CFB-WEST_CHESTER-GOLDEN_RAMS"
+    },
+    "CFB-WEST_VIRGINIA-MOUNTAINEERS": {
+      "sport": "CFB",
+      "espn_id": "277",
+      "display_name": "West Virginia Mountaineers",
+      "location": "West Virginia",
+      "nickname": "Mountaineers",
+      "abbreviation": "WVU",
+      "primary_color": [
+        0,
+        40,
+        85
+      ],
+      "secondary_color": [
+        234,
+        170,
+        0
+      ],
+      "primary_hex": "002855",
+      "secondary_hex": "eaaa00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "unified_key": "CFB-WEST_VIRGINIA-MOUNTAINEERS"
+    },
+    "CFB-WESTERN_KENTUCKY-HILLTOPPERS": {
+      "sport": "CFB",
+      "espn_id": "98",
+      "display_name": "Western Kentucky Hilltoppers",
+      "location": "Western Kentucky",
+      "nickname": "Hilltoppers",
+      "abbreviation": "WKU",
+      "primary_color": [
+        243,
+        32,
+        38
+      ],
+      "secondary_color": [
+        179,
+        181,
+        184
+      ],
+      "primary_hex": "F32026",
+      "secondary_hex": "b3b5b8",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+      "unified_key": "CFB-WESTERN_KENTUCKY-HILLTOPPERS"
+    },
+    "CFB-WISCONSIN-BADGERS": {
+      "sport": "CFB",
+      "espn_id": "275",
+      "display_name": "Wisconsin Badgers",
+      "location": "Wisconsin",
+      "nickname": "Badgers",
+      "abbreviation": "WIS",
+      "primary_color": [
+        196,
+        1,
+        47
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "c4012f",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "unified_key": "CFB-WISCONSIN-BADGERS"
+    },
+    "CFB-WISCONSIN-OSHKOSH-TITANS": {
+      "sport": "CFB",
+      "espn_id": "271",
+      "display_name": "Wisconsin-Oshkosh Titans",
+      "location": "Wisconsin-Oshkosh",
+      "nickname": "Titans",
+      "abbreviation": "WISO",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/271.png",
+      "unified_key": "CFB-WISCONSIN-OSHKOSH-TITANS"
+    },
+    "CFB-WISCONSIN-PLATTEVILLE-PIONEERS": {
+      "sport": "CFB",
+      "espn_id": "272",
+      "display_name": "Wisconsin-Platteville Pioneers",
+      "location": "Wisconsin-Platteville",
+      "nickname": "Pioneers",
+      "abbreviation": "WIPL",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "#FFFFFF",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/ncaa/500/272.png",
+      "unified_key": "CFB-WISCONSIN-PLATTEVILLE-PIONEERS"
+    },
+    "NHL-ANAHEIM-DUCKS": {
+      "sport": "NHL",
+      "espn_id": "25",
+      "display_name": "Anaheim Ducks",
+      "location": "Anaheim",
+      "nickname": "Ducks",
+      "abbreviation": "ANA",
+      "primary_color": [
+        252,
+        76,
+        2
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "fc4c02",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "unified_key": "NHL-ANAHEIM-DUCKS"
+    },
+    "NHL-BOSTON-BRUINS": {
+      "sport": "NHL",
+      "espn_id": "1",
+      "display_name": "Boston Bruins",
+      "location": "Boston",
+      "nickname": "Bruins",
+      "abbreviation": "BOS",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        253,
+        187,
+        48
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "fdbb30",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
+      "unified_key": "NHL-BOSTON-BRUINS"
+    },
+    "NHL-BUFFALO-SABRES": {
+      "sport": "NHL",
+      "espn_id": "2",
+      "display_name": "Buffalo Sabres",
+      "location": "Buffalo",
+      "nickname": "Sabres",
+      "abbreviation": "BUF",
+      "primary_color": [
+        0,
+        70,
+        139
+      ],
+      "secondary_color": [
+        253,
+        183,
+        26
+      ],
+      "primary_hex": "00468b",
+      "secondary_hex": "fdb71a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png",
+      "unified_key": "NHL-BUFFALO-SABRES"
+    },
+    "NHL-CALGARY-FLAMES": {
+      "sport": "NHL",
+      "espn_id": "3",
+      "display_name": "Calgary Flames",
+      "location": "Calgary",
+      "nickname": "Flames",
+      "abbreviation": "CGY",
+      "primary_color": [
+        221,
+        26,
+        50
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "dd1a32",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/cgy.png",
+      "unified_key": "NHL-CALGARY-FLAMES"
+    },
+    "NHL-CAROLINA-HURRICANES": {
+      "sport": "NHL",
+      "espn_id": "7",
+      "display_name": "Carolina Hurricanes",
+      "location": "Carolina",
+      "nickname": "Hurricanes",
+      "abbreviation": "CAR",
+      "primary_color": [
+        227,
+        4,
+        38
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "e30426",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png",
+      "unified_key": "NHL-CAROLINA-HURRICANES"
+    },
+    "NHL-CHICAGO-BLACKHAWKS": {
+      "sport": "NHL",
+      "espn_id": "4",
+      "display_name": "Chicago Blackhawks",
+      "location": "Chicago",
+      "nickname": "Blackhawks",
+      "abbreviation": "CHI",
+      "primary_color": [
+        227,
+        25,
+        55
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "e31937",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/chi.png",
+      "unified_key": "NHL-CHICAGO-BLACKHAWKS"
+    },
+    "NHL-COLORADO-AVALANCHE": {
+      "sport": "NHL",
+      "espn_id": "17",
+      "display_name": "Colorado Avalanche",
+      "location": "Colorado",
+      "nickname": "Avalanche",
+      "abbreviation": "COL",
+      "primary_color": [
+        134,
+        0,
+        56
+      ],
+      "secondary_color": [
+        0,
+        94,
+        163
+      ],
+      "primary_hex": "860038",
+      "secondary_hex": "005ea3",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
+      "unified_key": "NHL-COLORADO-AVALANCHE"
+    },
+    "NHL-COLUMBUS-BLUE_JACKETS": {
+      "sport": "NHL",
+      "espn_id": "29",
+      "display_name": "Columbus Blue Jackets",
+      "location": "Columbus",
+      "nickname": "Blue Jackets",
+      "abbreviation": "CBJ",
+      "primary_color": [
+        0,
+        45,
+        98
+      ],
+      "secondary_color": [
+        227,
+        25,
+        55
+      ],
+      "primary_hex": "002d62",
+      "secondary_hex": "e31937",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/cbj.png",
+      "unified_key": "NHL-COLUMBUS-BLUE_JACKETS"
+    },
+    "NHL-DALLAS-STARS": {
+      "sport": "NHL",
+      "espn_id": "9",
+      "display_name": "Dallas Stars",
+      "location": "Dallas",
+      "nickname": "Stars",
+      "abbreviation": "DAL",
+      "primary_color": [
+        32,
+        134,
+        76
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "20864c",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png",
+      "unified_key": "NHL-DALLAS-STARS"
+    },
+    "NHL-DETROIT-RED_WINGS": {
+      "sport": "NHL",
+      "espn_id": "5",
+      "display_name": "Detroit Red Wings",
+      "location": "Detroit",
+      "nickname": "Red Wings",
+      "abbreviation": "DET",
+      "primary_color": [
+        227,
+        5,
+        38
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "e30526",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/det.png",
+      "unified_key": "NHL-DETROIT-RED_WINGS"
+    },
+    "NHL-EDMONTON-OILERS": {
+      "sport": "NHL",
+      "espn_id": "6",
+      "display_name": "Edmonton Oilers",
+      "location": "Edmonton",
+      "nickname": "Oilers",
+      "abbreviation": "EDM",
+      "primary_color": [
+        0,
+        32,
+        91
+      ],
+      "secondary_color": [
+        255,
+        76,
+        0
+      ],
+      "primary_hex": "00205b",
+      "secondary_hex": "ff4c00",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
+      "unified_key": "NHL-EDMONTON-OILERS"
+    },
+    "NHL-FLORIDA-PANTHERS": {
+      "sport": "NHL",
+      "espn_id": "26",
+      "display_name": "Florida Panthers",
+      "location": "Florida",
+      "nickname": "Panthers",
+      "abbreviation": "FLA",
+      "primary_color": [
+        229,
+        25,
+        55
+      ],
+      "secondary_color": [
+        0,
+        45,
+        98
+      ],
+      "primary_hex": "e51937",
+      "secondary_hex": "002d62",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/fla.png",
+      "unified_key": "NHL-FLORIDA-PANTHERS"
+    },
+    "NHL-LOS_ANGELES-KINGS": {
+      "sport": "NHL",
+      "espn_id": "8",
+      "display_name": "Los Angeles Kings",
+      "location": "Los Angeles",
+      "nickname": "Kings",
+      "abbreviation": "LA",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        162,
+        170,
+        173
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "a2aaad",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/la.png",
+      "unified_key": "NHL-LOS_ANGELES-KINGS"
+    },
+    "NHL-MINNESOTA-WILD": {
+      "sport": "NHL",
+      "espn_id": "30",
+      "display_name": "Minnesota Wild",
+      "location": "Minnesota",
+      "nickname": "Wild",
+      "abbreviation": "MIN",
+      "primary_color": [
+        18,
+        71,
+        52
+      ],
+      "secondary_color": [
+        174,
+        18,
+        42
+      ],
+      "primary_hex": "124734",
+      "secondary_hex": "ae122a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png",
+      "unified_key": "NHL-MINNESOTA-WILD"
+    },
+    "NHL-MONTREAL-CANADIENS": {
+      "sport": "NHL",
+      "espn_id": "10",
+      "display_name": "Montreal Canadiens",
+      "location": "Montreal",
+      "nickname": "Canadiens",
+      "abbreviation": "MTL",
+      "primary_color": [
+        196,
+        18,
+        48
+      ],
+      "secondary_color": [
+        1,
+        58,
+        129
+      ],
+      "primary_hex": "c41230",
+      "secondary_hex": "013a81",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png",
+      "unified_key": "NHL-MONTREAL-CANADIENS"
+    },
+    "NHL-NASHVILLE-PREDATORS": {
+      "sport": "NHL",
+      "espn_id": "27",
+      "display_name": "Nashville Predators",
+      "location": "Nashville",
+      "nickname": "Predators",
+      "abbreviation": "NSH",
+      "primary_color": [
+        253,
+        186,
+        49
+      ],
+      "secondary_color": [
+        0,
+        45,
+        98
+      ],
+      "primary_hex": "fdba31",
+      "secondary_hex": "002d62",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/nsh.png",
+      "unified_key": "NHL-NASHVILLE-PREDATORS"
+    },
+    "NHL-NEW_JERSEY-DEVILS": {
+      "sport": "NHL",
+      "espn_id": "11",
+      "display_name": "New Jersey Devils",
+      "location": "New Jersey",
+      "nickname": "Devils",
+      "abbreviation": "NJ",
+      "primary_color": [
+        227,
+        11,
+        43
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "e30b2b",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "unified_key": "NHL-NEW_JERSEY-DEVILS"
+    },
+    "NHL-NEW_YORK-ISLANDERS": {
+      "sport": "NHL",
+      "espn_id": "12",
+      "display_name": "New York Islanders",
+      "location": "New York",
+      "nickname": "Islanders",
+      "abbreviation": "NYI",
+      "primary_color": [
+        0,
+        82,
+        155
+      ],
+      "secondary_color": [
+        244,
+        125,
+        49
+      ],
+      "primary_hex": "00529b",
+      "secondary_hex": "f47d31",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png",
+      "unified_key": "NHL-NEW_YORK-ISLANDERS"
+    },
+    "NHL-NEW_YORK-RANGERS": {
+      "sport": "NHL",
+      "espn_id": "13",
+      "display_name": "New York Rangers",
+      "location": "New York",
+      "nickname": "Rangers",
+      "abbreviation": "NYR",
+      "primary_color": [
+        0,
+        86,
+        174
+      ],
+      "secondary_color": [
+        229,
+        25,
+        55
+      ],
+      "primary_hex": "0056ae",
+      "secondary_hex": "e51937",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/nyr.png",
+      "unified_key": "NHL-NEW_YORK-RANGERS"
+    },
+    "NHL-OTTAWA-SENATORS": {
+      "sport": "NHL",
+      "espn_id": "14",
+      "display_name": "Ottawa Senators",
+      "location": "Ottawa",
+      "nickname": "Senators",
+      "abbreviation": "OTT",
+      "primary_color": [
+        221,
+        26,
+        50
+      ],
+      "secondary_color": [
+        183,
+        146,
+        87
+      ],
+      "primary_hex": "dd1a32",
+      "secondary_hex": "b79257",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ott.png",
+      "unified_key": "NHL-OTTAWA-SENATORS"
+    },
+    "NHL-PHILADELPHIA-FLYERS": {
+      "sport": "NHL",
+      "espn_id": "15",
+      "display_name": "Philadelphia Flyers",
+      "location": "Philadelphia",
+      "nickname": "Flyers",
+      "abbreviation": "PHI",
+      "primary_color": [
+        254,
+        88,
+        35
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "fe5823",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png",
+      "unified_key": "NHL-PHILADELPHIA-FLYERS"
+    },
+    "NHL-PITTSBURGH-PENGUINS": {
+      "sport": "NHL",
+      "espn_id": "16",
+      "display_name": "Pittsburgh Penguins",
+      "location": "Pittsburgh",
+      "nickname": "Penguins",
+      "abbreviation": "PIT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        253,
+        183,
+        26
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "fdb71a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/pit.png",
+      "unified_key": "NHL-PITTSBURGH-PENGUINS"
+    },
+    "NHL-SAN_JOSE-SHARKS": {
+      "sport": "NHL",
+      "espn_id": "18",
+      "display_name": "San Jose Sharks",
+      "location": "San Jose",
+      "nickname": "Sharks",
+      "abbreviation": "SJ",
+      "primary_color": [
+        0,
+        120,
+        138
+      ],
+      "secondary_color": [
+        7,
+        7,
+        7
+      ],
+      "primary_hex": "00788a",
+      "secondary_hex": "070707",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "unified_key": "NHL-SAN_JOSE-SHARKS"
+    },
+    "NHL-SEATTLE-KRAKEN": {
+      "sport": "NHL",
+      "espn_id": "124292",
+      "display_name": "Seattle Kraken",
+      "location": "Seattle",
+      "nickname": "Kraken",
+      "abbreviation": "SEA",
+      "primary_color": [
+        0,
+        13,
+        51
+      ],
+      "secondary_color": [
+        163,
+        220,
+        228
+      ],
+      "primary_hex": "000d33",
+      "secondary_hex": "a3dce4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sea.png",
+      "unified_key": "NHL-SEATTLE-KRAKEN"
+    },
+    "NHL-ST._LOUIS-BLUES": {
+      "sport": "NHL",
+      "espn_id": "19",
+      "display_name": "St. Louis Blues",
+      "location": "St. Louis",
+      "nickname": "Blues",
+      "abbreviation": "STL",
+      "primary_color": [
+        0,
+        70,
+        139
+      ],
+      "secondary_color": [
+        253,
+        183,
+        26
+      ],
+      "primary_hex": "00468b",
+      "secondary_hex": "fdb71a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/stl.png",
+      "unified_key": "NHL-ST._LOUIS-BLUES"
+    },
+    "NHL-TAMPA_BAY-LIGHTNING": {
+      "sport": "NHL",
+      "espn_id": "20",
+      "display_name": "Tampa Bay Lightning",
+      "location": "Tampa Bay",
+      "nickname": "Lightning",
+      "abbreviation": "TB",
+      "primary_color": [
+        0,
+        62,
+        126
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003e7e",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png",
+      "unified_key": "NHL-TAMPA_BAY-LIGHTNING"
+    },
+    "NHL-TORONTO-MAPLE_LEAFS": {
+      "sport": "NHL",
+      "espn_id": "21",
+      "display_name": "Toronto Maple Leafs",
+      "location": "Toronto",
+      "nickname": "Maple Leafs",
+      "abbreviation": "TOR",
+      "primary_color": [
+        0,
+        62,
+        126
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "003e7e",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
+      "unified_key": "NHL-TORONTO-MAPLE_LEAFS"
+    },
+    "NHL-UTAH-MAMMOTH": {
+      "sport": "NHL",
+      "espn_id": "129764",
+      "display_name": "Utah Mammoth",
+      "location": "Utah",
+      "nickname": "Mammoth",
+      "abbreviation": "UTA",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        120,
+        179,
+        224
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "78b3e0",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/uta.png",
+      "unified_key": "NHL-UTAH-MAMMOTH"
+    },
+    "NHL-VANCOUVER-CANUCKS": {
+      "sport": "NHL",
+      "espn_id": "22",
+      "display_name": "Vancouver Canucks",
+      "location": "Vancouver",
+      "nickname": "Canucks",
+      "abbreviation": "VAN",
+      "primary_color": [
+        0,
+        62,
+        126
+      ],
+      "secondary_color": [
+        0,
+        135,
+        82
+      ],
+      "primary_hex": "003e7e",
+      "secondary_hex": "008752",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/van.png",
+      "unified_key": "NHL-VANCOUVER-CANUCKS"
+    },
+    "NHL-VEGAS-GOLDEN_KNIGHTS": {
+      "sport": "NHL",
+      "espn_id": "37",
+      "display_name": "Vegas Golden Knights",
+      "location": "Vegas",
+      "nickname": "Golden Knights",
+      "abbreviation": "VGK",
+      "primary_color": [
+        52,
+        64,
+        67
+      ],
+      "secondary_color": [
+        180,
+        151,
+        90
+      ],
+      "primary_hex": "344043",
+      "secondary_hex": "b4975a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+      "unified_key": "NHL-VEGAS-GOLDEN_KNIGHTS"
+    },
+    "NHL-WASHINGTON-CAPITALS": {
+      "sport": "NHL",
+      "espn_id": "23",
+      "display_name": "Washington Capitals",
+      "location": "Washington",
+      "nickname": "Capitals",
+      "abbreviation": "WSH",
+      "primary_color": [
+        215,
+        24,
+        48
+      ],
+      "secondary_color": [
+        11,
+        31,
+        65
+      ],
+      "primary_hex": "d71830",
+      "secondary_hex": "0b1f41",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png",
+      "unified_key": "NHL-WASHINGTON-CAPITALS"
+    },
+    "NHL-WINNIPEG-JETS": {
+      "sport": "NHL",
+      "espn_id": "28",
+      "display_name": "Winnipeg Jets",
+      "location": "Winnipeg",
+      "nickname": "Jets",
+      "abbreviation": "WPG",
+      "primary_color": [
+        0,
+        45,
+        98
+      ],
+      "secondary_color": [
+        196,
+        18,
+        48
+      ],
+      "primary_hex": "002d62",
+      "secondary_hex": "c41230",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+      "unified_key": "NHL-WINNIPEG-JETS"
+    },
+    "MLB-ARIZONA-DIAMONDBACKS": {
+      "sport": "MLB",
+      "espn_id": "29",
+      "display_name": "Arizona Diamondbacks",
+      "location": "Arizona",
+      "nickname": "Diamondbacks",
+      "abbreviation": "ARI",
+      "primary_color": [
+        170,
+        24,
+        44
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "aa182c",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+      "unified_key": "MLB-ARIZONA-DIAMONDBACKS"
+    },
+    "MLB-ATHLETICS-ATHLETICS": {
+      "sport": "MLB",
+      "espn_id": "11",
+      "display_name": "Athletics",
+      "location": "Athletics",
+      "nickname": "Athletics",
+      "abbreviation": "ATH",
+      "primary_color": [
+        0,
+        56,
+        49
+      ],
+      "secondary_color": [
+        239,
+        178,
+        30
+      ],
+      "primary_hex": "003831",
+      "secondary_hex": "efb21e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+      "unified_key": "MLB-ATHLETICS-ATHLETICS"
+    },
+    "MLB-ATLANTA-BRAVES": {
+      "sport": "MLB",
+      "espn_id": "15",
+      "display_name": "Atlanta Braves",
+      "location": "Atlanta",
+      "nickname": "Braves",
+      "abbreviation": "ATL",
+      "primary_color": [
+        12,
+        35,
+        64
+      ],
+      "secondary_color": [
+        186,
+        12,
+        47
+      ],
+      "primary_hex": "0c2340",
+      "secondary_hex": "ba0c2f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+      "unified_key": "MLB-ATLANTA-BRAVES"
+    },
+    "MLB-BALTIMORE-ORIOLES": {
+      "sport": "MLB",
+      "espn_id": "1",
+      "display_name": "Baltimore Orioles",
+      "location": "Baltimore",
+      "nickname": "Orioles",
+      "abbreviation": "BAL",
+      "primary_color": [
+        223,
+        70,
+        1
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "df4601",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+      "unified_key": "MLB-BALTIMORE-ORIOLES"
+    },
+    "MLB-BOSTON-RED_SOX": {
+      "sport": "MLB",
+      "espn_id": "2",
+      "display_name": "Boston Red Sox",
+      "location": "Boston",
+      "nickname": "Red Sox",
+      "abbreviation": "BOS",
+      "primary_color": [
+        13,
+        43,
+        86
+      ],
+      "secondary_color": [
+        189,
+        48,
+        57
+      ],
+      "primary_hex": "0d2b56",
+      "secondary_hex": "bd3039",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+      "unified_key": "MLB-BOSTON-RED_SOX"
+    },
+    "MLB-CHICAGO-CUBS": {
+      "sport": "MLB",
+      "espn_id": "16",
+      "display_name": "Chicago Cubs",
+      "location": "Chicago",
+      "nickname": "Cubs",
+      "abbreviation": "CHC",
+      "primary_color": [
+        14,
+        51,
+        134
+      ],
+      "secondary_color": [
+        204,
+        52,
+        51
+      ],
+      "primary_hex": "0e3386",
+      "secondary_hex": "cc3433",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+      "unified_key": "MLB-CHICAGO-CUBS"
+    },
+    "MLB-CHICAGO-WHITE_SOX": {
+      "sport": "MLB",
+      "espn_id": "4",
+      "display_name": "Chicago White Sox",
+      "location": "Chicago",
+      "nickname": "White Sox",
+      "abbreviation": "CHW",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        196,
+        206,
+        212
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "c4ced4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png",
+      "unified_key": "MLB-CHICAGO-WHITE_SOX"
+    },
+    "MLB-CINCINNATI-REDS": {
+      "sport": "MLB",
+      "espn_id": "17",
+      "display_name": "Cincinnati Reds",
+      "location": "Cincinnati",
+      "nickname": "Reds",
+      "abbreviation": "CIN",
+      "primary_color": [
+        198,
+        1,
+        31
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "c6011f",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png",
+      "unified_key": "MLB-CINCINNATI-REDS"
+    },
+    "MLB-CLEVELAND-GUARDIANS": {
+      "sport": "MLB",
+      "espn_id": "5",
+      "display_name": "Cleveland Guardians",
+      "location": "Cleveland",
+      "nickname": "Guardians",
+      "abbreviation": "CLE",
+      "primary_color": [
+        0,
+        43,
+        92
+      ],
+      "secondary_color": [
+        227,
+        25,
+        55
+      ],
+      "primary_hex": "002b5c",
+      "secondary_hex": "e31937",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png",
+      "unified_key": "MLB-CLEVELAND-GUARDIANS"
+    },
+    "MLB-COLORADO-ROCKIES": {
+      "sport": "MLB",
+      "espn_id": "27",
+      "display_name": "Colorado Rockies",
+      "location": "Colorado",
+      "nickname": "Rockies",
+      "abbreviation": "COL",
+      "primary_color": [
+        51,
+        0,
+        111
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "33006f",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+      "unified_key": "MLB-COLORADO-ROCKIES"
+    },
+    "MLB-DETROIT-TIGERS": {
+      "sport": "MLB",
+      "espn_id": "6",
+      "display_name": "Detroit Tigers",
+      "location": "Detroit",
+      "nickname": "Tigers",
+      "abbreviation": "DET",
+      "primary_color": [
+        10,
+        34,
+        64
+      ],
+      "secondary_color": [
+        255,
+        71,
+        19
+      ],
+      "primary_hex": "0a2240",
+      "secondary_hex": "ff4713",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+      "unified_key": "MLB-DETROIT-TIGERS"
+    },
+    "MLB-HOUSTON-ASTROS": {
+      "sport": "MLB",
+      "espn_id": "18",
+      "display_name": "Houston Astros",
+      "location": "Houston",
+      "nickname": "Astros",
+      "abbreviation": "HOU",
+      "primary_color": [
+        0,
+        45,
+        98
+      ],
+      "secondary_color": [
+        235,
+        110,
+        31
+      ],
+      "primary_hex": "002d62",
+      "secondary_hex": "eb6e1f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+      "unified_key": "MLB-HOUSTON-ASTROS"
+    },
+    "MLB-KANSAS_CITY-ROYALS": {
+      "sport": "MLB",
+      "espn_id": "7",
+      "display_name": "Kansas City Royals",
+      "location": "Kansas City",
+      "nickname": "Royals",
+      "abbreviation": "KC",
+      "primary_color": [
+        0,
+        70,
+        135
+      ],
+      "secondary_color": [
+        122,
+        178,
+        221
+      ],
+      "primary_hex": "004687",
+      "secondary_hex": "7ab2dd",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+      "unified_key": "MLB-KANSAS_CITY-ROYALS"
+    },
+    "MLB-LOS_ANGELES-ANGELS": {
+      "sport": "MLB",
+      "espn_id": "3",
+      "display_name": "Los Angeles Angels",
+      "location": "Los Angeles",
+      "nickname": "Angels",
+      "abbreviation": "LAA",
+      "primary_color": [
+        186,
+        0,
+        33
+      ],
+      "secondary_color": [
+        196,
+        206,
+        212
+      ],
+      "primary_hex": "ba0021",
+      "secondary_hex": "c4ced4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "unified_key": "MLB-LOS_ANGELES-ANGELS"
+    },
+    "MLB-LOS_ANGELES-DODGERS": {
+      "sport": "MLB",
+      "espn_id": "19",
+      "display_name": "Los Angeles Dodgers",
+      "location": "Los Angeles",
+      "nickname": "Dodgers",
+      "abbreviation": "LAD",
+      "primary_color": [
+        0,
+        90,
+        156
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "005a9c",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "unified_key": "MLB-LOS_ANGELES-DODGERS"
+    },
+    "MLB-MIAMI-MARLINS": {
+      "sport": "MLB",
+      "espn_id": "28",
+      "display_name": "Miami Marlins",
+      "location": "Miami",
+      "nickname": "Marlins",
+      "abbreviation": "MIA",
+      "primary_color": [
+        0,
+        163,
+        224
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "00a3e0",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png",
+      "unified_key": "MLB-MIAMI-MARLINS"
+    },
+    "MLB-MILWAUKEE-BREWERS": {
+      "sport": "MLB",
+      "espn_id": "8",
+      "display_name": "Milwaukee Brewers",
+      "location": "Milwaukee",
+      "nickname": "Brewers",
+      "abbreviation": "MIL",
+      "primary_color": [
+        19,
+        41,
+        75
+      ],
+      "secondary_color": [
+        255,
+        199,
+        44
+      ],
+      "primary_hex": "13294b",
+      "secondary_hex": "ffc72c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+      "unified_key": "MLB-MILWAUKEE-BREWERS"
+    },
+    "MLB-MINNESOTA-TWINS": {
+      "sport": "MLB",
+      "espn_id": "9",
+      "display_name": "Minnesota Twins",
+      "location": "Minnesota",
+      "nickname": "Twins",
+      "abbreviation": "MIN",
+      "primary_color": [
+        3,
+        31,
+        64
+      ],
+      "secondary_color": [
+        226,
+        14,
+        50
+      ],
+      "primary_hex": "031f40",
+      "secondary_hex": "e20e32",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+      "unified_key": "MLB-MINNESOTA-TWINS"
+    },
+    "MLB-NEW_YORK-METS": {
+      "sport": "MLB",
+      "espn_id": "21",
+      "display_name": "New York Mets",
+      "location": "New York",
+      "nickname": "Mets",
+      "abbreviation": "NYM",
+      "primary_color": [
+        0,
+        45,
+        114
+      ],
+      "secondary_color": [
+        255,
+        89,
+        16
+      ],
+      "primary_hex": "002d72",
+      "secondary_hex": "ff5910",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+      "unified_key": "MLB-NEW_YORK-METS"
+    },
+    "MLB-NEW_YORK-YANKEES": {
+      "sport": "MLB",
+      "espn_id": "10",
+      "display_name": "New York Yankees",
+      "location": "New York",
+      "nickname": "Yankees",
+      "abbreviation": "NYY",
+      "primary_color": [
+        19,
+        36,
+        72
+      ],
+      "secondary_color": [
+        196,
+        206,
+        212
+      ],
+      "primary_hex": "132448",
+      "secondary_hex": "c4ced4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+      "unified_key": "MLB-NEW_YORK-YANKEES"
+    },
+    "MLB-PHILADELPHIA-PHILLIES": {
+      "sport": "MLB",
+      "espn_id": "22",
+      "display_name": "Philadelphia Phillies",
+      "location": "Philadelphia",
+      "nickname": "Phillies",
+      "abbreviation": "PHI",
+      "primary_color": [
+        232,
+        24,
+        40
+      ],
+      "secondary_color": [
+        0,
+        50,
+        120
+      ],
+      "primary_hex": "e81828",
+      "secondary_hex": "003278",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+      "unified_key": "MLB-PHILADELPHIA-PHILLIES"
+    },
+    "MLB-PITTSBURGH-PIRATES": {
+      "sport": "MLB",
+      "espn_id": "23",
+      "display_name": "Pittsburgh Pirates",
+      "location": "Pittsburgh",
+      "nickname": "Pirates",
+      "abbreviation": "PIT",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        253,
+        184,
+        39
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "fdb827",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png",
+      "unified_key": "MLB-PITTSBURGH-PIRATES"
+    },
+    "MLB-SAN_DIEGO-PADRES": {
+      "sport": "MLB",
+      "espn_id": "25",
+      "display_name": "San Diego Padres",
+      "location": "San Diego",
+      "nickname": "Padres",
+      "abbreviation": "SD",
+      "primary_color": [
+        47,
+        36,
+        29
+      ],
+      "secondary_color": [
+        255,
+        196,
+        37
+      ],
+      "primary_hex": "2f241d",
+      "secondary_hex": "ffc425",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+      "unified_key": "MLB-SAN_DIEGO-PADRES"
+    },
+    "MLB-SAN_FRANCISCO-GIANTS": {
+      "sport": "MLB",
+      "espn_id": "26",
+      "display_name": "San Francisco Giants",
+      "location": "San Francisco",
+      "nickname": "Giants",
+      "abbreviation": "SF",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        253,
+        90,
+        30
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "fd5a1e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+      "unified_key": "MLB-SAN_FRANCISCO-GIANTS"
+    },
+    "MLB-SEATTLE-MARINERS": {
+      "sport": "MLB",
+      "espn_id": "12",
+      "display_name": "Seattle Mariners",
+      "location": "Seattle",
+      "nickname": "Mariners",
+      "abbreviation": "SEA",
+      "primary_color": [
+        0,
+        92,
+        92
+      ],
+      "secondary_color": [
+        12,
+        44,
+        86
+      ],
+      "primary_hex": "005c5c",
+      "secondary_hex": "0c2c56",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+      "unified_key": "MLB-SEATTLE-MARINERS"
+    },
+    "MLB-ST._LOUIS-CARDINALS": {
+      "sport": "MLB",
+      "espn_id": "24",
+      "display_name": "St. Louis Cardinals",
+      "location": "St. Louis",
+      "nickname": "Cardinals",
+      "abbreviation": "STL",
+      "primary_color": [
+        190,
+        10,
+        20
+      ],
+      "secondary_color": [
+        0,
+        21,
+        65
+      ],
+      "primary_hex": "be0a14",
+      "secondary_hex": "001541",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+      "unified_key": "MLB-ST._LOUIS-CARDINALS"
+    },
+    "MLB-TAMPA_BAY-RAYS": {
+      "sport": "MLB",
+      "espn_id": "30",
+      "display_name": "Tampa Bay Rays",
+      "location": "Tampa Bay",
+      "nickname": "Rays",
+      "abbreviation": "TB",
+      "primary_color": [
+        9,
+        44,
+        92
+      ],
+      "secondary_color": [
+        143,
+        188,
+        230
+      ],
+      "primary_hex": "092c5c",
+      "secondary_hex": "8fbce6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+      "unified_key": "MLB-TAMPA_BAY-RAYS"
+    },
+    "MLB-TEXAS-RANGERS": {
+      "sport": "MLB",
+      "espn_id": "13",
+      "display_name": "Texas Rangers",
+      "location": "Texas",
+      "nickname": "Rangers",
+      "abbreviation": "TEX",
+      "primary_color": [
+        0,
+        50,
+        120
+      ],
+      "secondary_color": [
+        192,
+        17,
+        31
+      ],
+      "primary_hex": "003278",
+      "secondary_hex": "c0111f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+      "unified_key": "MLB-TEXAS-RANGERS"
+    },
+    "MLB-TORONTO-BLUE_JAYS": {
+      "sport": "MLB",
+      "espn_id": "14",
+      "display_name": "Toronto Blue Jays",
+      "location": "Toronto",
+      "nickname": "Blue Jays",
+      "abbreviation": "TOR",
+      "primary_color": [
+        19,
+        74,
+        142
+      ],
+      "secondary_color": [
+        108,
+        172,
+        229
+      ],
+      "primary_hex": "134a8e",
+      "secondary_hex": "6cace5",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+      "unified_key": "MLB-TORONTO-BLUE_JAYS"
+    },
+    "MLB-WASHINGTON-NATIONALS": {
+      "sport": "MLB",
+      "espn_id": "20",
+      "display_name": "Washington Nationals",
+      "location": "Washington",
+      "nickname": "Nationals",
+      "abbreviation": "WSH",
+      "primary_color": [
+        171,
+        0,
+        3
+      ],
+      "secondary_color": [
+        17,
+        34,
+        91
+      ],
+      "primary_hex": "ab0003",
+      "secondary_hex": "11225b",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png",
+      "unified_key": "MLB-WASHINGTON-NATIONALS"
+    },
+    "NBA-ATLANTA-HAWKS": {
+      "sport": "NBA",
+      "espn_id": "1",
+      "display_name": "Atlanta Hawks",
+      "location": "Atlanta",
+      "nickname": "Hawks",
+      "abbreviation": "ATL",
+      "primary_color": [
+        200,
+        16,
+        46
+      ],
+      "secondary_color": [
+        253,
+        185,
+        39
+      ],
+      "primary_hex": "c8102e",
+      "secondary_hex": "fdb927",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+      "unified_key": "NBA-ATLANTA-HAWKS"
+    },
+    "NBA-BOSTON-CELTICS": {
+      "sport": "NBA",
+      "espn_id": "2",
+      "display_name": "Boston Celtics",
+      "location": "Boston",
+      "nickname": "Celtics",
+      "abbreviation": "BOS",
+      "primary_color": [
+        0,
+        131,
+        72
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "008348",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
+      "unified_key": "NBA-BOSTON-CELTICS"
+    },
+    "NBA-BROOKLYN-NETS": {
+      "sport": "NBA",
+      "espn_id": "17",
+      "display_name": "Brooklyn Nets",
+      "location": "Brooklyn",
+      "nickname": "Nets",
+      "abbreviation": "BKN",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        255,
+        255,
+        255
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "ffffff",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
+      "unified_key": "NBA-BROOKLYN-NETS"
+    },
+    "NBA-CHARLOTTE-HORNETS": {
+      "sport": "NBA",
+      "espn_id": "30",
+      "display_name": "Charlotte Hornets",
+      "location": "Charlotte",
+      "nickname": "Hornets",
+      "abbreviation": "CHA",
+      "primary_color": [
+        0,
+        140,
+        168
+      ],
+      "secondary_color": [
+        29,
+        16,
+        96
+      ],
+      "primary_hex": "008ca8",
+      "secondary_hex": "1d1060",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
+      "unified_key": "NBA-CHARLOTTE-HORNETS"
+    },
+    "NBA-CHICAGO-BULLS": {
+      "sport": "NBA",
+      "espn_id": "4",
+      "display_name": "Chicago Bulls",
+      "location": "Chicago",
+      "nickname": "Bulls",
+      "abbreviation": "CHI",
+      "primary_color": [
+        206,
+        17,
+        65
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "ce1141",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
+      "unified_key": "NBA-CHICAGO-BULLS"
+    },
+    "NBA-CLEVELAND-CAVALIERS": {
+      "sport": "NBA",
+      "espn_id": "5",
+      "display_name": "Cleveland Cavaliers",
+      "location": "Cleveland",
+      "nickname": "Cavaliers",
+      "abbreviation": "CLE",
+      "primary_color": [
+        134,
+        0,
+        56
+      ],
+      "secondary_color": [
+        188,
+        148,
+        92
+      ],
+      "primary_hex": "860038",
+      "secondary_hex": "bc945c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
+      "unified_key": "NBA-CLEVELAND-CAVALIERS"
+    },
+    "NBA-DALLAS-MAVERICKS": {
+      "sport": "NBA",
+      "espn_id": "6",
+      "display_name": "Dallas Mavericks",
+      "location": "Dallas",
+      "nickname": "Mavericks",
+      "abbreviation": "DAL",
+      "primary_color": [
+        0,
+        100,
+        177
+      ],
+      "secondary_color": [
+        187,
+        196,
+        202
+      ],
+      "primary_hex": "0064b1",
+      "secondary_hex": "bbc4ca",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
+      "unified_key": "NBA-DALLAS-MAVERICKS"
+    },
+    "NBA-DENVER-NUGGETS": {
+      "sport": "NBA",
+      "espn_id": "7",
+      "display_name": "Denver Nuggets",
+      "location": "Denver",
+      "nickname": "Nuggets",
+      "abbreviation": "DEN",
+      "primary_color": [
+        14,
+        34,
+        64
+      ],
+      "secondary_color": [
+        254,
+        197,
+        36
+      ],
+      "primary_hex": "0e2240",
+      "secondary_hex": "fec524",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
+      "unified_key": "NBA-DENVER-NUGGETS"
+    },
+    "NBA-DETROIT-PISTONS": {
+      "sport": "NBA",
+      "espn_id": "8",
+      "display_name": "Detroit Pistons",
+      "location": "Detroit",
+      "nickname": "Pistons",
+      "abbreviation": "DET",
+      "primary_color": [
+        29,
+        66,
+        138
+      ],
+      "secondary_color": [
+        200,
+        16,
+        46
+      ],
+      "primary_hex": "1d428a",
+      "secondary_hex": "c8102e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
+      "unified_key": "NBA-DETROIT-PISTONS"
+    },
+    "NBA-GOLDEN_STATE-WARRIORS": {
+      "sport": "NBA",
+      "espn_id": "9",
+      "display_name": "Golden State Warriors",
+      "location": "Golden State",
+      "nickname": "Warriors",
+      "abbreviation": "GS",
+      "primary_color": [
+        253,
+        185,
+        39
+      ],
+      "secondary_color": [
+        29,
+        66,
+        138
+      ],
+      "primary_hex": "fdb927",
+      "secondary_hex": "1d428a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+      "unified_key": "NBA-GOLDEN_STATE-WARRIORS"
+    },
+    "NBA-HOUSTON-ROCKETS": {
+      "sport": "NBA",
+      "espn_id": "10",
+      "display_name": "Houston Rockets",
+      "location": "Houston",
+      "nickname": "Rockets",
+      "abbreviation": "HOU",
+      "primary_color": [
+        206,
+        17,
+        65
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "ce1141",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+      "unified_key": "NBA-HOUSTON-ROCKETS"
+    },
+    "NBA-INDIANA-PACERS": {
+      "sport": "NBA",
+      "espn_id": "11",
+      "display_name": "Indiana Pacers",
+      "location": "Indiana",
+      "nickname": "Pacers",
+      "abbreviation": "IND",
+      "primary_color": [
+        12,
+        35,
+        64
+      ],
+      "secondary_color": [
+        255,
+        213,
+        32
+      ],
+      "primary_hex": "0c2340",
+      "secondary_hex": "ffd520",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
+      "unified_key": "NBA-INDIANA-PACERS"
+    },
+    "NBA-LA-CLIPPERS": {
+      "sport": "NBA",
+      "espn_id": "12",
+      "display_name": "LA Clippers",
+      "location": "LA",
+      "nickname": "Clippers",
+      "abbreviation": "LAC",
+      "primary_color": [
+        18,
+        23,
+        63
+      ],
+      "secondary_color": [
+        200,
+        16,
+        46
+      ],
+      "primary_hex": "12173f",
+      "secondary_hex": "c8102e",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
+      "unified_key": "NBA-LA-CLIPPERS"
+    },
+    "NBA-LOS_ANGELES-LAKERS": {
+      "sport": "NBA",
+      "espn_id": "13",
+      "display_name": "Los Angeles Lakers",
+      "location": "Los Angeles",
+      "nickname": "Lakers",
+      "abbreviation": "LAL",
+      "primary_color": [
+        85,
+        37,
+        131
+      ],
+      "secondary_color": [
+        253,
+        185,
+        39
+      ],
+      "primary_hex": "552583",
+      "secondary_hex": "fdb927",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+      "unified_key": "NBA-LOS_ANGELES-LAKERS"
+    },
+    "NBA-MEMPHIS-GRIZZLIES": {
+      "sport": "NBA",
+      "espn_id": "29",
+      "display_name": "Memphis Grizzlies",
+      "location": "Memphis",
+      "nickname": "Grizzlies",
+      "abbreviation": "MEM",
+      "primary_color": [
+        93,
+        118,
+        169
+      ],
+      "secondary_color": [
+        18,
+        23,
+        63
+      ],
+      "primary_hex": "5d76a9",
+      "secondary_hex": "12173f",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+      "unified_key": "NBA-MEMPHIS-GRIZZLIES"
+    },
+    "NBA-MIAMI-HEAT": {
+      "sport": "NBA",
+      "espn_id": "14",
+      "display_name": "Miami Heat",
+      "location": "Miami",
+      "nickname": "Heat",
+      "abbreviation": "MIA",
+      "primary_color": [
+        152,
+        0,
+        46
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "98002e",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+      "unified_key": "NBA-MIAMI-HEAT"
+    },
+    "NBA-MILWAUKEE-BUCKS": {
+      "sport": "NBA",
+      "espn_id": "15",
+      "display_name": "Milwaukee Bucks",
+      "location": "Milwaukee",
+      "nickname": "Bucks",
+      "abbreviation": "MIL",
+      "primary_color": [
+        0,
+        71,
+        27
+      ],
+      "secondary_color": [
+        238,
+        225,
+        198
+      ],
+      "primary_hex": "00471b",
+      "secondary_hex": "eee1c6",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
+      "unified_key": "NBA-MILWAUKEE-BUCKS"
+    },
+    "NBA-MINNESOTA-TIMBERWOLVES": {
+      "sport": "NBA",
+      "espn_id": "16",
+      "display_name": "Minnesota Timberwolves",
+      "location": "Minnesota",
+      "nickname": "Timberwolves",
+      "abbreviation": "MIN",
+      "primary_color": [
+        38,
+        96,
+        146
+      ],
+      "secondary_color": [
+        121,
+        188,
+        67
+      ],
+      "primary_hex": "266092",
+      "secondary_hex": "79bc43",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
+      "unified_key": "NBA-MINNESOTA-TIMBERWOLVES"
+    },
+    "NBA-NEW_ORLEANS-PELICANS": {
+      "sport": "NBA",
+      "espn_id": "3",
+      "display_name": "New Orleans Pelicans",
+      "location": "New Orleans",
+      "nickname": "Pelicans",
+      "abbreviation": "NO",
+      "primary_color": [
+        10,
+        34,
+        64
+      ],
+      "secondary_color": [
+        180,
+        151,
+        90
+      ],
+      "primary_hex": "0a2240",
+      "secondary_hex": "b4975a",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+      "unified_key": "NBA-NEW_ORLEANS-PELICANS"
+    },
+    "NBA-NEW_YORK-KNICKS": {
+      "sport": "NBA",
+      "espn_id": "18",
+      "display_name": "New York Knicks",
+      "location": "New York",
+      "nickname": "Knicks",
+      "abbreviation": "NY",
+      "primary_color": [
+        29,
+        66,
+        138
+      ],
+      "secondary_color": [
+        245,
+        132,
+        38
+      ],
+      "primary_hex": "1d428a",
+      "secondary_hex": "f58426",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
+      "unified_key": "NBA-NEW_YORK-KNICKS"
+    },
+    "NBA-OKLAHOMA_CITY-THUNDER": {
+      "sport": "NBA",
+      "espn_id": "25",
+      "display_name": "Oklahoma City Thunder",
+      "location": "Oklahoma City",
+      "nickname": "Thunder",
+      "abbreviation": "OKC",
+      "primary_color": [
+        0,
+        122,
+        193
+      ],
+      "secondary_color": [
+        239,
+        59,
+        36
+      ],
+      "primary_hex": "007ac1",
+      "secondary_hex": "ef3b24",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+      "unified_key": "NBA-OKLAHOMA_CITY-THUNDER"
+    },
+    "NBA-ORLANDO-MAGIC": {
+      "sport": "NBA",
+      "espn_id": "19",
+      "display_name": "Orlando Magic",
+      "location": "Orlando",
+      "nickname": "Magic",
+      "abbreviation": "ORL",
+      "primary_color": [
+        1,
+        80,
+        181
+      ],
+      "secondary_color": [
+        156,
+        160,
+        163
+      ],
+      "primary_hex": "0150b5",
+      "secondary_hex": "9ca0a3",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
+      "unified_key": "NBA-ORLANDO-MAGIC"
+    },
+    "NBA-PHILADELPHIA-76ERS": {
+      "sport": "NBA",
+      "espn_id": "20",
+      "display_name": "Philadelphia 76ers",
+      "location": "Philadelphia",
+      "nickname": "76ers",
+      "abbreviation": "PHI",
+      "primary_color": [
+        29,
+        66,
+        138
+      ],
+      "secondary_color": [
+        224,
+        18,
+        52
+      ],
+      "primary_hex": "1d428a",
+      "secondary_hex": "e01234",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+      "unified_key": "NBA-PHILADELPHIA-76ERS"
+    },
+    "NBA-PHOENIX-SUNS": {
+      "sport": "NBA",
+      "espn_id": "21",
+      "display_name": "Phoenix Suns",
+      "location": "Phoenix",
+      "nickname": "Suns",
+      "abbreviation": "PHX",
+      "primary_color": [
+        41,
+        18,
+        122
+      ],
+      "secondary_color": [
+        229,
+        96,
+        32
+      ],
+      "primary_hex": "29127a",
+      "secondary_hex": "e56020",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
+      "unified_key": "NBA-PHOENIX-SUNS"
+    },
+    "NBA-PORTLAND-TRAIL_BLAZERS": {
+      "sport": "NBA",
+      "espn_id": "22",
+      "display_name": "Portland Trail Blazers",
+      "location": "Portland",
+      "nickname": "Trail Blazers",
+      "abbreviation": "POR",
+      "primary_color": [
+        224,
+        58,
+        62
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "e03a3e",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+      "unified_key": "NBA-PORTLAND-TRAIL_BLAZERS"
+    },
+    "NBA-SACRAMENTO-KINGS": {
+      "sport": "NBA",
+      "espn_id": "23",
+      "display_name": "Sacramento Kings",
+      "location": "Sacramento",
+      "nickname": "Kings",
+      "abbreviation": "SAC",
+      "primary_color": [
+        90,
+        45,
+        129
+      ],
+      "secondary_color": [
+        106,
+        122,
+        130
+      ],
+      "primary_hex": "5a2d81",
+      "secondary_hex": "6a7a82",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+      "unified_key": "NBA-SACRAMENTO-KINGS"
+    },
+    "NBA-SAN_ANTONIO-SPURS": {
+      "sport": "NBA",
+      "espn_id": "24",
+      "display_name": "San Antonio Spurs",
+      "location": "San Antonio",
+      "nickname": "Spurs",
+      "abbreviation": "SA",
+      "primary_color": [
+        0,
+        0,
+        0
+      ],
+      "secondary_color": [
+        196,
+        206,
+        212
+      ],
+      "primary_hex": "000000",
+      "secondary_hex": "c4ced4",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
+      "unified_key": "NBA-SAN_ANTONIO-SPURS"
+    },
+    "NBA-TORONTO-RAPTORS": {
+      "sport": "NBA",
+      "espn_id": "28",
+      "display_name": "Toronto Raptors",
+      "location": "Toronto",
+      "nickname": "Raptors",
+      "abbreviation": "TOR",
+      "primary_color": [
+        217,
+        18,
+        68
+      ],
+      "secondary_color": [
+        0,
+        0,
+        0
+      ],
+      "primary_hex": "d91244",
+      "secondary_hex": "000000",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+      "unified_key": "NBA-TORONTO-RAPTORS"
+    },
+    "NBA-UTAH-JAZZ": {
+      "sport": "NBA",
+      "espn_id": "26",
+      "display_name": "Utah Jazz",
+      "location": "Utah",
+      "nickname": "Jazz",
+      "abbreviation": "UTAH",
+      "primary_color": [
+        78,
+        0,
+        142
+      ],
+      "secondary_color": [
+        121,
+        163,
+        220
+      ],
+      "primary_hex": "4e008e",
+      "secondary_hex": "79a3dc",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+      "unified_key": "NBA-UTAH-JAZZ"
+    },
+    "NBA-WASHINGTON-WIZARDS": {
+      "sport": "NBA",
+      "espn_id": "27",
+      "display_name": "Washington Wizards",
+      "location": "Washington",
+      "nickname": "Wizards",
+      "abbreviation": "WSH",
+      "primary_color": [
+        227,
+        24,
+        55
+      ],
+      "secondary_color": [
+        0,
+        43,
+        92
+      ],
+      "primary_hex": "e31837",
+      "secondary_hex": "002b5c",
+      "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png",
+      "unified_key": "NBA-WASHINGTON-WIZARDS"
+    }
+  },
+  "abbreviation_mapping": {
+    "ARI": "MLB-ARIZONA-DIAMONDBACKS",
+    "ATL": "NBA-ATLANTA-HAWKS",
+    "BAL": "MLB-BALTIMORE-ORIOLES",
+    "BUF": "NHL-BUFFALO-SABRES",
+    "CAR": "NHL-CAROLINA-HURRICANES",
+    "CHI": "NBA-CHICAGO-BULLS",
+    "CIN": "MLB-CINCINNATI-REDS",
+    "CLE": "NBA-CLEVELAND-CAVALIERS",
+    "DAL": "NBA-DALLAS-MAVERICKS",
+    "DEN": "NBA-DENVER-NUGGETS",
+    "DET": "NBA-DETROIT-PISTONS",
+    "GB": "NFL-GREEN_BAY-PACKERS",
+    "HOU": "NBA-HOUSTON-ROCKETS",
+    "IND": "NBA-INDIANA-PACERS",
+    "JAX": "NFL-JACKSONVILLE-JAGUARS",
+    "KC": "MLB-KANSAS_CITY-ROYALS",
+    "LV": "NFL-LAS_VEGAS-RAIDERS",
+    "LAS": "NFL-LAS_VEGAS-RAIDERS",
+    "LAC": "NBA-LA-CLIPPERS",
+    "LAR": "NFL-LOS_ANGELES-RAMS",
+    "LA": "NHL-LOS_ANGELES-KINGS",
+    "MIA": "NBA-MIAMI-HEAT",
+    "MIN": "NBA-MINNESOTA-TIMBERWOLVES",
+    "NE": "NFL-NEW_ENGLAND-PATRIOTS",
+    "NO": "NBA-NEW_ORLEANS-PELICANS",
+    "NYG": "NFL-NEW_YORK-GIANTS",
+    "NYJ": "NFL-NEW_YORK-JETS",
+    "PHI": "NBA-PHILADELPHIA-76ERS",
+    "PIT": "MLB-PITTSBURGH-PIRATES",
+    "SF": "MLB-SAN_FRANCISCO-GIANTS",
+    "SEA": "MLB-SEATTLE-MARINERS",
+    "TB": "MLB-TAMPA_BAY-RAYS",
+    "TEN": "NFL-TENNESSEE-TITANS",
+    "WSH": "NBA-WASHINGTON-WIZARDS",
+    "AMH": "CFB-AMHERST-MAMMOTHS",
+    "ANN": "CFB-ANNA_MARIA_COLLEGE-AMCATS",
+    "ASU": "CFB-ARIZONA_STATE-SUN_DEVILS",
+    "ARIZ": "CFB-ARIZONA-WILDCATS",
+    "ARK": "CFB-ARKANSAS-RAZORBACKS",
+    "AUB": "CFB-AUBURN-TIGERS",
+    "BOIS": "CFB-BOISE_STATE-BRONCOS",
+    "BRST": "CFB-BRIDGEWATER_STATE-BEARS",
+    "BUENA": "CFB-BUENA_VISTA-BEAVERS",
+    "CP": "CFB-CAL_POLY-MUSTANGS",
+    "CAL": "CFB-CALIFORNIA-GOLDEN_BEARS",
+    "CLA": "CFB-CLAREMONT-MUDD-SCRIPPS_COLLEGE-STAGS",
+    "COLBY": "CFB-COLBY_COLLEGE-WHITE_MULES",
+    "COLO": "CFB-COLORADO-BUFFALOES",
+    "MESA": "CFB-COLORADO_MESA-MAVERICKS",
+    "CSU": "CFB-COLORADO_STATE-RAMS",
+    "CUR": "CFB-CURRY_COLLEGE-COLONELS",
+    "DEL": "CFB-DELAWARE-BLUE_HENS",
+    "DUB": "CFB-DUBUQUE-SPARTANS",
+    "ELM": "CFB-ELMHURST-BLUEJAYS",
+    "FAMU": "CFB-FLORIDA_A&M-RATTLERS",
+    "FLA": "NHL-FLORIDA-PANTHERS",
+    "FSU": "CFB-FLORIDA_STATE-SEMINOLES",
+    "GTWN": "CFB-GEORGETOWN-HOYAS",
+    "UGA": "CFB-GEORGIA-BULLDOGS",
+    "GT": "CFB-GEORGIA_TECH-YELLOW_JACKETS",
+    "GRI": "CFB-GRINNELL-PIONEERS",
+    "HAW": "CFB-HAWAI'I-RAINBOW_WARRIORS",
+    "HOW": "CFB-HOWARD-BISON",
+    "IDHO": "CFB-IDAHO-VANDALS",
+    "ISU": "CFB-IOWA_STATE-CYCLONES",
+    "JXST": "CFB-JACKSONVILLE_STATE-GAMECOCKS",
+    "LUT": "CFB-LUTHER-NORSE",
+    "MIL": "NBA-MILWAUKEE-BUCKS",
+    "MOR": "CFB-MOREHOUSE_COLLEGE-MAROON_TIGERS",
+    "NOR": "CFB-NORTHEASTERN_STATE-RIVERHAWKS",
+    "RED": "CFB-REDLANDS-BULLDOGS",
+    "SAC": "NBA-SACRAMENTO-KINGS",
+    "SDSU": "CFB-SAN_DIEGO_STATE-AZTECS",
+    "SJSU": "CFB-SAN_JOSÉ_STATE-SPARTANS",
+    "USA": "CFB-SOUTH_ALABAMA-JAGUARS",
+    "USF": "CFB-SOUTH_FLORIDA-BULLS",
+    "STAN": "CFB-STANFORD-CARDINAL",
+    "STET": "CFB-STETSON-HATTERS",
+    "UAB": "CFB-UAB-BLAZERS",
+    "UCLA": "CFB-UCLA-BRUINS",
+    "CONN": "CFB-UCONN-HUSKIES",
+    "USC": "CFB-USC-TROJANS",
+    "YALE": "CFB-YALE-BULLDOGS",
+    "ASH": "CFB-ASHLAND-EAGLES",
+    "AUG": "CFB-AUGSBURG-AUGGIES",
+    "BYU": "CFB-BYU-COUGARS",
+    "BAT": "CFB-BATES-BOBCATS",
+    "BAY": "CFB-BAYLOR-BEARS",
+    "BEL": "CFB-BELOIT-BUCCANEERS",
+    "BST": "CFB-BEMIDJI_STATE-BEAVERS",
+    "BC": "CFB-BOSTON_COLLEGE-EAGLES",
+    "BGSU": "CFB-BOWLING_GREEN-FALCONS",
+    "BRWN": "CFB-BROWN-BEARS",
+    "CAS": "CFB-CASTLETON-SPARTANS",
+    "UTC": "CFB-CHATTANOOGA-MOCS",
+    "CLEM": "CFB-CLEMSON-TIGERS",
+    "COLU": "CFB-COLUMBIA-LIONS",
+    "COR": "CFB-CORNELL-BIG_RED",
+    "DART": "CFB-DARTMOUTH-BIG_GREEN",
+    "DEF": "CFB-DEFIANCE_COLLEGE-YELLOW_JACKETS",
+    "DEP": "CFB-DEPAUW-TIGERS",
+    "DUKE": "CFB-DUKE-BLUE_DEVILS",
+    "ECU": "CFB-EAST_CAROLINA-PIRATES",
+    "EUR": "CFB-EUREKA_COLLEGE-RED_DEVILS",
+    "FITCH": "CFB-FITCHBURG_STATE-FALCONS",
+    "FRES": "CFB-FRESNO_STATE-BULLDOGS",
+    "FUR": "CFB-FURMAN-PALADINS",
+    "GASO": "CFB-GEORGIA_SOUTHERN-EAGLES",
+    "GVSU": "CFB-GRAND_VALLEY_STATE_UNIVERSITY-LAKERS",
+    "GRO": "CFB-GROVE_CITY_COLLEGE-WOLVERINES",
+    "HAM": "CFB-HAMPDEN-SYDNEY-TIGERS",
+    "HAR": "CFB-HARTWICK-HAWKS",
+    "HARV": "CFB-HARVARD-CRIMSON",
+    "HEI": "CFB-HEIDELBERG-STUDENT_PRINCES",
+    "HBRT": "CFB-HOBART_COLLEGE-STATESMEN",
+    "HC": "CFB-HOLY_CROSS-CRUSADERS",
+    "IDST": "CFB-IDAHO_STATE-BENGALS",
+    "ILLWES": "CFB-ILLINOIS_WESLEYAN-TITANS",
+    "IU": "CFB-INDIANA-HOOSIERS",
+    "INST": "CFB-INDIANA_STATE-SYCAMORES",
+    "ITH": "CFB-ITHACA_COLLEGE-BOMBERS",
+    "JMU": "CFB-JAMES_MADISON-DUKES",
+    "JHU": "CFB-JOHNS_HOPKINS_UNIVERSITY-BLUE_JAYS",
+    "JUN": "CFB-JUNIATA_COLLEGE-EAGLES",
+    "KAL": "CFB-KALAMAZOO-HORNETS",
+    "UK": "CFB-KENTUCKY-WILDCATS",
+    "KIN": "CFB-KING'S_COLLEGE_(PA)-MONARCHS",
+    "KNO": "CFB-KNOX_COLLEGE-PRAIRIE_FIRE",
+    "SEU": "CFB-LAKELAND-FIRES",
+    "LSU": "CFB-LSU-TIGERS",
+    "LAK": "CFB-LAKE_FOREST_COLLEGE-FORESTERS",
+    "LAW": "CFB-LAWRENCE_UNIVERSITY-VIKINGS",
+    "LIN": "CFB-LINFIELD_COLLEGE-WILDCATS",
+    "LHU": "CFB-LOCK_HAVEN_UNIVERSITY-BALD_EAGLES",
+    "LOR": "CFB-LORAS_COLLEGE-DUHAWKS",
+    "UL": "CFB-LOUISIANA-RAGIN'_CAJUNS",
+    "LOU": "CFB-LOUISVILLE-CARDINALS",
+    "MIT": "CFB-MIT-ENGINEERS",
+    "MAI": "CFB-MAINE_MARITIME-MARINERS",
+    "MRSH": "CFB-MARSHALL-THUNDERING_HERD",
+    "MD": "CFB-MARYLAND-TERRAPINS",
+    "MAMARI": "CFB-MASS_MARITIME-BUCCANEERS",
+    "MASS": "CFB-MASSACHUSETTS-MINUTEMEN",
+    "MCM": "CFB-MCMURRY-WAR_HAWKS",
+    "MEM": "NBA-MEMPHIS-GRIZZLIES",
+    "MTH": "CFB-METHODIST-MONARCHS",
+    "M-OH": "CFB-MIAMI_(OH)-REDHAWKS",
+    "MSU": "CFB-MICHIGAN_STATE-SPARTANS",
+    "MICH": "CFB-MICHIGAN-WOLVERINES",
+    "UMD": "CFB-MINNESOTA_DULUTH-BULLDOGS",
+    "MINN": "CFB-MINNESOTA-GOLDEN_GOPHERS",
+    "MIZ": "CFB-MISSOURI-TIGERS",
+    "MOW": "CFB-MISSOURI_WESTERN-GRIFFONS",
+    "MONT": "CFB-MONTANA-GRIZZLIES",
+    "MTST": "CFB-MONTANA_STATE-BOBCATS",
+    "MUR": "CFB-MURRAY_STATE-RACERS",
+    "NCSU": "CFB-NC_STATE-WOLFPACK",
+    "NEB": "CFB-NEBRASKA-CORNHUSKERS",
+    "UNH": "CFB-NEW_HAMPSHIRE-WILDCATS",
+    "UNM": "CFB-NEW_MEXICO-LOBOS",
+    "NMSU": "CFB-NEW_MEXICO_STATE-AGGIES",
+    "UNC": "CFB-NORTH_CAROLINA-TAR_HEELS",
+    "NORTH": "CFB-NORTH_CAROLINA_WESLEYAN-BATTLING_BISHOPS",
+    "UND": "CFB-NORTH_DAKOTA-FIGHTING_HAWKS",
+    "UNT": "CFB-NORTH_TEXAS-MEAN_GREEN",
+    "NMI": "CFB-NORTHERN_MICHIGAN-WILDCATS",
+    "NWMS": "CFB-NORTHWEST_MISSOURI_ST-BEARCATS",
+    "NU": "CFB-NORTHWESTERN-WILDCATS",
+    "ND": "CFB-NOTRE_DAME-FIGHTING_IRISH",
+    "OHIO": "CFB-OHIO-BOBCATS",
+    "OSU": "CFB-OHIO_STATE-BUCKEYES",
+    "OU": "CFB-OKLAHOMA-SOONERS",
+    "OKST": "CFB-OKLAHOMA_STATE-COWBOYS",
+    "ODU": "CFB-OLD_DOMINION-MONARCHS",
+    "MISS": "CFB-OLE_MISS-REBELS",
+    "ORST": "CFB-OREGON_STATE-BEAVERS",
+    "PAC": "CFB-PACIFIC_(OR)-BOXERS",
+    "PSU": "CFB-PENN_STATE-NITTANY_LIONS",
+    "PENN": "CFB-PENNSYLVANIA-QUAKERS",
+    "PIKEV": "CFB-PIKEVILLE-BEARS",
+    "PITT": "CFB-PITTSBURGH-PANTHERS",
+    "PRIN": "CFB-PRINCETON-TIGERS",
+    "URI": "CFB-RHODE_ISLAND-RAMS",
+    "RICE": "CFB-RICE-OWLS",
+    "RICH": "CFB-RICHMOND-SPIDERS",
+    "ROSEHUL": "CFB-ROSE-HULMAN-FIGHTIN'_ENGINEERS",
+    "RUTG": "CFB-RUTGERS-SCARLET_KNIGHTS",
+    "SAGI": "CFB-SAGINAW_VALLEY_STATE-CARDINALS",
+    "USD": "CFB-SAN_DIEGO-TOREROS",
+    "SRU": "CFB-SLIPPERY_ROCK-THE_ROCK",
+    "SDAK": "CFB-SOUTH_DAKOTA-COYOTES",
+    "SEOS": "CFB-SOUTHEASTERN_OKLAHOMA_STATE-SAVAGE_STORM",
+    "SIU": "CFB-SOUTHERN_ILLINOIS-SALUKIS",
+    "STN": "CFB-SOUTHERN_NAZARENE-CRIMSON_STORM",
+    "SUU": "CFB-SOUTHERN_UTAH-THUNDERBIRDS",
+    "SPR": "CFB-SPRINGFIELD-PRIDE",
+    "STO": "CFB-STONEHILL-SKYHAWKS",
+    "SUS": "CFB-SUSQUEHANNA-RIVER_HAWKS",
+    "SYR": "CFB-SYRACUSE-ORANGE",
+    "TEM": "CFB-TEMPLE-OWLS",
+    "TA&M": "CFB-TEXAS_A&M-AGGIES",
+    "TEX": "MLB-TEXAS-RANGERS",
+    "TOW": "CFB-TOWSON-TIGERS",
+    "TUF": "CFB-TUFTS-JUMBOS",
+    "TLSA": "CFB-TULSA-GOLDEN_HURRICANE",
+    "UCD": "CFB-UC_DAVIS-AGGIES",
+    "UNNY": "CFB-UNION-GARNET_CHARGERS",
+    "ROC": "CFB-UNIVERSITY_OF_ROCHESTER_(NY)-YELLOW_JACKETS",
+    "UTAH": "NBA-UTAH-JAZZ",
+    "VAN": "NHL-VANCOUVER-CANUCKS",
+    "VILL": "CFB-VILLANOVA-WILDCATS",
+    "UVA": "CFB-VIRGINIA-CAVALIERS",
+    "VT": "CFB-VIRGINIA_TECH-HOKIES",
+    "WAB": "CFB-WABASH_COLLEGE-LITTLE_GIANTS",
+    "WAKE": "CFB-WAKE_FOREST-DEMON_DEACONS",
+    "WASH": "CFB-WASHINGTON-HUSKIES",
+    "WSU": "CFB-WASHINGTON_STATE-COUGARS",
+    "WSTL": "CFB-WASHINGTON_UNIVERSITY_(ST._LOUIS)-BEARS",
+    "WAY": "CFB-WAYNE_STATE_(MI)-WARRIORS",
+    "WES": "CFB-WEST_CHESTER-GOLDEN_RAMS",
+    "WVU": "CFB-WEST_VIRGINIA-MOUNTAINEERS",
+    "WKU": "CFB-WESTERN_KENTUCKY-HILLTOPPERS",
+    "WIS": "CFB-WISCONSIN-BADGERS",
+    "WISO": "CFB-WISCONSIN-OSHKOSH-TITANS",
+    "WIPL": "CFB-WISCONSIN-PLATTEVILLE-PIONEERS",
+    "ANA": "NHL-ANAHEIM-DUCKS",
+    "BOS": "NBA-BOSTON-CELTICS",
+    "CGY": "NHL-CALGARY-FLAMES",
+    "COL": "MLB-COLORADO-ROCKIES",
+    "CBJ": "NHL-COLUMBUS-BLUE_JACKETS",
+    "EDM": "NHL-EDMONTON-OILERS",
+    "MTL": "NHL-MONTREAL-CANADIENS",
+    "NSH": "NHL-NASHVILLE-PREDATORS",
+    "NJ": "NHL-NEW_JERSEY-DEVILS",
+    "NYI": "NHL-NEW_YORK-ISLANDERS",
+    "NYR": "NHL-NEW_YORK-RANGERS",
+    "OTT": "NHL-OTTAWA-SENATORS",
+    "SJ": "NHL-SAN_JOSE-SHARKS",
+    "STL": "MLB-ST._LOUIS-CARDINALS",
+    "TOR": "NBA-TORONTO-RAPTORS",
+    "UTA": "NHL-UTAH-MAMMOTH",
+    "VGK": "NHL-VEGAS-GOLDEN_KNIGHTS",
+    "WPG": "NHL-WINNIPEG-JETS",
+    "ATH": "MLB-ATHLETICS-ATHLETICS",
+    "CHC": "MLB-CHICAGO-CUBS",
+    "CHW": "MLB-CHICAGO-WHITE_SOX",
+    "LAA": "MLB-LOS_ANGELES-ANGELS",
+    "LAD": "MLB-LOS_ANGELES-DODGERS",
+    "NYM": "MLB-NEW_YORK-METS",
+    "NYY": "MLB-NEW_YORK-YANKEES",
+    "SD": "MLB-SAN_DIEGO-PADRES",
+    "BKN": "NBA-BROOKLYN-NETS",
+    "CHA": "NBA-CHARLOTTE-HORNETS",
+    "GS": "NBA-GOLDEN_STATE-WARRIORS",
+    "LAL": "NBA-LOS_ANGELES-LAKERS",
+    "NY": "NBA-NEW_YORK-KNICKS",
+    "OKC": "NBA-OKLAHOMA_CITY-THUNDER",
+    "ORL": "NBA-ORLANDO-MAGIC",
+    "PHX": "NBA-PHOENIX-SUNS",
+    "POR": "NBA-PORTLAND-TRAIL_BLAZERS",
+    "SA": "NBA-SAN_ANTONIO-SPURS"
+  }
+}

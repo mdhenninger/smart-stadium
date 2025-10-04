@@ -3,24 +3,31 @@
     "AFC_East": {
       "BUF": {
         "name": "Buffalo Bills",
+        "city": "Buffalo",
         "primary_color": [0, 51, 141],
         "secondary_color": [198, 12, 48],
-        "colors_description": "Blue & Red"
+        "lighting_primary_color": [0, 0, 255],
+        "lighting_secondary_color": [255, 0, 0],
+        "colors_description": "Blue & Red",
+        "colors_note": "Lighting colors optimized for maximum visibility with smart bulbs"
       },
       "MIA": {
-        "name": "Miami Dolphins", 
+        "name": "Miami Dolphins",
+        "city": "Miami", 
         "primary_color": [0, 142, 204],
         "secondary_color": [252, 76, 2],
         "colors_description": "Aqua & Orange"
       },
       "NE": {
         "name": "New England Patriots",
+        "city": "Boston",
         "primary_color": [0, 34, 68],
         "secondary_color": [198, 12, 48],
         "colors_description": "Navy & Red"
       },
       "NYJ": {
         "name": "New York Jets",
+        "city": "New York",
         "primary_color": [18, 87, 64],
         "secondary_color": [255, 255, 255],
         "colors_description": "Green & White"
@@ -210,7 +217,163 @@
     }
   },
   "college_teams": {
-    "note": "College team colors will be added here as needed"
+    "SEC": {
+      "Alabama": {
+        "name": "Alabama Crimson Tide",
+        "primary_color": [158, 27, 50],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Crimson & White"
+      },
+      "Georgia": {
+        "name": "Georgia Bulldogs",
+        "primary_color": [186, 12, 47],
+        "secondary_color": [0, 0, 0],
+        "colors_description": "Red & Black"
+      },
+      "Florida": {
+        "name": "Florida Gators",
+        "primary_color": [0, 33, 165],
+        "secondary_color": [255, 103, 0],
+        "colors_description": "Blue & Orange"
+      },
+      "LSU": {
+        "name": "LSU Tigers",
+        "primary_color": [70, 29, 124],
+        "secondary_color": [253, 208, 35],
+        "colors_description": "Purple & Gold"
+      },
+      "Auburn": {
+        "name": "Auburn Tigers",
+        "primary_color": [12, 35, 64],
+        "secondary_color": [232, 119, 34],
+        "colors_description": "Navy & Orange"
+      },
+      "Tennessee": {
+        "name": "Tennessee Volunteers",
+        "primary_color": [255, 130, 0],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Orange & White"
+      },
+      "Kentucky": {
+        "name": "Kentucky Wildcats",
+        "primary_color": [0, 51, 160],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Blue & White"
+      },
+      "Arkansas": {
+        "name": "Arkansas Razorbacks",
+        "primary_color": [157, 34, 53],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Red & White"
+      },
+      "Mississippi": {
+        "name": "Ole Miss Rebels",
+        "primary_color": [20, 35, 75],
+        "secondary_color": [206, 17, 65],
+        "colors_description": "Navy & Red"
+      },
+      "South Carolina": {
+        "name": "South Carolina Gamecocks",
+        "primary_color": [115, 0, 10],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Garnet & White"
+      }
+    },
+    "Big_Ten": {
+      "Ohio State": {
+        "name": "Ohio State Buckeyes",
+        "primary_color": [187, 0, 0],
+        "secondary_color": [102, 102, 102],
+        "colors_description": "Scarlet & Gray"
+      },
+      "Michigan": {
+        "name": "Michigan Wolverines",
+        "primary_color": [0, 39, 76],
+        "secondary_color": [255, 203, 5],
+        "colors_description": "Blue & Maize"
+      },
+      "Penn State": {
+        "name": "Penn State Nittany Lions",
+        "primary_color": [4, 30, 66],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Navy & White"
+      },
+      "Wisconsin": {
+        "name": "Wisconsin Badgers",
+        "primary_color": [197, 5, 12],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Red & White"
+      }
+    },
+    "Big_12": {
+      "Texas": {
+        "name": "Texas Longhorns",
+        "primary_color": [191, 87, 0],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Burnt Orange & White"
+      },
+      "Oklahoma": {
+        "name": "Oklahoma Sooners",
+        "primary_color": [153, 27, 30],
+        "secondary_color": [255, 255, 255],
+        "colors_description": "Crimson & Cream"
+      }
+    },
+    "Pac_12": {
+      "USC": {
+        "name": "USC Trojans",
+        "primary_color": [153, 27, 30],
+        "secondary_color": [255, 204, 0],
+        "colors_description": "Cardinal & Gold"
+      },
+      "Oregon": {
+        "name": "Oregon Ducks",
+        "primary_color": [0, 71, 49],
+        "secondary_color": [254, 225, 35],
+        "colors_description": "Green & Yellow"
+      }
+    },
+    "ACC": {
+      "Clemson": {
+        "name": "Clemson Tigers",
+        "primary_color": [245, 102, 0],
+        "secondary_color": [82, 45, 128],
+        "colors_description": "Orange & Purple"
+      },
+      "Miami": {
+        "name": "Miami Hurricanes",
+        "primary_color": [240, 81, 35],
+        "secondary_color": [0, 71, 27],
+        "colors_description": "Orange & Green"
+      },
+      "SYR": {
+        "name": "Syracuse Orange",
+        "primary_color": [255, 101, 0],
+        "secondary_color": [0, 14, 84],
+        "colors_description": "Orange & Navy"
+      }
+    },
+    "Independent": {
+      "Notre Dame": {
+        "name": "Notre Dame Fighting Irish",
+        "primary_color": [0, 51, 102],
+        "secondary_color": [201, 151, 0],
+        "colors_description": "Navy & Gold"
+      }
+    }
+  },
+  "nhl_teams": {
+    "Atlantic": {
+      "BUF": {
+        "name": "Buffalo Sabres",
+        "primary_color": [0, 0, 255],
+        "secondary_color": [255, 255, 0],
+        "lighting_primary_color": [0, 0, 255],
+        "lighting_secondary_color": [255, 255, 0],
+        "colors_description": "True Blue & Yellow",
+        "colors_note": "Updated to true blue and yellow for better visibility"
+      }
+    }
   },
   "other_sports": {
     "note": "NBA, NHL, MLB team colors will be added here as needed"
