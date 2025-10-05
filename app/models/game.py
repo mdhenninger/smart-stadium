@@ -19,6 +19,7 @@ class TeamScore(BaseModel):
     abbreviation: str
     display_name: str
     score: int
+    logo_url: Optional[str] = None  # ESPN team logo URL
 
 
 class GameStatus(Enum):

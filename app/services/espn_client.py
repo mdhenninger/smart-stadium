@@ -106,11 +106,19 @@ class EspnScoreboardClient:
     @staticmethod
     def _parse_competitor(competitor: Dict) -> TeamScore:
         team = competitor.get("team", {})
+        # ESPN provides logo in team.logo or team.logos array
+        logo_url = None
+        if "logo" in team:
+            logo_url = team["logo"]
+        elif "logos" in team and len(team["logos"]) > 0:
+            logo_url = team["logos"][0].get("href")
+        
         return TeamScore(
             team_id=team.get("id", ""),
             abbreviation=team.get("abbreviation", ""),
             display_name=team.get("displayName", team.get("name", "")),
             score=int(competitor.get("score", 0)),
+            logo_url=logo_url,
         )
 
     @staticmethod

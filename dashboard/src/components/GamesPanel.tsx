@@ -24,7 +24,7 @@ const statusCopy: Record<string, string> = {
 
 const renderScore = (game: GameSnapshot) => (
   <div className="game-row__score">
-    <div>
+    <div className="game-row__team-line">
       {game.home.logo_url && (
         <img 
           src={game.home.logo_url} 
@@ -35,7 +35,7 @@ const renderScore = (game: GameSnapshot) => (
       <span className="game-row__team">{game.home.display_name}</span>
       <span className="game-row__points">{game.home.score}</span>
     </div>
-    <div>
+    <div className="game-row__team-line">
       {game.away.logo_url && (
         <img 
           src={game.away.logo_url} 

@@ -187,8 +187,8 @@ class HybridTeamsService:
                     team_option.logo_url = team_entry['logo_url']
                 if 'espn_id' in team_entry:
                     team_option.espn_id = team_entry['espn_id']
-                if 'unified_key' in team_entry:
-                    team_option.unified_key = team_entry['unified_key']
+                if 'nickname' in team_entry:
+                    team_option.nickname = team_entry.get('nickname')
                 
                 teams.append(team_option)
         
