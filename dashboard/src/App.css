@@ -539,6 +539,13 @@
   flex-shrink: 0;
 }
 
+.team-logo {
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .monitored-game-row__team .team-name {
   flex: 1;
 }

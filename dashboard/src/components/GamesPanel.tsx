@@ -25,10 +25,24 @@ const statusCopy: Record<string, string> = {
 const renderScore = (game: GameSnapshot) => (
   <div className="game-row__score">
     <div>
+      {game.home.logo_url && (
+        <img 
+          src={game.home.logo_url} 
+          alt={`${game.home.display_name} logo`}
+          className="team-logo"
+        />
+      )}
       <span className="game-row__team">{game.home.display_name}</span>
       <span className="game-row__points">{game.home.score}</span>
     </div>
     <div>
+      {game.away.logo_url && (
+        <img 
+          src={game.away.logo_url} 
+          alt={`${game.away.display_name} logo`}
+          className="team-logo"
+        />
+      )}
       <span className="game-row__team">{game.away.display_name}</span>
       <span className="game-row__points">{game.away.score}</span>
     </div>
@@ -139,8 +153,21 @@ export const GamesPanel = () => {
     })
     .filter((item) => item !== null);
 
-  // Filter out monitored games from available games list
-  const availableGames = data?.games.filter((game) => !isGameMonitored(game.id)) ?? [];
+  // Filter out monitored games from available games list and sort by status
+  // Priority: 1) Live (in), 2) Pre-game (pre), 3) Final (post)
+  const statusPriority: Record<string, number> = {
+    in: 1,
+    pre: 2,
+    post: 3,
+    unknown: 4,
+  };
+  
+  const availableGames = (data?.games.filter((game) => !isGameMonitored(game.id)) ?? [])
+    .sort((a, b) => {
+      const priorityA = statusPriority[a.status] ?? 5;
+      const priorityB = statusPriority[b.status] ?? 5;
+      return priorityA - priorityB;
+    });
 
   return (
     <Card

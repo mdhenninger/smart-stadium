@@ -24,8 +24,6 @@ export const CelebrationPanel = () => {
     team: null,
   });
   const [eventType, setEventType] = useState(EVENT_TYPES[0].value);
-  const [gameId, setGameId] = useState('manual');
-  const [points, setPoints] = useState<number | null>(null);
   const [message, setMessage] = useState<string | null>(null);
 
   const trigger = useTriggerCelebration();
@@ -48,8 +46,8 @@ export const CelebrationPanel = () => {
       team_name: team.name,
       event_type: eventType,
       sport: sport || null,
-      points,
-      game_id: gameId.trim() || null,
+      points: null,
+      game_id: 'manual',
     };
 
     trigger.mutate(payload, {
@@ -73,8 +71,8 @@ export const CelebrationPanel = () => {
   return (
     <Card title="Manual celebrations" subtitle="Trigger lighting effects">
       <form className="celebration-form" onSubmit={handleSubmit}>
+        <TeamSelect value={selectedTeam} onChange={setSelectedTeam} />
         <div className="form-grid">
-          <TeamSelect value={selectedTeam} onChange={setSelectedTeam} />
           <label>
             Event type
             <select value={eventType} onChange={(event) => setEventType(event.target.value)}>
@@ -85,20 +83,8 @@ export const CelebrationPanel = () => {
               ))}
             </select>
           </label>
-          <label>
-            Game ID (optional)
-            <input value={gameId} onChange={(event) => setGameId(event.target.value)} />
-          </label>
-          <label>
-            Points override (optional)
-            <input
-              type="number"
-              value={points ?? ''}
-              onChange={(event) => setPoints(event.target.value ? Number(event.target.value) : null)}
-            />
-          </label>
         </div>
-        <div className="form-actions">
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '16px' }}>
           <button type="submit" className="btn btn--primary" disabled={isSubmitting}>
             {isSubmitting ? (
               <>

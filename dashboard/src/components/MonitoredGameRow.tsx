@@ -40,11 +40,25 @@ export const MonitoredGameRow = ({ game, monitoredGame, onRemove }: MonitoredGam
       <div className="monitored-game-row__teams">
         <div className={`monitored-game-row__team ${isHomeMonitored ? 'monitored-game-row__team--monitored' : ''}`}>
           {isHomeMonitored && <span className="monitor-icon">🔔</span>}
+          {game.home.logo_url && (
+            <img 
+              src={game.home.logo_url} 
+              alt={`${game.home.display_name} logo`}
+              className="team-logo"
+            />
+          )}
           <span className="team-name">{game.home.display_name}</span>
           <span className="team-score">{game.home.score}</span>
         </div>
         <div className={`monitored-game-row__team ${isAwayMonitored ? 'monitored-game-row__team--monitored' : ''}`}>
           {isAwayMonitored && <span className="monitor-icon">🔔</span>}
+          {game.away.logo_url && (
+            <img 
+              src={game.away.logo_url} 
+              alt={`${game.away.display_name} logo`}
+              className="team-logo"
+            />
+          )}
           <span className="team-name">{game.away.display_name}</span>
           <span className="team-score">{game.away.score}</span>
         </div>

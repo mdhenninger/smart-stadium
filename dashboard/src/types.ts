@@ -66,6 +66,7 @@ export interface TeamScore {
   abbreviation: string;
   display_name: string;
   score: number;
+  logo_url?: string | null;
 }
 
 export type GameStatusCode = 'pre' | 'in' | 'post' | 'unknown';
