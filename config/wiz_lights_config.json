@@ -23,7 +23,25 @@
       "name": "Stadium Light 4",
       "location": "Zone 4",
       "enabled": true
+    },
+    {
+      "ip": "192.168.86.52",
+      "name": "Stadium Light 5",
+      "location": "Zone 5",
+      "enabled": true
+    },
+    {
+      "ip": "192.168.86.53",
+      "name": "Stadium Light 6",
+      "location": "Zone 6",
+      "enabled": true
+    },
+    {
+      "ip": "192.168.86.54",
+      "name": "Stadium Light 7",
+      "location": "Zone 7",
+      "enabled": true
     }
   ],
-  "last_updated": "2025-10-04 20:49:00"
+  "last_updated": "2025-10-05 16:45:00"
 }

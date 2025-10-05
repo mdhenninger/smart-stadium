@@ -52,6 +52,7 @@ class SportMonitor:
         self._last_scores: Dict[str, Dict[str, int]] = defaultdict(dict)
         self._last_status: Dict[str, GameStatus] = {}
         self._last_red_zone_state: Dict[str, bool] = {}  # Track red zone state per game
+        self._last_play_ids: Dict[str, str] = {}  # Track last play IDs to detect new defensive plays
 
     async def start(self) -> None:
         if self._running:
@@ -175,6 +176,141 @@ class SportMonitor:
             await self._lights.stop_red_zone()
             logger.info("Red zone cleared for game %s", game.game_id)
             self._last_red_zone_state[game.game_id] = False
+
+        # Defensive play detection - check for new defensive plays
+        if game.status == GameStatus.IN_PROGRESS and game.last_play:
+            await self._check_defensive_play(game)
+
+    async def _check_defensive_play(self, game: GameSnapshot) -> None:
+        """Check if the last play was a new defensive event and trigger celebration."""
+        if not game.last_play or not game.last_play.play_id:
+            return
+            
+        last_play_id = self._last_play_ids.get(game.game_id)
+        current_play_id = game.last_play.play_id
+        
+        # Only process if this is a new play
+        if last_play_id == current_play_id:
+            return
+            
+        # Update last play ID
+        self._last_play_ids[game.game_id] = current_play_id
+        
+        # Skip if this is the first time we see this game (no baseline)
+        if last_play_id is None:
+            return
+        
+        # Check for defensive play types
+        play_type_id = game.last_play.play_type_id
+        play_text = game.last_play.description or ""
+        play_text_lower = play_text.lower()
+        
+        # Map of ESPN play type IDs to defensive events
+        defensive_type_mapping = {
+            "8": "sack",
+            "26": "interception", 
+            "52": "fumble_recovery",
+            "53": "fumble",
+            "54": "safety",
+            "27": "interception",  # Interception return TD
+            "28": "fumble_recovery",  # Fumble return TD
+        }
+        
+        defensive_event = None
+        defending_team_abbr = None
+        
+        # Check by play type ID first
+        if play_type_id in defensive_type_mapping:
+            defensive_event = defensive_type_mapping[play_type_id]
+            
+        # Also check by keywords in play description
+        elif any(keyword in play_text_lower for keyword in ["sack", "sacked"]):
+            defensive_event = "sack"
+        elif any(keyword in play_text_lower for keyword in ["interception", "intercepted", "int "]):
+            defensive_event = "interception"
+        elif "fumble" in play_text_lower and any(keyword in play_text_lower for keyword in ["recover", "recovery"]):
+            defensive_event = "fumble_recovery"
+        elif "safety" in play_text_lower:
+            defensive_event = "safety"
+        
+        if not defensive_event:
+            return  # Not a defensive play
+            
+        # Determine which team made the defensive play
+        # For sacks/turnovers, it's the team that didn't have possession
+        play_team_id = game.last_play.team_id
+        if play_team_id == game.home.team_id:
+            # Play was by home team
+            if defensive_event in ["sack", "interception", "fumble_recovery", "safety"]:
+                # Defensive play by away team (they made the sack/turnover)
+                defending_team_abbr = game.away.abbreviation
+                defending_team_name = game.away.display_name
+            else:
+                # Offensive play by home team
+                defending_team_abbr = game.home.abbreviation  
+                defending_team_name = game.home.display_name
+        elif play_team_id == game.away.team_id:
+            # Play was by away team
+            if defensive_event in ["sack", "interception", "fumble_recovery", "safety"]:
+                # Defensive play by home team (they made the sack/turnover)
+                defending_team_abbr = game.home.abbreviation
+                defending_team_name = game.home.display_name
+            else:
+                # Offensive play by away team
+                defending_team_abbr = game.away.abbreviation
+                defending_team_name = game.away.display_name
+        else:
+            # Can't determine team, skip
+            logger.debug("Could not determine defending team for defensive play: %s", play_text)
+            return
+            
+        # Check if the defending team is being monitored
+        is_monitored = await self._monitoring_store.is_team_monitored(game.game_id, defending_team_abbr)
+        if not is_monitored:
+            logger.debug(
+                "Defensive play detected but team not monitored: %s by %s",
+                defensive_event, defending_team_abbr
+            )
+            return
+            
+        # Trigger appropriate celebration
+        sport_id = "nfl" if self._config.sport.value == "nfl" else "cfb"
+        
+        logger.info(
+            "Defensive play detected for monitored team: %s by %s (%s)",
+            defensive_event, defending_team_abbr, game.game_id
+        )
+        
+        try:
+            if defensive_event == "sack":
+                await self._lights.celebrate_sack(defending_team_name, team_abbr=defending_team_abbr, sport=sport_id)
+            elif defensive_event in ["interception", "fumble_recovery"]:
+                turnover_type = "interception" if defensive_event == "interception" else "fumble recovery"
+                await self._lights.celebrate_turnover(defending_team_name, turnover_type, team_abbr=defending_team_abbr, sport=sport_id)
+            elif defensive_event == "safety":
+                await self._lights.celebrate_safety(defending_team_name, team_abbr=defending_team_abbr, sport=sport_id)
+                
+            # Record in history
+            await self._history.record_celebration(
+                sport=self._config.sport.value,
+                team=defending_team_abbr,
+                event_type=defensive_event,
+                game_id=game.game_id,
+                detail=f"{defending_team_abbr} {defensive_event}: {play_text[:100]}",
+            )
+            
+            # Broadcast via WebSocket
+            await self._broadcast({
+                "type": "defensive_celebration",
+                "sport": self._config.sport.value,
+                "team": defending_team_abbr,
+                "event_type": defensive_event,
+                "gameId": game.game_id,
+                "description": play_text,
+            })
+            
+        except Exception as exc:
+            logger.error("Error triggering defensive celebration: %s", exc)
 
     async def _handle_score_event(self, game: GameSnapshot, team_abbr: str, delta: int) -> None:
         # Check if this team is being monitored

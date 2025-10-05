@@ -36,6 +36,9 @@ class SmartStadiumLights:
         self.celebration_brightness = 255
         self.default_brightness = 180
         self.default_color_temp = 2700  # Warm white
+        
+        # Track which lights are currently online (set of IPs)
+        self._online_lights: set[str] = set()  # Start empty - will be populated by first connectivity check
     
     def set_team_colors(self, team_abbr: str, primary_color: Tuple[int, int, int], 
                        secondary_color: Tuple[int, int, int], sport: Optional[str] = None) -> None:
@@ -94,7 +97,7 @@ class SmartStadiumLights:
         return self.current_primary_color, self.current_secondary_color
     
     async def test_connectivity(self) -> bool:
-        """Test connection to all lights"""
+        """Test connection to all lights. Returns True if ANY lights are responding."""
         print("🧪 Testing light connectivity...")
         success_count = 0
         
@@ -116,7 +119,39 @@ class SmartStadiumLights:
         else:
             print(f"⚠️ {success_count}/{len(self.lights)} lights responding")
         
-        return all_connected
+        # Return True if at least one light is working
+        return success_count > 0
+    
+    async def test_individual_connectivity(self) -> Dict[str, bool]:
+        """Test connection to each light individually and return per-device status.
+        
+        All lights are checked in parallel to avoid sequential timeout delays.
+        
+        Returns:
+            Dict mapping IP address to online status (True/False)
+        """
+        async def check_light(ip: str, light: wizlight) -> tuple[str, bool]:
+            """Check a single light and return (ip, status)."""
+            try:
+                # Try to get light state with a timeout
+                state = await asyncio.wait_for(light.updateState(), timeout=1.0)
+                return (ip, state is not None)
+            except asyncio.TimeoutError:
+                return (ip, False)
+            except Exception:
+                return (ip, False)
+        
+        # Check all lights in parallel
+        tasks = [check_light(ip, light) for ip, light in zip(self.light_ips, self.lights)]
+        results = await asyncio.gather(*tasks)
+        
+        # Convert list of tuples to dict
+        status_map = dict(results)
+        
+        # Update cached online lights set
+        self._online_lights = {ip for ip, is_online in status_map.items() if is_online}
+        
+        return status_map
 
     async def flash_color(self, color: Tuple[int, int, int], duration: float = 0.5) -> None:
         """Flash all lights to a specific color for a duration"""
@@ -124,9 +159,15 @@ class SmartStadiumLights:
             r, g, b = color
             pilot = PilotBuilder(rgb=(r, g, b), brightness=self.celebration_brightness)
             
-            # Turn all lights to the color
-            tasks = [light.turn_on(pilot) for light in self.lights]
-            await asyncio.gather(*tasks, return_exceptions=True)
+            # Only send commands to lights we know are online
+            tasks = [
+                light.turn_on(pilot) 
+                for ip, light in zip(self.light_ips, self.lights) 
+                if ip in self._online_lights
+            ]
+            
+            if tasks:
+                await asyncio.gather(*tasks, return_exceptions=True)
             
             await asyncio.sleep(duration)
         except Exception as e:
@@ -139,15 +180,19 @@ class SmartStadiumLights:
             # This forces the lights out of RGB mode into white mode
             pilot = PilotBuilder(colortemp=self.default_color_temp, brightness=self.default_brightness)
             
-            # Turn on all lights with the white pilot
-            for light in self.lights:
+            # Turn on only online lights with the white pilot
+            for ip, light in zip(self.light_ips, self.lights):
+                if ip not in self._online_lights:
+                    continue  # Skip offline lights
+                    
                 try:
                     await light.turn_on(pilot)
                     print(f"  ✅ {light.ip} set to {self.default_color_temp}K")
                 except Exception as e:
                     print(f"  ❌ {light.ip} error: {e}")
             
-            print(f"💡 Lights set to warm default lighting ({self.default_color_temp}K, brightness={self.default_brightness})")
+            online_count = len(self._online_lights)
+            print(f"💡 {online_count} online lights set to warm default lighting ({self.default_color_temp}K, brightness={self.default_brightness})")
         except Exception as e:
             print(f"Error setting default lighting: {e}")
 
@@ -156,6 +201,12 @@ class SmartStadiumLights:
     async def celebrate_touchdown(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         print(f"[DEBUG] celebrate_touchdown called for {team_name} ({team_abbr}, {sport})")
         """Epic 12-second touchdown celebration"""
+        
+        # Stop red zone if active before celebration
+        if self.red_zone_active:
+            print(f"🛑 Stopping red zone for {team_name} touchdown celebration")
+            await self.stop_red_zone_ambient(from_celebration=True)
+        
         print(f"\n🏈 {team_name} TOUCHDOWN! 🏈")
         print("🎉 12-second epic celebration starting...")
         start_time = time.time()
@@ -177,6 +228,12 @@ class SmartStadiumLights:
     async def celebrate_field_goal(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         print(f"[DEBUG] celebrate_field_goal called for {team_name} ({team_abbr}, {sport})")
         """5-second field goal celebration"""
+        
+        # Stop red zone if active before celebration
+        if self.red_zone_active:
+            print(f"🛑 Stopping red zone for {team_name} field goal celebration")
+            await self.stop_red_zone_ambient(from_celebration=True)
+        
         print(f"\n🥅 {team_name} FIELD GOAL! 🥅")
         print("⚡ 5-second celebration starting...")
         start_time = time.time()
@@ -255,66 +312,96 @@ class SmartStadiumLights:
         print(f"🛡️ Safety celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_turnover(self, team_name: str = "TEAM", turnover_type: str = "turnover") -> None:
-        print(f"[DEBUG] celebrate_turnover called for {team_name} ({turnover_type})")
+    async def celebrate_turnover(self, team_name: str = "TEAM", turnover_type: str = "turnover", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
+        print(f"[DEBUG] celebrate_turnover called for {team_name} ({turnover_type}, {team_abbr}, {sport})")
         """Celebration for defensive turnovers (interceptions, fumbles)"""
+        
+        # Stop red zone if active before celebration
+        if self.red_zone_active:
+            print(f"🛑 Stopping red zone for {team_name} turnover celebration")
+            await self.stop_red_zone_ambient(from_celebration=True)
+        
         print(f"\n🔄 {team_name} {turnover_type.upper()}! 🔄")
         print("🛡️ Defensive turnover celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # Defensive celebration - emphasize secondary color
         for i in range(8):
             if i % 3 == 0:
-                await self.flash_color(self.current_primary_color, 0.3)
+                await self.flash_color(primary, 0.3)
             else:
-                await self.flash_color(self.current_secondary_color, 0.3)
+                await self.flash_color(secondary, 0.3)
         
         elapsed = time.time() - start_time
         print(f"🔄 {turnover_type.title()} celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_sack(self, team_name: str = "TEAM") -> None:
-        print(f"[DEBUG] celebrate_sack called for {team_name}")
+    async def celebrate_sack(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
+        print(f"[DEBUG] celebrate_sack called for {team_name} ({team_abbr}, {sport})")
         """Sack celebration"""
+        
+        # Stop red zone if active before celebration
+        if self.red_zone_active:
+            print(f"🛑 Stopping red zone for {team_name} sack celebration")
+            await self.stop_red_zone_ambient(from_celebration=True)
+        
         print(f"\n⚡ {team_name} SACK! ⚡")
         print("💥 Sack celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # Quick, aggressive flashes for sacks
         for i in range(6):
-            color = self.current_secondary_color if i % 2 == 0 else self.current_primary_color
+            color = secondary if i % 2 == 0 else primary
             await self.flash_color(color, 0.25)
         
         elapsed = time.time() - start_time
         print(f"⚡ Sack celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_big_play(self, team_name: str = "TEAM", play_description: str = "BIG PLAY") -> None:
-        print(f"[DEBUG] celebrate_big_play called for {team_name} ({play_description})")
+    async def celebrate_big_play(self, team_name: str = "TEAM", play_description: str = "BIG PLAY", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
+        print(f"[DEBUG] celebrate_big_play called for {team_name} ({play_description}, {team_abbr}, {sport})")
         """Celebration for big plays (long runs, passes, etc.)"""
+        
+        # Note: Don't stop red zone for big plays - they can happen during red zone
+        
         print(f"\n🚀 {team_name} {play_description}! 🚀")
         print("💫 Big play celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # Moderate celebration for big plays
         for i in range(6):
-            color = self.current_primary_color if i % 2 == 0 else self.current_secondary_color
+            color = primary if i % 2 == 0 else secondary
             await self.flash_color(color, 0.4)
         
         elapsed = time.time() - start_time
         print(f"🚀 Big play celebration complete! ({elapsed:.1f}s)")
         await self.set_default_lighting()
 
-    async def celebrate_defensive_stop(self, team_name: str = "TEAM") -> None:
-        print(f"[DEBUG] celebrate_defensive_stop called for {team_name}")
+    async def celebrate_defensive_stop(self, team_name: str = "TEAM", team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
+        print(f"[DEBUG] celebrate_defensive_stop called for {team_name} ({team_abbr}, {sport})")
         """Celebration for key defensive stops"""
+        
+        # Note: Don't stop red zone for defensive stops - they can happen during red zone
+        
         print(f"\n🛑 {team_name} DEFENSIVE STOP! 🛑")
         print("🛡️ Defensive stop celebration starting...")
         start_time = time.time()
         
+        # Get sport-specific colors if team_abbr provided
+        primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
+        
         # Subtle celebration for defensive stops
         for i in range(4):
-            await self.flash_color(self.current_secondary_color, 0.5)
+            await self.flash_color(secondary, 0.5)
         
         elapsed = time.time() - start_time
         print(f"🛑 Defensive stop celebration complete! ({elapsed:.1f}s)")
@@ -341,6 +428,12 @@ class SmartStadiumLights:
 
     async def celebrate_score(self, team_name: str = "TEAM", points: int = 3, team_abbr: Optional[str] = None, sport: Optional[str] = None) -> None:
         """Generic celebration for any score amount"""
+        
+        # Stop red zone if active before celebration
+        if self.red_zone_active:
+            print(f"🛑 Stopping red zone for {team_name} score celebration ({points} pts)")
+            await self.stop_red_zone_ambient(from_celebration=True)
+        
         print(f"\n🎯 {team_name.upper()} SCORES {points} POINTS! 🎯")
         
         primary, secondary = self.get_team_colors(team_abbr, sport) if team_abbr else (self.current_primary_color, self.current_secondary_color)
@@ -384,7 +477,7 @@ class SmartStadiumLights:
         
         # If active for a different team, stop first
         if self.red_zone_active:
-            await self.stop_red_zone_ambient()
+            await self.stop_red_zone_ambient(from_celebration=False)
         
         print(f"🎯 Starting red zone ambient lighting for {team_abbr}")
         self.red_zone_active = True
@@ -405,20 +498,36 @@ class SmartStadiumLights:
             print(f"❌ Error starting red zone ambient: {e}")
             self.red_zone_active = False
 
-    async def stop_red_zone_ambient(self) -> None:
-        """Stop red zone ambient lighting"""
+    async def stop_red_zone_ambient(self, from_celebration: bool = False) -> None:
+        """Stop red zone ambient lighting
+        
+        Args:
+            from_celebration: True if called by a celebration (default lighting will be handled by celebration)
+                             False if called by monitoring (need to return to default lighting)
+        """
         if not self.red_zone_active:
             print("[DEBUG] stop_red_zone_ambient called, but red_zone_active is already False. No action taken.")
             return
 
         print(f"🛑 Stopping red zone ambient lighting (was active for team: {self.red_zone_team})")
+        
+        if from_celebration:
+            print("📍 Reason: Celebration starting - lights will transition to celebration")
+        else:
+            print("📍 Reason: Team left red zone - returning to default lighting")
+            
         self.red_zone_active = False
 
         if self.red_zone_task:
             self.red_zone_task.cancel()
             self.red_zone_task = None
 
-        # Only return to default lighting if we were actually in red zone mode
-        print("[DEBUG] Returning to default lighting after red zone.")
-        await self.set_default_lighting()
+        if from_celebration:
+            # Celebration will handle the lighting transition
+            print("[DEBUG] Red zone stopped, celebration will handle lighting transition.")
+        else:
+            # No celebration - need to return to default lighting
+            print("[DEBUG] Red zone stopped, returning to default lighting.")
+            await self.set_default_lighting()
+            
         self.red_zone_team = None

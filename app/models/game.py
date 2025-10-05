@@ -45,6 +45,36 @@ class GameSituation(BaseModel):
     period: Optional[int] = None  # Quarter/period number
 
 
+class DefensivePlayType(str, Enum):
+    SACK = "sack"
+    INTERCEPTION = "interception"
+    FUMBLE_RECOVERY = "fumble_recovery"
+    FUMBLE = "fumble"
+    SAFETY = "safety"
+    INTERCEPTION_TD = "interception_td"
+    FUMBLE_TD = "fumble_td"
+
+
+class DefensivePlay(BaseModel):
+    """Represents a defensive play that occurred."""
+    play_id: str
+    play_type: DefensivePlayType
+    team_abbr: str  # Defending team that made the play
+    description: str  # Full play description
+    score_value: int = 0  # Points scored (for TDs, safeties)
+    timestamp: datetime = Field(default_factory=datetime.now)
+
+
+class LastPlayInfo(BaseModel):
+    """Information about the last play in a game."""
+    play_id: Optional[str] = None
+    play_type_id: Optional[str] = None
+    play_type_name: Optional[str] = None
+    description: Optional[str] = None
+    score_value: int = 0
+    team_id: Optional[str] = None  # Team that executed the play
+
+
 class GameSnapshot(BaseModel):
     game_id: str = Field(..., alias="id")
     sport: Sport
@@ -54,6 +84,7 @@ class GameSnapshot(BaseModel):
     last_update: datetime
     red_zone: RedZoneInfo = Field(default_factory=RedZoneInfo)
     situation: Optional[GameSituation] = None  # Only populated for in-progress games
+    last_play: Optional[LastPlayInfo] = None  # Track last play for defensive event detection
 
     class Config:
         populate_by_name = True

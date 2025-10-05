@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from typing import Iterable, Tuple
+from typing import Dict, Iterable, Tuple
 
 from src.devices.smart_lights import SmartStadiumLights
 
@@ -27,6 +27,22 @@ class LightsService:
     async def test_connectivity(self) -> bool:
         """Test connectivity to light system."""
         return await self._controller.test_connectivity()
+    
+    async def test_individual_connectivity(self, enabled_ips: list[str] | None = None) -> Dict[str, bool]:
+        """Test connectivity to each light individually.
+        
+        Args:
+            enabled_ips: Optional list of IPs to check. If None, checks all lights.
+        
+        Returns:
+            Dict mapping IP address to online status (True/False)
+        """
+        if enabled_ips is None:
+            return await self._controller.test_individual_connectivity()
+        
+        # Only check enabled IPs
+        all_statuses = await self._controller.test_individual_connectivity()
+        return {ip: status for ip, status in all_statuses.items() if ip in enabled_ips}
 
     def set_team_colors(self, team_abbr: str, primary: Tuple[int, int, int], secondary: Tuple[int, int, int], sport: str | None = None) -> None:
         """Set team colors on controller."""
@@ -56,21 +72,21 @@ class LightsService:
         """Celebrate a safety."""
         await self._controller.celebrate_safety(team_name)
 
-    async def celebrate_turnover(self, team_name: str, turnover_type: str) -> None:
+    async def celebrate_turnover(self, team_name: str, turnover_type: str, team_abbr: str | None = None, sport: str | None = None) -> None:
         """Celebrate a turnover."""
-        await self._controller.celebrate_turnover(team_name, turnover_type)
+        await self._controller.celebrate_turnover(team_name, turnover_type, team_abbr=team_abbr, sport=sport)
 
-    async def celebrate_sack(self, team_name: str) -> None:
+    async def celebrate_sack(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
         """Celebrate a sack."""
-        await self._controller.celebrate_sack(team_name)
+        await self._controller.celebrate_sack(team_name, team_abbr=team_abbr, sport=sport)
 
-    async def celebrate_big_play(self, team_name: str, play_description: str) -> None:
+    async def celebrate_big_play(self, team_name: str, play_description: str, team_abbr: str | None = None, sport: str | None = None) -> None:
         """Celebrate a big play."""
-        await self._controller.celebrate_big_play(team_name, play_description)
+        await self._controller.celebrate_big_play(team_name, play_description, team_abbr=team_abbr, sport=sport)
 
-    async def celebrate_defensive_stop(self, team_name: str) -> None:
+    async def celebrate_defensive_stop(self, team_name: str, team_abbr: str | None = None, sport: str | None = None) -> None:
         """Celebrate a defensive stop."""
-        await self._controller.celebrate_defensive_stop(team_name)
+        await self._controller.celebrate_defensive_stop(team_name, team_abbr=team_abbr, sport=sport)
 
     async def celebrate_victory(self, team_name: str, final_score: str | None = None) -> None:
         """Celebrate a victory."""

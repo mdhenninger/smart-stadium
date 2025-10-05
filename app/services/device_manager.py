@@ -80,16 +80,37 @@ class DeviceManager:
         )
 
     async def refresh_status(self) -> None:
-        """Ping lights and update cached metadata."""
+        """Ping lights and update cached metadata for each device individually."""
 
         logger.debug("Refreshing device status for %s devices", len(self._devices))
         start = datetime.now(timezone.utc)
-        success = await self._lights.test_connectivity()
-        status = DeviceStatus.ONLINE if success else DeviceStatus.OFFLINE
+        
+        # Get list of enabled WiZ device IPs to check
+        enabled_wiz_ips = [
+            device.ip_address 
+            for device in self._devices.values() 
+            if device.device_type == DeviceType.WIZ and device.enabled
+        ]
+        
+        # Get per-device status from lights service (only for enabled devices)
+        device_statuses = await self._lights.test_individual_connectivity(enabled_wiz_ips)
+        
+        # Update each WiZ device based on its individual status
         for device in self._devices.values():
-            device.status = status
-            device.last_seen = start if success else device.last_seen
-            await self._history.record_device_event(device.device_id, device.status.value)
+            if device.device_type == DeviceType.WIZ:
+                if not device.enabled:
+                    # Disabled devices are marked as offline without checking
+                    device.status = DeviceStatus.OFFLINE
+                else:
+                    # Check if this device's IP is in the status map
+                    is_online = device_statuses.get(device.ip_address, False)
+                    device.status = DeviceStatus.ONLINE if is_online else DeviceStatus.OFFLINE
+                    device.last_seen = start if is_online else device.last_seen
+                await self._history.record_device_event(device.device_id, device.status.value)
+            # For Govee devices, keep existing behavior (cloud-based, different check needed)
+            elif device.device_type == DeviceType.GOVEE:
+                # For now, mark Govee devices as unknown since we don't check them individually
+                device.status = DeviceStatus.UNKNOWN
 
     async def set_default_lighting(self) -> None:
         await self._lights.set_default_lighting()

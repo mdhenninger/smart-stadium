@@ -37,18 +37,20 @@ async def trigger_celebration(payload: CelebrationTriggerRequest, container=Depe
             elif event == "victory":
                 await lights.celebrate_victory(payload.team_name, payload.game_id or "")
             elif event == "turnover":
-                await lights.celebrate_turnover(payload.team_name, "turnover")
+                await lights.celebrate_turnover(payload.team_name, "turnover", team_abbr=payload.team_abbr, sport=payload.sport)
             elif event == "sack":
-                await lights.celebrate_sack(payload.team_name)
+                await lights.celebrate_sack(payload.team_name, team_abbr=payload.team_abbr, sport=payload.sport)
             elif event == "big_play":
                 description = payload.game_id or "Big play"
-                await lights.celebrate_big_play(payload.team_name, description)
+                await lights.celebrate_big_play(payload.team_name, description, team_abbr=payload.team_abbr, sport=payload.sport)
+            elif event == "defensive_stop":
+                await lights.celebrate_defensive_stop(payload.team_name, team_abbr=payload.team_abbr, sport=payload.sport)
         except Exception as exc:
             logger.error(f"Celebration error: {exc}")
     
     # Validate event type before starting
     valid_events = ["touchdown", "field_goal", "extra_point", "two_point", "safety", 
-                    "victory", "turnover", "sack", "big_play"]
+                    "victory", "turnover", "sack", "big_play", "defensive_stop"]
     if event not in valid_events:
         raise HTTPException(status_code=400, detail=f"Unknown celebration type: {payload.event_type}")
     

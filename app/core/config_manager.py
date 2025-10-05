@@ -98,6 +98,10 @@ def _extract_light_ips(stadium: Dict[str, Any], wiz_config: Dict[str, Any]) -> L
     ips.extend(smart_lights.get("ips", []))
 
     for entry in wiz_config.get("devices", []):
+        # Only include enabled devices
+        if not entry.get("enabled", True):
+            continue
+            
         ip = entry.get("ip")
         if isinstance(ip, str) and ip not in ips:
             ips.append(ip)
