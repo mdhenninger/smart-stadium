@@ -362,9 +362,24 @@
   flex-wrap: wrap;
 }
 
+.device-row__name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+}
+
+.device-icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
 .device-row__name {
   font-weight: 600;
-  flex: 1 1 auto;
 }
 
 /* Device Type Badge */

@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from typing import Dict, Iterable
 
 from app.core.config_manager import AppConfig
-from app.models.device import DeviceInfo, DeviceStatus, DeviceSummary, DeviceType
+from app.models.device import DeviceInfo, DeviceStatus, DeviceSummary, DeviceType, LightType
 from app.services.history_store import HistoryStore
 from app.services.lights_service import LightsService
 from app.utils.logging import get_logger
@@ -33,6 +33,16 @@ class DeviceManager:
             if not ip:
                 continue
             device_id = f"wiz_{ip.replace('.', '_')}"
+            
+            # Parse light_type from config
+            light_type_str = entry.get("light_type")
+            light_type = None
+            if light_type_str:
+                try:
+                    light_type = LightType(light_type_str)
+                except ValueError:
+                    light_type = LightType.LAMP  # Default fallback
+            
             device = DeviceInfo(
                 device_id=device_id,
                 ip_address=ip,
@@ -40,6 +50,7 @@ class DeviceManager:
                 location=entry.get("location"),
                 enabled=bool(entry.get("enabled", True)),
                 device_type=DeviceType.WIZ,
+                light_type=light_type,
             )
             self._devices[device_id] = device
         

@@ -4,44 +4,51 @@
       "ip": "192.168.86.41",
       "name": "Stadium Light 1",
       "location": "Zone 1",
+      "light_type": "lamp",
       "enabled": true
     },
     {
       "ip": "192.168.86.47", 
       "name": "Stadium Light 2",
       "location": "Zone 2",
+      "light_type": "lamp",
       "enabled": true
     },
     {
       "ip": "192.168.86.48",
       "name": "Stadium Light 3", 
       "location": "Zone 3",
+      "light_type": "lamp",
       "enabled": true
     },
     {
       "ip": "192.168.86.51",
       "name": "Stadium Light 4",
       "location": "Zone 4",
+      "light_type": "lamp",
       "enabled": true
     },
     {
-      "ip": "192.168.86.52",
+      "ip": "192.168.86.50",
       "name": "Stadium Light 5",
       "location": "Zone 5",
+      "light_type": "ceiling-fan",
       "enabled": true
     },
     {
-      "ip": "192.168.86.53",
+      "ip": "192.168.86.55",
       "name": "Stadium Light 6",
       "location": "Zone 6",
+      "light_type": "ceiling-fan",
       "enabled": true
     },
     {
-      "ip": "192.168.86.54",
+      "ip": "192.168.86.56",
       "name": "Stadium Light 7",
       "location": "Zone 7",
+      "light_type": "ceiling-fan",
       "enabled": true
     }
   ],
-  "last_updated": "2025-10-05 16:45:00"
+  "last_updated": "2025-10-05 17:15:00"
 }

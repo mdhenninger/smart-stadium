@@ -50,7 +50,14 @@ export const DevicePanel = () => {
             return (
               <li key={device.device_id} className="device-row">
                 <div className="device-row__main">
-                  <span className="device-row__name">{device.name}</span>
+                  <div className="device-row__name-container">
+                    {device.light_type === 'ceiling-fan' ? (
+                      <span className="device-icon">🕯️</span>
+                    ) : (
+                      <span className="device-icon">💡</span>
+                    )}
+                    <span className="device-row__name">{device.name}</span>
+                  </div>
                   <span className={clsx('device-type-badge', `device-type-badge--${device.device_type}`)}>
                     {device.device_type.toUpperCase()}
                   </span>

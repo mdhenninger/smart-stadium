@@ -19,6 +19,7 @@ export interface DeviceInfo {
   location?: string | null;
   enabled: boolean;
   device_type: string;
+  light_type?: 'lamp' | 'ceiling-fan' | null;
   last_seen?: string | null;
   response_time_ms?: number | null;
   status: 'online' | 'offline' | 'unknown';

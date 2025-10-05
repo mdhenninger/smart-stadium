@@ -14,6 +14,11 @@ class DeviceType(str, Enum):
     GOVEE = "govee"
 
 
+class LightType(str, Enum):
+    LAMP = "lamp"
+    CEILING_FAN = "ceiling-fan"
+
+
 class DeviceStatus(str, Enum):
     ONLINE = "online"
     OFFLINE = "offline"
@@ -27,6 +32,7 @@ class DeviceInfo(BaseModel):
     location: str | None = Field(None, description="Physical location description")
     enabled: bool = Field(True, description="Whether device should actively participate")
     device_type: DeviceType = Field(DeviceType.WIZ, description="Type of smart device")
+    light_type: LightType | None = Field(None, description="Visual type of light for dashboard icons")
     last_seen: Optional[datetime] = Field(None, description="Last successful communication time")
     response_time_ms: Optional[float] = Field(None, description="Last known response latency in milliseconds")
     status: DeviceStatus = Field(DeviceStatus.UNKNOWN, description="Current status of the device")
