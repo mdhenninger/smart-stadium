@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
@@ -219,50 +220,118 @@ class SportMonitor:
         defensive_event = None
         defending_team_abbr = None
         
-        # Check by play type ID first
+        # Enhanced detection with debug logging
+        logger.debug(f"Analyzing play: game={game.game_id}, play_id={current_play_id}")
+        logger.debug(f"  ESPN data: type_id={play_type_id}, type_name={game.last_play.play_type_name}")
+        logger.debug(f"  Team ID: {play_team_id}, Description: {play_text[:100]}...")
+        
+        # Check by play type ID first (most reliable)
+        espn_detected_event = None
         if play_type_id in defensive_type_mapping:
-            defensive_event = defensive_type_mapping[play_type_id]
+            espn_detected_event = defensive_type_mapping[play_type_id]
+            defensive_event = espn_detected_event
+            logger.debug(f"  ESPN play type detection: {defensive_event}")
             
-        # Also check by keywords in play description
-        elif any(keyword in play_text_lower for keyword in ["sack", "sacked"]):
-            defensive_event = "sack"
-        elif any(keyword in play_text_lower for keyword in ["interception", "intercepted", "int "]):
-            defensive_event = "interception"
-        elif "fumble" in play_text_lower and any(keyword in play_text_lower for keyword in ["recover", "recovery"]):
-            defensive_event = "fumble_recovery"
-        elif "safety" in play_text_lower:
-            defensive_event = "safety"
+        # Enhanced keyword detection with validation
+        keyword_detected_event = None
+        if not defensive_event:
+            # Sack detection with yardage loss verification
+            if any(keyword in play_text_lower for keyword in ["sack", "sacked"]):
+                # Must have actual yardage loss or be explicitly a sack
+                if (re.search(r'sacked.*for -\d+', play_text_lower) or 
+                    re.search(r'loss of \d+', play_text_lower) or
+                    "sacked at" in play_text_lower):
+                    # Additional check: not a completed pass
+                    if not ("pass" in play_text_lower and "incomplete" not in play_text_lower and "sacked" not in play_text_lower):
+                        keyword_detected_event = "sack"
+                        defensive_event = "sack"
+                        logger.debug(f"  Keyword sack detection: validated with yardage loss")
+                    else:
+                        logger.debug(f"  Rejected sack: appears to be completed pass")
+                else:
+                    logger.debug(f"  Rejected sack: no yardage loss found")
+                    
+            # Interception detection
+            elif any(keyword in play_text_lower for keyword in ["interception", "intercepted", "int "]):
+                keyword_detected_event = "interception"
+                defensive_event = "interception"
+                logger.debug(f"  Keyword interception detection")
+                
+            # Enhanced fumble recovery detection
+            elif "fumble" in play_text_lower:
+                # Must have proper "RECOVERED by TEAM-PLAYER" pattern
+                recover_match = re.search(r'recovered by ([A-Z]{2,3})-', play_text, re.IGNORECASE)
+                if recover_match:
+                    keyword_detected_event = "fumble_recovery"
+                    defensive_event = "fumble_recovery"
+                    logger.debug(f"  Keyword fumble recovery detection: recovered by {recover_match.group(1)}")
+                else:
+                    logger.debug(f"  Rejected fumble: no 'RECOVERED by TEAM-' pattern found")
+                    
+            # Safety detection
+            elif "safety" in play_text_lower:
+                keyword_detected_event = "safety"
+                defensive_event = "safety"
+                logger.debug(f"  Keyword safety detection")
+        
+        # Cross-validate ESPN vs keyword detection
+        if espn_detected_event and keyword_detected_event and espn_detected_event != keyword_detected_event:
+            logger.warning(f"Detection mismatch: ESPN={espn_detected_event}, keywords={keyword_detected_event}")
         
         if not defensive_event:
+            logger.debug(f"  No defensive play detected")
             return  # Not a defensive play
             
-        # Determine which team made the defensive play
-        # For sacks/turnovers, it's the team that didn't have possession
+        # Enhanced team assignment logic
+        defending_team_abbr = None
+        defending_team_name = None
         play_team_id = game.last_play.team_id
-        if play_team_id == game.home.team_id:
-            # Play was by home team
-            if defensive_event in ["sack", "interception", "fumble_recovery", "safety"]:
-                # Defensive play by away team (they made the sack/turnover)
+        
+        # For turnovers, parse the actual recovering team from description
+        if defensive_event in ["fumble_recovery", "interception"]:
+            # Look for "RECOVERED by TEAM-" or "INTERCEPTED by TEAM-" patterns
+            team_patterns = [
+                r'recovered by ([A-Z]{2,3})-',
+                r'intercepted by ([A-Z]{2,3})-',
+                r'([A-Z]{2,3}) recovered',
+                r'([A-Z]{2,3}) intercepted'
+            ]
+            
+            for pattern in team_patterns:
+                team_match = re.search(pattern, play_text, re.IGNORECASE)
+                if team_match:
+                    defending_team_abbr = team_match.group(1).upper()
+                    break
+                    
+            if not defending_team_abbr:
+                logger.debug(f"  Could not parse recovering team from description")
+                return
+                
+        else:
+            # For sacks/safeties, use existing logic (opposite of offensive team)
+            if play_team_id == game.home.team_id:
+                # Offensive play by home team, defensive play by away team
                 defending_team_abbr = game.away.abbreviation
                 defending_team_name = game.away.display_name
-            else:
-                # Offensive play by home team
-                defending_team_abbr = game.home.abbreviation  
-                defending_team_name = game.home.display_name
-        elif play_team_id == game.away.team_id:
-            # Play was by away team
-            if defensive_event in ["sack", "interception", "fumble_recovery", "safety"]:
-                # Defensive play by home team (they made the sack/turnover)
+            elif play_team_id == game.away.team_id:
+                # Offensive play by away team, defensive play by home team  
                 defending_team_abbr = game.home.abbreviation
                 defending_team_name = game.home.display_name
             else:
-                # Offensive play by away team
-                defending_team_abbr = game.away.abbreviation
+                logger.debug(f"  Could not determine team from play_team_id: {play_team_id}")
+                return
+        
+        # Get defending team name if not already set
+        if not defending_team_name:
+            if defending_team_abbr == game.home.abbreviation:
+                defending_team_name = game.home.display_name
+            elif defending_team_abbr == game.away.abbreviation:
                 defending_team_name = game.away.display_name
-        else:
-            # Can't determine team, skip
-            logger.debug("Could not determine defending team for defensive play: %s", play_text)
-            return
+            else:
+                logger.error(f"Invalid defending team: {defending_team_abbr} not in game {game.home.abbreviation} vs {game.away.abbreviation}")
+                return
+        
+        logger.debug(f"  Final detection: {defensive_event} by {defending_team_abbr}")
             
         # Check if the defending team is being monitored
         is_monitored = await self._monitoring_store.is_team_monitored(game.game_id, defending_team_abbr)
